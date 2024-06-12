@@ -17,6 +17,7 @@
 package net.milkbowl.vault2.economy;
 
 import java.math.BigDecimal;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -125,7 +126,7 @@ public interface Economy {
      * @return list of currencies used by the economy plugin. These are able to be used
      * in the calls in the methods of the API.
      */
-    List<String> currencies();
+    Collection<String> currencies();
 
     /*
      * Account-related methods follow.
@@ -550,5 +551,5 @@ public interface Economy {
      * 
      * @return the List of Banks' UUIDs.
      */
-    List<UUID> getBanks();
+    Collection<UUID> getBanks();
 }
