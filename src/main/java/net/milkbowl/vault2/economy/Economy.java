@@ -82,6 +82,16 @@ public interface Economy {
      * amount using your economy plugin's currency names/conventions.
      *
      * @param amount to format.
+     *
+     * @return Human-readable string describing amount, ie 5 Dollars or 5.55 Pounds.
+     */
+    String format(BigDecimal amount);
+
+    /**
+     * Plugins use this method to format a given BigDecimal amount into a human-readable
+     * amount using your economy plugin's currency names/conventions.
+     *
+     * @param amount to format.
      * @param currency the currency to use for the format.
      *
      * @return Human-readable string describing amount, ie 5 Dollars or 5.55 Pounds.
