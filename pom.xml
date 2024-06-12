@@ -5,11 +5,10 @@
 	<artifactId>VaultUnlockedAPI</artifactId>
 	<version>2.0</version>
 
-	<name>VaultUnlockedAPI</name>
-	<description>VaultUnlocked is a Permissions &amp; Economy API to allow plugins to more easily hook into these systems without needing to hook each individual system themselves.
 
-		VaultUnlocked supports all plugins that support Vault
-    </description>
+	<name>VaultUnlockedAPI</name>
+	<description>VaultUnlocked is a Permissions &amp; Economy API to allow plugins to more easily hook into these systems without needing to hook each individual system themselves. VaultUnlocked supports all plugins that support Vault
+	</description>
 	<url>http://dev.bukkit.org/server-mods/vault/</url>
 
 	<properties>

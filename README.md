@@ -13,6 +13,7 @@ How to include the API with Maven:
         <groupId>net.milkbowl.vault</groupId>
         <artifactId>VaultUnlockedAPI</artifactId>
         <version>2.0</version>
+        <scope>provided</scope>
     </dependency>
 </dependencies>
 ```
@@ -79,10 +80,12 @@ Implementing VaultUnlocked is quite simple. It requires getting the Economy, Per
 ```java
 package com.example.plugin;
 
-import net.milkbowl.vault.chat.Chat;
-import net.milkbowl.vault.economy.Economy;
-import net.milkbowl.vault.economy.EconomyResponse;
-import net.milkbowl.vault.permission.Permission;
+import java.util.logging.Logger;
+
+import net.milkbowl.vault2.chat.Chat;
+import net.milkbowl.vault2.economy.Economy;
+import net.milkbowl.vault2.economy.EconomyResponse;
+import net.milkbowl.vault2.permission.Permission;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -103,7 +106,7 @@ public class ExamplePlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        if (!setupEconomy() ) {
+        if (!setupEconomy()) {
             getLogger().severe(String.format("[%s] - Disabled due to no Vault dependency found!", getDescription().getName()));
             getServer().getPluginManager().disablePlugin(this);
             return;
@@ -146,8 +149,8 @@ public class ExamplePlugin extends JavaPlugin {
         
         if(command.getLabel().equals("test-economy")) {
             // Lets give the player 1.05 currency (note that SOME economic plugins require rounding!)
-            sender.sendMessage(String.format("You have %s", econ.format(econ.getBalance(player.getName()))));
-            EconomyResponse r = econ.depositPlayer(player, 1.05);
+            sender.sendMessage(String.format("You have %s", econ.format(econ.getBalance(player.getUniqueId()))));
+            EconomyResponse r = econ.depositPlayer(player.getUniqueId(), new BigDecimal("1.05"));
             if(r.transactionSuccess()) {
                 sender.sendMessage(String.format("You were given %s and now have %s", econ.format(r.amount), econ.format(r.balance)));
             } else {
