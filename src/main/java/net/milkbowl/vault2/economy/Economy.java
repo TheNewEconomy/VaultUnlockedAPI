@@ -20,6 +20,7 @@ import java.math.BigDecimal;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.UUID;
 
 import net.milkbowl.vault2.economy.EconomyResponse.ResponseType;
@@ -168,9 +169,10 @@ public interface Economy {
      * messages to be more human-readable than UUIDs alone can provide.
      * 
      * @param uuid UUID associated with the account.
-     * @return name of the account owner.
+     * @return An optional containing the last known name if the account exists, otherwise an empty
+     * optional.
      */
-    String getAccountName(UUID uuid);
+    Optional<String> getAccountName(UUID uuid);
 
     /**
      * Checks if this UUID has an account yet.
