@@ -1,4 +1,4 @@
-# VaultAPI - Abstraction Library API for Bukkit Plugins - [![](https://travis-ci.org/MilkBowl/VaultAPI.svg?branch=master)](https://travis-ci.org/MilkBowl/VaultAPI)
+# VaultUnlockedAPI - Abstraction Library API for Bukkit Plugins - [![](https://travis-ci.org/MilkBowl/VaultAPI.svg?branch=master)](https://travis-ci.org/MilkBowl/VaultAPI)
 
 How to include the API with Maven: 
 ```xml
@@ -28,9 +28,11 @@ dependencies {
 }
 ```
 
-**Note**: The VaultAPI version has 2 numbers (major.minor), unlike Vault, which has 3. The 2 numbers in the VaultAPI will always correspond to the 2 beginning numbers in a Vault version to make it clear what versions your plugin will for sure work with.
+**Note**: The VaultUnlockedAPI version has 2 numbers (major.minor), unlike Vault, which has 3. The 2
+numbers in the VaultUnlockedAPI will always correspond to the 2 beginning numbers in a VaultUnlocked
+version to make it clear what versions your plugin will for sure work with.
 
-## Why Vault?
+## Why VaultUnlocked?
 I have no preference which library suits your plugin and development efforts
 best.  Really, I thought a central suite (rather...Vault) of solutions was the
 the proper avenue than focusing on a single category of plugin.  That's where
@@ -59,10 +61,10 @@ You should have received a copy of the GNU Lesser General Public License
 along with Vault.  If not, see <http://www.gnu.org/licenses/>.
 
 ## Building
-VaultAPI comes with all libraries needed to build from the current branch.
+VaultUnlockedAPI comes with all libraries needed to build from the current branch.
 
 ## Implementing Vault
-Implementing Vault is quite simple. It requires getting the Economy, Permission, or Chat service from the Bukkit ServiceManager. See the example below:
+Implementing VaultUnlocked is quite simple. It requires getting the Economy, Permission, or Chat service from the Bukkit ServiceManager. See the example below:
 
 ```java
 package com.example.plugin;

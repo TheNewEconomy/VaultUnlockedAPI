@@ -2,13 +2,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.milkbowl.vault</groupId>
-	<artifactId>VaultAPI</artifactId>
-	<version>1.7</version>
+	<artifactId>VaultUnlockedAPI</artifactId>
+	<version>2.0</version>
 
-	<name>VaultAPI</name>
-	<description>Vault is a Permissions &amp; Economy API to allow plugins to more easily hook into these systems without needing to hook each individual system themselves.
+	<name>VaultUnlockedAPI</name>
+	<description>VaultUnlocked is a Permissions &amp; Economy API to allow plugins to more easily hook into these systems without needing to hook each individual system themselves.
 
-Vault currently supports the following: Permissions 3, PEX, GroupManager, bPerms, bPerms2, SimplyPerms, DroxPerms, zPermissions, rscPermissions, KPerms, Starburst, iConomy (4/5/6) BOSEconomy *6/7), EssentialsEcon, 3Co, MultiConomy, MineConomy, EconXP, eWallet, CurrencyCore, XPBank, CraftConomy, AEco, SDFEconomy, TAEcon
+		VaultUnlocked supports all plugins that support Vault
     </description>
 	<url>http://dev.bukkit.org/server-mods/vault/</url>
 
@@ -18,25 +18,36 @@ Vault currently supports the following: Permissions 3, PEX, GroupManager, bPerms
 	</properties>
 
 	<!-- Organization -->
+
 	<organization>
-		<name>MilkBowl</name>
-		<url>https://github.com/MilkBowl</url>
+		<name>The New Economy</name>
+		<url>https://tnemc.net</url>
 	</organization>
 
+	<developers>
+		<developer>
+			<id>creatorfromhell</id>
+			<name>Daniel "creatorfromhell" Vidmar</name>
+			<email>daniel.viddy@gmail.com</email>
+			<url>https://cfh.dev</url>
+			<organization>The New Economy</organization>
+			<organizationUrl>https://tnemc.net</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>America/New_York</timezone>
+		</developer>
+	</developers>
+
 	<scm>
-		<url>https://github.com/MilkBowl/VaultAPI</url>
-		<connection>scm:git:git://github.com:MilkBowl/VaultAPI.git</connection>
+		<url>https://github.com/TheNewEconomy/VaultUnlockedAPI</url>
+		<connection>scm:git:git://github.com/TheNewEconomy/VaultUnlockedAPI.git</connection>
 		<developerConnection>scm:git:git@github.com:MilkBowl/VaultAPI.git</developerConnection>
 	</scm>
 
-	<ciManagement>
-		<system>Travis-CI</system>
-		<url>https://travis-ci.org/MilkBowl/VaultAPI</url>
-	</ciManagement>
-
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/MilkBowl/VaultAPI/issues</url>
+		<url>https://github.com/TheNewEconomy/VaultUnlockedAPI/issues</url>
 	</issueManagement>
 
 	<repositories>
@@ -47,11 +58,14 @@ Vault currently supports the following: Permissions 3, PEX, GroupManager, bPerms
 	</repositories>
 
 	<distributionManagement>
- 		<repository>
-      		<id>github</id>
-      		<name>GitHub Packages</name>
-      		<url>https://maven.pkg.github.com/milkbowl/github-releases</url>
-    	</repository>
+		<repository>
+			<id>codemc-releases</id>
+			<url>https://repo.codemc.io/repository/maven-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>codemc-snapshots</id>
+			<url>https://repo.codemc.io/repository/maven-snapshots/</url>
+		</snapshotRepository>
 	</distributionManagement>
 
 	<dependencies>
@@ -110,7 +124,7 @@ Vault currently supports the following: Permissions 3, PEX, GroupManager, bPerms
 					<version>true</version>
 					<linksource>true</linksource>
 					<notimestamp>true</notimestamp>
-					<bottom><![CDATA[<b>Milkbowl, 2020</b>]]></bottom>
+					<bottom><![CDATA[<b>TheNewEconomy, 2024</b>]]></bottom>
 					<reportOutputDirectory>${project.build.directory}</reportOutputDirectory>
 					<destDir>javadoc-latest</destDir>
 				</configuration>

@@ -1,4 +1,4 @@
-name: Publish VaultAPI to GitHub Packages
+name: Publish VaultUnlockedAPI to GitHub Packages
 on:
   release:
     types: [created]
