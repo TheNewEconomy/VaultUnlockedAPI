@@ -1,19 +1,18 @@
-# VaultUnlockedAPI - Abstraction Library API for Bukkit Plugins - [![](https://travis-ci.org/MilkBowl/VaultAPI.svg?branch=master)](https://travis-ci.org/MilkBowl/VaultAPI)
+# VaultUnlockedAPI - Abstraction Library API for Bukkit Plugins - [![Build Status](https://ci.codemc.io/job/creatorfromhell/job/VaultUnlockedAPI/badge/icon)](https://ci.codemc.io/job/creatorfromhell/job/VaultUnlockedAPI/)
 
 How to include the API with Maven: 
 ```xml
 <repositories>
     <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
+        <id>codemc-repo</id>
+        <url>https://repo.codemc.org/repository/maven-public</url>
     </repository>
 </repositories>
 <dependencies>
     <dependency>
-        <groupId>com.github.MilkBowl</groupId>
-        <artifactId>VaultAPI</artifactId>
-        <version>1.7</version>
-        <scope>provided</scope>
+        <groupId>net.milkbowl.vault</groupId>
+        <artifactId>VaultUnlockedAPI</artifactId>
+        <version>2.0</version>
     </dependency>
 </dependencies>
 ```
@@ -21,10 +20,10 @@ How to include the API with Maven:
 How to include the API with Gradle:
 ```groovy
 repositories {
-    maven { url 'https://jitpack.io' }
+    maven { url 'https://repo.codemc.org/repository/maven-public' }
 }
 dependencies {
-    compileOnly "com.github.MilkBowl:VaultAPI:1.7"
+    compileOnly "net.milkbowl.vault:VaultUnlockedAPI:2.0"
 }
 ```
 
@@ -33,26 +32,37 @@ numbers in the VaultUnlockedAPI will always correspond to the 2 beginning number
 version to make it clear what versions your plugin will for sure work with.
 
 ## Why VaultUnlocked?
-I have no preference which library suits your plugin and development efforts
-best.  Really, I thought a central suite (rather...Vault) of solutions was the
-the proper avenue than focusing on a single category of plugin.  That's where
-the idea for Vault came into play.
+I have no preference regarding which library is best suited for
+your plugin development efforts. I believe a central suite (or "Vault")
+of solutions is a more effective approach than focusing on a single
+category of plugins. This is the concept behind VaultUnlocked.
 
-So, what features do I _think_ you'll like the most?
+### Key Features You'll Appreciate
 
- * No need to include my source code in your plugin
- * Broad range of supported plugins
- * Choice!
+* **No Source Code Integration Needed**
+  VaultUnlocked operates as a standalone plugin, so you only need to obtain an instance of it. This prevents conflicts with multiple plugins using the same namespaces. Simply include VaultUnlocked.jar in your download zip file for seamless integration!
+* **Extensive Plugin Support**
+  VaultUnlocked provides an abstraction layer not just for Economic plugins but for Permission plugins as well, ensuring broad compatibility.
+* **Freedom of Choice**
+  One of the best aspects of Bukkit is the freedom to choose what to use. More options benefit developers, so here’s to embracing choice!
+
+### Enhanced Features of VaultUnlocked
+
+* **Multi-Currency Support**
+* **More Friendly PR Acceptance**
+* **Folia Support**
+
+Let me know if you need any further modifications!
 
 ## License
-Copyright (C) 2011-2018 Morgan Humes <morgan@lanaddict.com>
+Copyright (C) 2024 Daniel "creatorfromhell" Vidmar
 
-Vault is free software: you can redistribute it and/or modify
+VaultUnlocked is free software: you can redistribute it and/or modify
 it under the terms of the GNU Lesser General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-Vault is distributed in the hope that it will be useful,
+VaultUnlocked is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU Lesser General Public License for more details.
@@ -63,7 +73,7 @@ along with Vault.  If not, see <http://www.gnu.org/licenses/>.
 ## Building
 VaultUnlockedAPI comes with all libraries needed to build from the current branch.
 
-## Implementing Vault
+## Implementing VaultUnlocked
 Implementing VaultUnlocked is quite simple. It requires getting the Economy, Permission, or Chat service from the Bukkit ServiceManager. See the example below:
 
 ```java
