@@ -38,21 +38,21 @@ public interface Economy {
      * 
      * @return true if the server's economy plugin has properly enabled.
      */
-    public boolean isEnabled();
+    boolean isEnabled();
 
     /**
      * Gets name of the economy plugin.
      * 
      * @return Name of the active economy plugin on the server.
      */
-    public String getName();
+    String getName();
 
     /**
      * Returns true if the economy plugin supports banks.
      * 
      * @return true if the economy plugin supports banks.
      */
-    public boolean hasBankSupport();
+    boolean hasBankSupport();
 
     /*
      * Currency-related methods follow.
@@ -66,7 +66,7 @@ public interface Economy {
      * @return number of digits after the decimal point this plugin supports or -1
      *         if no rounding occurs.
      */
-    public int fractionalDigits();
+    int fractionalDigits();
 
     /**
      * Plugins use this method to format a given BigDecimal amount into a human
@@ -75,7 +75,7 @@ public interface Economy {
      * @param amount to format.
      * @return Human readable string describing amount, ie 5 Dollars or 5.55 Pounds.
      */
-    public String format(BigDecimal amount);
+    String format(BigDecimal amount);
 
     /**
      * Returns the name of the currency in plural form. If the economy being used
@@ -83,7 +83,7 @@ public interface Economy {
      * 
      * @return name of the currency (plural) ie: Dollars or Pounds.
      */
-    public String currencyNamePlural();
+    String currencyNamePlural();
 
     /**
      * Returns the name of the currency in singular form. If the economy being used
@@ -91,7 +91,7 @@ public interface Economy {
      * 
      * @return name of the currency (singular) ie: Dollar or Pound.
      */
-    public String currencyNameSingular();
+    String currencyNameSingular();
 
     /*
      * Account-related methods follow.
@@ -104,7 +104,7 @@ public interface Economy {
      * @param name UUID associated with the account.
      * @return true if the account creation was successful.
      */
-    public boolean createAccount(UUID uuid, String name);
+    boolean createAccount(UUID uuid, String name);
 
     /**
      * Attempts to create an account for the given UUID on the specified world
@@ -116,7 +116,7 @@ public interface Economy {
      * @param worldName String name of the world.
      * @return if the account creation was successful
      */
-    public boolean createAccount(UUID uuid, String name, String worldName);
+    boolean createAccount(UUID uuid, String name, String worldName);
 
     /**
      * Returns a map that represents all of the UUIDs which have accounts in the
@@ -126,7 +126,7 @@ public interface Economy {
      * @return a {@link Map} composed of the accounts keyed by their UUID, along
      *         with their associated last-known-name.
      */
-    public Map<UUID, String> getUUIDNameMap();
+    Map<UUID, String> getUUIDNameMap();
 
     /**
      * Gets the last known name of an account owned by the given UUID. Required for
@@ -135,7 +135,7 @@ public interface Economy {
      * @param uuid UUID associated with the account.
      * @return name of the account owner.
      */
-    public String getAccountName(UUID uuid);
+    String getAccountName(UUID uuid);
 
     /**
      * Checks if this UUID has an account yet.
@@ -143,7 +143,7 @@ public interface Economy {
      * @param uuid UUID to check for an existing account.
      * @return true if the UUID has an account.
      */
-    public boolean hasAccount(UUID uuid);
+    boolean hasAccount(UUID uuid);
 
     /**
      * Checks if this UUID has an account yet on the given world.
@@ -152,7 +152,7 @@ public interface Economy {
      * @param worldName world-specific account.
      * @return if the UUID has an account.
      */
-    public boolean hasAccount(UUID uuid, String worldName);
+    boolean hasAccount(UUID uuid, String worldName);
 
     /**
      * A method which changes the name associated with the given UUID in the
@@ -163,7 +163,7 @@ public interface Economy {
      *             Map<UUID, String> map.
      * @return true if the name change is successful.
      */
-    public boolean renameAccount(UUID uuid, String name);
+    boolean renameAccount(UUID uuid, String name);
 
     /*
      * Account balance related methods follow.
@@ -175,7 +175,7 @@ public interface Economy {
      * @param uuid UUID of the account to get a balance for.
      * @return Amount currently held in account associated with the given UUID.
      */
-    public BigDecimal getBalance(UUID uuid);
+    BigDecimal getBalance(UUID uuid);
 
     /**
      * Gets balance of a UUID on the specified world. IMPLEMENTATION SPECIFIC - if
@@ -185,7 +185,7 @@ public interface Economy {
      * @param world name of the world.
      * @return Amount currently held in account associated with the given UUID.
      */
-    public BigDecimal getBalance(UUID uuid, String world);
+    BigDecimal getBalance(UUID uuid, String world);
 
     /**
      * Checks if the account associated with the given UUID has the amount - DO NOT
@@ -195,7 +195,7 @@ public interface Economy {
      * @param amount the amount to check for.
      * @return True if <b>UUID</b> has <b>amount</b>, False else wise.
      */
-    public boolean has(UUID uuid, BigDecimal amount);
+    boolean has(UUID uuid, BigDecimal amount);
 
     /**
      * Checks if the account associated with the given UUID has the amount in the
@@ -208,7 +208,7 @@ public interface Economy {
      * @return True if <b>UUID</b> has <b>amount</b> in the given <b>world</b>,
      *         False else wise.
      */
-    public boolean has(UUID uuid, String worldName, BigDecimal amount);
+    boolean has(UUID uuid, String worldName, BigDecimal amount);
 
     /**
      * Withdraw an amount from an account associated with a UUID - DO NOT USE
@@ -220,7 +220,7 @@ public interface Economy {
      *         {@link ResponseType} as to whether the transaction was a Success,
      *         Failure, Unsupported.
      */
-    public EconomyResponse withdraw(UUID uuid, BigDecimal amount);
+    EconomyResponse withdraw(UUID uuid, BigDecimal amount);
 
     /**
      * Withdraw an amount from an account associated with a UUID on a given world -
@@ -234,7 +234,7 @@ public interface Economy {
      *         {@link ResponseType} as to whether the transaction was a Success,
      *         Failure, Unsupported.
      */
-    public EconomyResponse withdraw(UUID uuid, String worldName, BigDecimal amount);
+    EconomyResponse withdraw(UUID uuid, String worldName, BigDecimal amount);
 
     /**
      * Deposit an amount to an account associated with the given UUID - DO NOT USE
@@ -246,7 +246,7 @@ public interface Economy {
      *         {@link ResponseType} as to whether the transaction was a Success,
      *         Failure, Unsupported.
      */
-    public EconomyResponse deposit(UUID uuid, BigDecimal amount);
+    EconomyResponse deposit(UUID uuid, BigDecimal amount);
 
     /**
      * Deposit an amount to an account associated with a UUID on a given world -
@@ -260,7 +260,7 @@ public interface Economy {
      *         {@link ResponseType} as to whether the transaction was a Success,
      *         Failure, Unsupported.
      */
-    public EconomyResponse deposit(UUID uuid, String worldName, BigDecimal amount);
+    EconomyResponse deposit(UUID uuid, String worldName, BigDecimal amount);
 
     /*
      * Bank methods follow.
@@ -274,7 +274,7 @@ public interface Economy {
      * @param uuid UUID of the account should be linked to.
      * @return true if bank creation is successful.
      */
-    public boolean createBank(String name, UUID uuid);
+    boolean createBank(String name, UUID uuid);
 
     /**
      * Deletes a bank account with the specified UUID.
@@ -282,7 +282,7 @@ public interface Economy {
      * @param uuid UUID of the bank to be deleted.
      * @return true if the operation completed successfully
      */
-    public boolean deleteBank(UUID uuid);
+    boolean deleteBank(UUID uuid);
 
     /**
      * Returns a map that represents all of the UUIDs which have banks in the
@@ -292,7 +292,7 @@ public interface Economy {
      * @return a {@link Map} composed of the accounts keyed by their UUID, along
      *         with their associated last-known-name.
      */
-    public Map<UUID, String> getBankUUIDNameMap();
+    Map<UUID, String> getBankUUIDNameMap();
 
     /**
      * Gets the last known name of an bank with the given UUID. Required for
@@ -301,7 +301,7 @@ public interface Economy {
      * @param uuid UUID to look up.
      * @return name of the bank.
      */
-    public String getBankAccountName(UUID uuid);
+    String getBankAccountName(UUID uuid);
 
     /**
      * Checks if this UUID has a bank yet.
@@ -309,7 +309,7 @@ public interface Economy {
      * @param uuid UUID to check.
      * @return true if the UUID has an account.
      */
-    public boolean hasBankAccount(UUID uuid);
+    boolean hasBankAccount(UUID uuid);
 
     /**
      * A method which changes the name associated with the given UUID in the
@@ -320,7 +320,7 @@ public interface Economy {
      *             Map<UUID, String> map.
      * @return true if the name change is successful.
      */
-    public boolean renameBankAccount(UUID uuid, String name);
+    boolean renameBankAccount(UUID uuid, String name);
 
     /**
      * Returns the amount the bank has.
@@ -328,7 +328,7 @@ public interface Economy {
      * @param uuid UUID of the account.
      * @return amount which the bank holds as a balance.
      */
-    public BigDecimal bankBalance(UUID uuid);
+    BigDecimal bankBalance(UUID uuid);
 
     /**
      * Returns true or false whether the bank has the amount specified - DO NOT USE
@@ -338,7 +338,7 @@ public interface Economy {
      * @param amount to check for
      * @return true if the bank has the given amount.
      */
-    public boolean bankHas(UUID uuid, BigDecimal amount);
+    boolean bankHas(UUID uuid, BigDecimal amount);
 
     /**
      * Withdraw an amount from a bank account - DO NOT USE NEGATIVE AMOUNTS.
@@ -349,7 +349,7 @@ public interface Economy {
      *         {@link ResponseType} as to whether the transaction was a Success,
      *         Failure, Unsupported.
      */
-    public EconomyResponse bankWithdraw(String name, BigDecimal amount);
+    EconomyResponse bankWithdraw(String name, BigDecimal amount);
 
     /**
      * Deposit an amount into a bank account - DO NOT USE NEGATIVE AMOUNTS.
@@ -360,7 +360,7 @@ public interface Economy {
      *         {@link ResponseType} as to whether the transaction was a Success,
      *         Failure, Unsupported.
      */
-    public EconomyResponse bankDeposit(String name, BigDecimal amount);
+    EconomyResponse bankDeposit(String name, BigDecimal amount);
 
     /**
      * Check if a UUID is the owner of a bank account.
@@ -369,7 +369,7 @@ public interface Economy {
      * @param bankUUID UUID of the bank account to check ownership of.
      * @return true if the uuid is the owner of the bank associated with bankUUID.
      */
-    public boolean isBankOwner(UUID uuid, UUID bankUUID);
+    boolean isBankOwner(UUID uuid, UUID bankUUID);
 
     /**
      * Check if the UUID is a member of the bank account
@@ -378,12 +378,12 @@ public interface Economy {
      * @param bankUUID UUID of the bank account to check membership of.
      * @return @return true if the uuid is a member of the bank associated with bankUUID.
      */
-    public boolean isBankMember(UUID uuid, UUID bankUUID);
+    boolean isBankMember(UUID uuid, UUID bankUUID);
 
     /**
      * Gets the list of banks' UUIDs.
      * 
      * @return the List of Banks' UUIDs.
      */
-    public List<UUID> getBanks();
+    List<UUID> getBanks();
 }

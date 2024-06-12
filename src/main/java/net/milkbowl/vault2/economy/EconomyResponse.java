@@ -29,7 +29,7 @@ public class EconomyResponse {
     /**
      * Enum for types of Responses indicating the status of a method call.
      */
-    public static enum ResponseType {
+    public enum ResponseType {
         SUCCESS(1),
         FAILURE(2),
         NOT_IMPLEMENTED(3);
