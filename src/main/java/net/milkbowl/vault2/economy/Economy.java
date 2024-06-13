@@ -24,6 +24,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 import net.milkbowl.vault2.economy.EconomyResponse.ResponseType;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * The main economy API
@@ -47,6 +48,7 @@ public interface Economy {
      * 
      * @return Name of the active economy plugin on the server.
      */
+    @NotNull
     String getName();
 
     /**
@@ -75,6 +77,7 @@ public interface Economy {
      * @return number of digits after the decimal point this plugin supports or -1
      *         if no rounding occurs.
      */
+    @NotNull
     int fractionalDigits();
 
     /**
@@ -85,6 +88,7 @@ public interface Economy {
      *
      * @return Human-readable string describing amount, ie 5 Dollars or 5.55 Pounds.
      */
+    @NotNull
     String format(BigDecimal amount);
 
     /**
@@ -96,6 +100,7 @@ public interface Economy {
      *
      * @return Human-readable string describing amount, ie 5 Dollars or 5.55 Pounds.
      */
+    @NotNull
     String format(BigDecimal amount, String currency);
 
     /**
@@ -108,11 +113,14 @@ public interface Economy {
     boolean hasCurrency(String currency);
 
     /**
-     * Returns the default currency that is able to be used in API operations. May not be human-readable.
-     * 
-     * @return name of the currency i.e.: USD
+     * Used to get the default currency. This could be the default currency for the server globally or
+     * for the default world if the implementation supports multi-world.
+     * @return The currency that is the default for the server if multi-world support is not available
+     * otherwise the default for the default world.
+     *
      */
-    String defaultCurrency();
+    @NotNull
+    String getDefaultCurrency();
 
     /**
      * Returns the name of the default currency in plural form. If the economy being used
@@ -120,6 +128,7 @@ public interface Economy {
      *
      * @return name of the currency (plural) ie: Dollars or Pounds.
      */
+    @NotNull
     String defaultCurrencyNamePlural();
 
     /**
@@ -128,6 +137,7 @@ public interface Economy {
      * 
      * @return name of the currency (singular) ie: Dollar or Pound.
      */
+    @NotNull
     String defaultCurrencyNameSingular();
 
     /**
@@ -223,6 +233,7 @@ public interface Economy {
      * @param uuid UUID of the account to get a balance for.
      * @return Amount currently held in account associated with the given UUID.
      */
+    @NotNull
     BigDecimal getBalance(String pluginName, UUID uuid);
 
     /**
@@ -234,6 +245,7 @@ public interface Economy {
      * @param world name of the world.
      * @return Amount currently held in account associated with the given UUID.
      */
+    @NotNull
     BigDecimal getBalance(String pluginName, UUID uuid, String world);
 
     /**
@@ -246,6 +258,7 @@ public interface Economy {
      * @param currency the currency to use.
      * @return Amount currently held in account associated with the given UUID.
      */
+    @NotNull
     BigDecimal getBalance(String pluginName, UUID uuid, String world, String currency);
 
     /**
@@ -299,6 +312,7 @@ public interface Economy {
      *         {@link ResponseType} as to whether the transaction was a Success,
      *         Failure, Unsupported.
      */
+    @NotNull
     EconomyResponse withdraw(String pluginName, UUID uuid, BigDecimal amount);
 
     /**
@@ -314,6 +328,7 @@ public interface Economy {
      *         {@link ResponseType} as to whether the transaction was a Success,
      *         Failure, Unsupported.
      */
+    @NotNull
     EconomyResponse withdraw(String pluginName, UUID uuid, String worldName, BigDecimal amount);
 
     /**
@@ -330,6 +345,7 @@ public interface Economy {
      *         {@link ResponseType} as to whether the transaction was a Success,
      *         Failure, Unsupported.
      */
+    @NotNull
     EconomyResponse withdraw(String pluginName, UUID uuid, String worldName, String currency, BigDecimal amount);
 
     /**
@@ -343,6 +359,7 @@ public interface Economy {
      *         {@link ResponseType} as to whether the transaction was a Success,
      *         Failure, Unsupported.
      */
+    @NotNull
     EconomyResponse deposit(String pluginName, UUID uuid, BigDecimal amount);
 
     /**
@@ -358,6 +375,7 @@ public interface Economy {
      *         {@link ResponseType} as to whether the transaction was a Success,
      *         Failure, Unsupported.
      */
+    @NotNull
     EconomyResponse deposit(String pluginName, UUID uuid, String worldName, BigDecimal amount);
 
     /**
@@ -374,6 +392,7 @@ public interface Economy {
      *         {@link ResponseType} as to whether the transaction was a Success,
      *         Failure, Unsupported.
      */
+    @NotNull
     EconomyResponse deposit(String pluginName, UUID uuid, String worldName, String currency, BigDecimal amount);
 
     /*
@@ -401,7 +420,7 @@ public interface Economy {
     boolean deleteBank(String pluginName, UUID uuid);
 
     /**
-     * Returns a map that represents all of the UUIDs which have banks in the
+     * Returns a map that represents all the UUIDs which have banks in the
      * plugin, as well as their last-known-name. This is used for Vault's economy
      * converter and should be given every account available.
      * 
@@ -417,6 +436,7 @@ public interface Economy {
      * @param uuid UUID to look up.
      * @return name of the bank.
      */
+    @NotNull
     String getBankAccountName(UUID uuid);
 
     /**
@@ -455,6 +475,7 @@ public interface Economy {
      * @param uuid UUID of the account.
      * @return amount which the bank holds as a balance.
      */
+    @NotNull
     BigDecimal bankBalance(String pluginName, UUID uuid);
 
     /**
@@ -465,6 +486,7 @@ public interface Economy {
      * @param currency the currency to use.
      * @return amount which the bank holds as a balance.
      */
+    @NotNull
     BigDecimal bankBalance(String pluginName, UUID uuid, String currency);
 
     /**
@@ -500,6 +522,7 @@ public interface Economy {
      *         {@link ResponseType} as to whether the transaction was a Success,
      *         Failure, Unsupported.
      */
+    @NotNull
     EconomyResponse bankWithdraw(String pluginName, UUID uuid, BigDecimal amount);
 
     /**
@@ -513,6 +536,7 @@ public interface Economy {
      *         {@link ResponseType} as to whether the transaction was a Success,
      *         Failure, Unsupported.
      */
+    @NotNull
     EconomyResponse bankWithdraw(String pluginName, UUID uuid, String currency, BigDecimal amount);
 
     /**
@@ -525,6 +549,7 @@ public interface Economy {
      *         {@link ResponseType} as to whether the transaction was a Success,
      *         Failure, Unsupported.
      */
+    @NotNull
     EconomyResponse bankDeposit(String pluginName, UUID uuid, BigDecimal amount);
 
     /**
@@ -538,6 +563,7 @@ public interface Economy {
      *         {@link ResponseType} as to whether the transaction was a Success,
      *         Failure, Unsupported.
      */
+    @NotNull
     EconomyResponse bankDeposit(String pluginName, UUID uuid, String currency, BigDecimal amount);
 
     /**
