@@ -12,7 +12,7 @@ How to include the API with Maven:
     <dependency>
         <groupId>net.milkbowl.vault</groupId>
         <artifactId>VaultUnlockedAPI</artifactId>
-        <version>2.2</version><!-- Validate this is the most recent version from the CI -->
+        <version>2.4</version><!-- Validate this is the most recent version from the CI -->
         <scope>provided</scope>
     </dependency>
 </dependencies>
@@ -24,7 +24,7 @@ repositories {
     maven { url 'https://repo.codemc.org/repository/maven-public' }
 }
 dependencies {
-    compileOnly "net.milkbowl.vault:VaultUnlockedAPI:2.1"
+    compileOnly "net.milkbowl.vault:VaultUnlockedAPI:2.4"
 }
 ```
 
