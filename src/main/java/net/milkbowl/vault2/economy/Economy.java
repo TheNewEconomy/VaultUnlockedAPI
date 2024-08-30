@@ -16,15 +16,14 @@
 
 package net.milkbowl.vault2.economy;
 
+import net.milkbowl.vault2.economy.EconomyResponse.ResponseType;
+import org.jetbrains.annotations.NotNull;
+
 import java.math.BigDecimal;
 import java.util.Collection;
-import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
-
-import net.milkbowl.vault2.economy.EconomyResponse.ResponseType;
-import org.jetbrains.annotations.NotNull;
 
 /**
  * The main economy API
@@ -52,11 +51,11 @@ public interface Economy {
     String getName();
 
     /**
-     * Returns true if the economy plugin supports banks.
-     * 
-     * @return true if the economy plugin supports banks.
+     * Returns true if the economy plugin supports shared accounts.
+     *
+     * @return true if the economy plugin supports shared accounts.
      */
-    boolean hasBankSupport();
+    boolean hasSharedAccountSupport();
 
     /**
      * Returns true if the economy plugin supports multiple currencies.
@@ -101,7 +100,7 @@ public interface Economy {
      * @return Human-readable string describing amount, ie 5 Dollars or 5.55 Pounds.
      */
     @NotNull
-    String format(BigDecimal amount, String currency);
+    String format(BigDecimal amount, final String currency);
 
     /**
      * Returns true if a currency with the specified name exists.
@@ -110,7 +109,7 @@ public interface Economy {
      *
      * @return true if a currency with the specified name exists.
      */
-    boolean hasCurrency(String currency);
+    boolean hasCurrency(final String currency);
 
     /**
      * Used to get the default currency. This could be the default currency for the server globally or
@@ -156,23 +155,23 @@ public interface Economy {
     /**
      * Attempts to create a account for the given UUID.
      * 
-     * @param uuid UUID associated with the account.
+     * @param accountID UUID associated with the account.
      * @param name UUID associated with the account.
      * @return true if the account creation was successful.
      */
-    boolean createAccount(UUID uuid, String name);
+    boolean createAccount(UUID accountID, final String name);
 
     /**
      * Attempts to create an account for the given UUID on the specified world
      * IMPLEMENTATION SPECIFIC - if an economy plugin does not support this then
      * false will always be returned.
      * 
-     * @param uuid      UUID associated with the account.
+     * @param accountID      UUID associated with the account.
      * @param name      UUID associated with the account.
      * @param worldName String name of the world.
      * @return if the account creation was successful
      */
-    boolean createAccount(UUID uuid, String name, String worldName);
+    boolean createAccount(UUID accountID, final String name, final String worldName);
 
     /**
      * Returns a map that represents all the UUIDs which have accounts in the
@@ -188,89 +187,110 @@ public interface Economy {
      * Gets the last known name of an account owned by the given UUID. Required for
      * messages to be more human-readable than UUIDs alone can provide.
      * 
-     * @param uuid UUID associated with the account.
+     * @param accountID UUID associated with the account.
      * @return An optional containing the last known name if the account exists, otherwise an empty
      * optional.
      */
-    Optional<String> getAccountName(UUID uuid);
+    Optional<String> getAccountName(UUID accountID);
 
     /**
      * Checks if this UUID has an account yet.
      * 
-     * @param uuid UUID to check for an existing account.
+     * @param accountID UUID to check for an existing account.
      * @return true if the UUID has an account.
      */
-    boolean hasAccount(UUID uuid);
+    boolean hasAccount(UUID accountID);
 
     /**
      * Checks if this UUID has an account yet on the given world.
      * 
-     * @param uuid      UUID to check for an existing account.
+     * @param accountID      UUID to check for an existing account.
      * @param worldName world-specific account.
      * @return if the UUID has an account.
      */
-    boolean hasAccount(UUID uuid, String worldName);
+    boolean hasAccount(UUID accountID, final String worldName);
 
     /**
      * A method which changes the name associated with the given UUID in the
-     * Map<UUID, String> received from {@link #getUUIDNameMap()}.
+     * Map<UUID, final String> received from {@link #getUUIDNameMap()}.
      * 
-     * @param uuid UUID whose account is having a name change.
+     * @param accountID UUID whose account is having a name change.
      * @param name String name that will be associated with the UUID in the 
-     *             Map<UUID, String> map.
+     *             Map<UUID, final String> map.
      * @return true if the name change is successful.
      */
-    boolean renameAccount(UUID uuid, String name);
+    boolean renameAccount(UUID accountID, final String name);
 
     /*
      * Account balance related methods follow.
      */
 
     /**
+     * Determines whether an account supports a specific currency.
+     *
+     * @param plugin    the name of the plugin
+     * @param accountID      the UUID of the account
+     * @param currency  the currency to check support for
+     * @return true if the account supports the currency, false otherwise
+     */
+    boolean accountSupportsCurrency(final String plugin, final UUID accountID, final String currency);
+
+    /**
+     * Checks if the given account supports the specified currency in the given world.
+     *
+     * @param plugin   the name of the plugin requesting the check
+     * @param accountID     the UUID of the player account
+     * @param currency the currency code to check support for
+     * @param world    the name of the world to check in
+     * @return true if the account supports the currency in the world, false otherwise
+     */
+    boolean accountSupportsCurrency(final String plugin, final UUID accountID, final String currency, final String world);
+
+    /**
      * Gets balance of an account associated with a UUID.
      *
      * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid UUID of the account to get a balance for.
+     * @param accountID UUID of the account to get a balance for.
      * @return Amount currently held in account associated with the given UUID.
      */
     @NotNull
-    BigDecimal getBalance(String pluginName, UUID uuid);
+    BigDecimal getBalance(final String pluginName, final UUID accountID);
 
     /**
      * Gets balance of a UUID on the specified world. IMPLEMENTATION SPECIFIC - if
      * an economy plugin does not support this the global balance will be returned.
      *
      * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid  UUID of the account to get a balance for.
+     * @param accountID  UUID of the account to get a balance for.
      * @param world name of the world.
      * @return Amount currently held in account associated with the given UUID.
      */
     @NotNull
-    BigDecimal getBalance(String pluginName, UUID uuid, String world);
+    BigDecimal getBalance(final String pluginName, final UUID accountID, final String world);
 
     /**
      * Gets balance of a UUID on the specified world. IMPLEMENTATION SPECIFIC - if
      * an economy plugin does not support this the global balance will be returned.
      *
      * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid  UUID of the account to get a balance for.
+     * @param accountID  UUID of the account to get a balance for.
      * @param world name of the world.
      * @param currency the currency to use.
      * @return Amount currently held in account associated with the given UUID.
      */
     @NotNull
-    BigDecimal getBalance(String pluginName, UUID uuid, String world, String currency);
+    BigDecimal getBalance(final String pluginName, final UUID accountID, final String world, final String currency);
 
     /**
      * Checks if the account associated with the given UUID has the amount - DO NOT
      * USE NEGATIVE AMOUNTS.
      *
      * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid   the UUID associated with the account to check the balance of.
+     * @param accountID   the UUID associated with the account to check the balance of.
      * @param amount the amount to check for.
      * @return True if <b>UUID</b> has <b>amount</b>, False else wise.
      */
-    boolean has(String pluginName, UUID uuid, BigDecimal amount);
+    boolean has(final String pluginName, final UUID accountID, final BigDecimal amount);
 
     /**
      * Checks if the account associated with the given UUID has the amount in the
@@ -278,13 +298,13 @@ public interface Economy {
      * economy plugin does not support this the global balance will be returned.
      *
      * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid      the UUID associated with the account to check the balance of.
+     * @param accountID      the UUID associated with the account to check the balance of.
      * @param worldName the name of the world to check in.
      * @param amount    the amount to check for.
      * @return True if <b>UUID</b> has <b>amount</b> in the given <b>world</b>,
      *         False else wise.
      */
-    boolean has(String pluginName, UUID uuid, String worldName, BigDecimal amount);
+    boolean has(final String pluginName, final UUID accountID, final String worldName, final BigDecimal amount);
 
     /**
      * Checks if the account associated with the given UUID has the amount in the
@@ -292,28 +312,28 @@ public interface Economy {
      * economy plugin does not support this the global balance will be returned.
      *
      * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid      the UUID associated with the account to check the balance of.
+     * @param accountID      the UUID associated with the account to check the balance of.
      * @param worldName the name of the world to check in.
      * @param currency the currency to use.
      * @param amount    the amount to check for.
      * @return True if <b>UUID</b> has <b>amount</b> in the given <b>world</b>,
      *         False else wise.
      */
-    boolean has(String pluginName, UUID uuid, String worldName, String currency, BigDecimal amount);
+    boolean has(final String pluginName, final UUID accountID, final String worldName, final String currency, final BigDecimal amount);
 
     /**
      * Withdraw an amount from an account associated with a UUID - DO NOT USE
      * NEGATIVE AMOUNTS.
      *
      * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid   the UUID associated with the account to withdraw from.
+     * @param accountID   the UUID associated with the account to withdraw from.
      * @param amount Amount to withdraw.
      * @return {@link EconomyResponse} which includes the Economy plugin's
      *         {@link ResponseType} as to whether the transaction was a Success,
      *         Failure, Unsupported.
      */
     @NotNull
-    EconomyResponse withdraw(String pluginName, UUID uuid, BigDecimal amount);
+    EconomyResponse withdraw(final String pluginName, final UUID accountID, final BigDecimal amount);
 
     /**
      * Withdraw an amount from an account associated with a UUID on a given world -
@@ -321,7 +341,7 @@ public interface Economy {
      * does not support this the global balance will be returned.
      *
      * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid      the UUID associated with the account to withdraw from.
+     * @param accountID      the UUID associated with the account to withdraw from.
      * @param worldName the name of the world to check in.
      * @param amount    Amount to withdraw.
      * @return {@link EconomyResponse} which includes the Economy plugin's
@@ -329,7 +349,7 @@ public interface Economy {
      *         Failure, Unsupported.
      */
     @NotNull
-    EconomyResponse withdraw(String pluginName, UUID uuid, String worldName, BigDecimal amount);
+    EconomyResponse withdraw(final String pluginName, final UUID accountID, final String worldName, final BigDecimal amount);
 
     /**
      * Withdraw an amount from an account associated with a UUID on a given world -
@@ -337,7 +357,7 @@ public interface Economy {
      * does not support this the global balance will be returned.
      *
      * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid      the UUID associated with the account to withdraw from.
+     * @param accountID      the UUID associated with the account to withdraw from.
      * @param worldName the name of the world to check in.
      * @param currency the currency to use.
      * @param amount    Amount to withdraw.
@@ -346,21 +366,21 @@ public interface Economy {
      *         Failure, Unsupported.
      */
     @NotNull
-    EconomyResponse withdraw(String pluginName, UUID uuid, String worldName, String currency, BigDecimal amount);
+    EconomyResponse withdraw(final String pluginName, final UUID accountID, final String worldName, final String currency, final BigDecimal amount);
 
     /**
      * Deposit an amount to an account associated with the given UUID - DO NOT USE
      * NEGATIVE AMOUNTS.
      *
      * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid   the UUID associated with the account to deposit to.
+     * @param accountID   the UUID associated with the account to deposit to.
      * @param amount Amount to deposit.
      * @return {@link EconomyResponse} which includes the Economy plugin's
      *         {@link ResponseType} as to whether the transaction was a Success,
      *         Failure, Unsupported.
      */
     @NotNull
-    EconomyResponse deposit(String pluginName, UUID uuid, BigDecimal amount);
+    EconomyResponse deposit(final String pluginName, final UUID accountID, final BigDecimal amount);
 
     /**
      * Deposit an amount to an account associated with a UUID on a given world -
@@ -368,7 +388,7 @@ public interface Economy {
      * does not support this the global balance will be returned.
      *
      * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid      the UUID associated with the account to deposit to.
+     * @param accountID  the {@link UUID} associated with the account to deposit to.
      * @param worldName the name of the world to check in.
      * @param amount    Amount to deposit.
      * @return {@link EconomyResponse} which includes the Economy plugin's
@@ -376,7 +396,7 @@ public interface Economy {
      *         Failure, Unsupported.
      */
     @NotNull
-    EconomyResponse deposit(String pluginName, UUID uuid, String worldName, BigDecimal amount);
+    EconomyResponse deposit(final String pluginName, final UUID accountID, final String worldName, final BigDecimal amount);
 
     /**
      * Deposit an amount to an account associated with a UUID on a given world -
@@ -384,7 +404,7 @@ public interface Economy {
      * does not support this the global balance will be returned.
      *
      * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid      the UUID associated with the account to deposit to.
+     * @param accountID      the {@link UUID} associated with the account to deposit to.
      * @param worldName the name of the world to check in.
      * @param currency the currency to use.
      * @param amount    Amount to deposit.
@@ -393,201 +413,105 @@ public interface Economy {
      *         Failure, Unsupported.
      */
     @NotNull
-    EconomyResponse deposit(String pluginName, UUID uuid, String worldName, String currency, BigDecimal amount);
+    EconomyResponse deposit(final String pluginName, final UUID accountID, final String worldName, final String currency, final BigDecimal amount);
 
     /*
-     * Bank methods follow.
+     * Shared Account Methods
      */
 
     /**
-     * Creates a bank account with the specified name and the given UUID as the
-     * owner.
+     * Creates a shared account with the specified parameters.
      *
-     * @param pluginName The name of the plugin that is calling the method.
-     * @param name Name of account.
-     * @param uuid UUID of the account should be linked to.
-     * @return true if bank creation is successful.
+     * @param pluginName the name of the plugin
+     * @param accountID  the {@link UUID} of the account
+     * @param name       the name of the account
+     * @param owner      the {@link UUID} of the account owner
+     * @return true if the shared account is successfully created, false otherwise
      */
-    boolean createBank(String pluginName, String name, UUID uuid);
+    boolean createSharedAccount(final String pluginName, final UUID accountID, final String name, final UUID owner);
 
     /**
-     * Deletes a bank account with the specified UUID.
+     * Determines whether the specified owner ID is the owner of the account associated with the given account ID and plugin name.
      *
-     * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid UUID of the bank to be deleted.
-     * @return true if the operation completed successfully
+     * @param pluginName the name of the plugin
+     * @param accountID the {@link UUID} of the account
+     * @param uuid the {@link UUID} to check for ownership of the account
+     * @return true if the owner ID is the owner of the account, false otherwise
      */
-    boolean deleteBank(String pluginName, UUID uuid);
+    boolean isAccountOwner(final String pluginName, final UUID accountID, final UUID uuid);
 
     /**
-     * Returns a map that represents all the UUIDs which have banks in the
-     * plugin, as well as their last-known-name. This is used for Vault's economy
-     * converter and should be given every account available.
-     * 
-     * @return a {@link Map} composed of the accounts keyed by their UUID, along
-     *         with their associated last-known-name.
-     */
-    Map<UUID, String> getBankUUIDNameMap();
-
-    /**
-     * Gets the last known name of an bank with the given UUID. Required for
-     * messages to be more human-readable than UUIDs alone can provide.
+     * Sets the owner of a specified plugin to the given accountID.
      *
-     * @param uuid UUID to look up.
-     * @return name of the bank.
+     * @param pluginName The name of the plugin.
+     * @param accountID  The {@link UUID} of the account
+     * @param uuid       The {@link UUID} of the account to set as the owner.
+     * @return true if the owner is successfully set, false otherwise.
      */
-    @NotNull
-    String getBankAccountName(UUID uuid);
+    boolean setOwner(final String pluginName, final UUID accountID, final UUID uuid);
 
     /**
-     * Checks if this UUID has a bank yet.
+     * Determines whether a specific member is an account member of a given plugin.
      *
-     * @param uuid UUID to check.
-     * @return true if the UUID has an account.
+     * @param pluginName The name of the plugin.
+     * @param accountID The {@link UUID} of the account.
+     * @param uuid The {@link UUID} to check for membership.
+     * @return true if the member is an account member, false otherwise.
      */
-    boolean hasBankAccount(UUID uuid);
+    boolean isAccountMember(final String pluginName, final UUID accountID, final UUID uuid);
 
     /**
-     * Checks if the specified bank account supports the specified currency.
+     * Adds a member to an account.
      *
-     * @param uuid UUID of the account.
-     * @param currency the currency to use.
-     * @return true if the bank supports the currency
+     * @param pluginName The name of the plugin.
+     * @param accountID  The {@link UUID} of the account.
+     * @param uuid       The {@link UUID} of the member to be added.
+     * @return true if the member was successfully added, false otherwise.
      */
-    boolean bankSupportsCurrency(UUID uuid, String currency);
+    boolean addAccountMember(final String pluginName, final UUID accountID, final UUID uuid);
 
     /**
-     * A method which changes the name associated with the given UUID in the
-     * Map<UUID, String> received from {@link #getBankUUIDNameMap()}.
+     * Adds a member to an account with the specified initial permissions.
      *
-     * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid UUID which is having a name change.
-     * @param name name that will be associated with the UUID in the 
-     *             Map<UUID, String> map.
-     * @return true if the name change is successful.
+     * @param pluginName The name of the plugin.
+     * @param accountID The {@link UUID} of the account.
+     * @param uuid The {@link UUID} of the member to be added.
+     * @param initialPermissions The initial permissions to be assigned to the member. The values for
+     *                           these should be assumed to be "true."
+     * @return true if the member was added successfully, false otherwise.
      */
-    boolean renameBankAccount(String pluginName, UUID uuid, String name);
+    boolean addAccountMember(final String pluginName, final UUID accountID, final UUID uuid, final AccountPermission... initialPermissions);
 
     /**
-     * Returns the amount the bank has.
+     * Removes a member from an account.
      *
-     * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid UUID of the account.
-     * @return amount which the bank holds as a balance.
+     * @param pluginName the name of the plugin managing the account
+     * @param accountID the {@link UUID} of the account
+     * @param uuid the {@link UUID} of the member to be removed
+     * @return true if the member was successfully removed, false otherwise
      */
-    @NotNull
-    BigDecimal bankBalance(String pluginName, UUID uuid);
+    boolean removeAccountMember(final String pluginName, final UUID accountID, final UUID uuid);
 
     /**
-     * Returns the amount the bank has.
+     * Checks if the specified account has the given permission for the given plugin.
      *
-     * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid UUID of the account.
-     * @param currency the currency to use.
-     * @return amount which the bank holds as a balance.
+     * @param pluginName   the name of the plugin to check permission for
+     * @param accountID    the {@link UUID} of the account
+     * @param uuid         the {@link UUID} to check for the permission
+     * @param permission   the permission to check for
+     * @return true if the account has the specified permission, false otherwise
      */
-    @NotNull
-    BigDecimal bankBalance(String pluginName, UUID uuid, String currency);
+    boolean hasAccountPermission(final String pluginName, final UUID accountID, final UUID uuid, final AccountPermission permission);
 
     /**
-     * Returns true or false whether the bank has the amount specified - DO NOT USE
-     * NEGATIVE AMOUNTS.
+     * Updates the account permission for a specific plugin and user.
      *
-     * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid   UUID of the account.
-     * @param amount to check for
-     * @return true if the bank has the given amount.
+     * @param pluginName   the name of the plugin
+     * @param accountID    the {@link UUID} of the account
+     * @param uuid         the {@link UUID} to update the permission for
+     * @param permission   the new account permissions to set
+     * @param value        the new permission value to set for this value
+     * @return true if the account permission was successfully updated, false otherwise
      */
-    boolean bankHas(String pluginName, UUID uuid, BigDecimal amount);
-
-    /**
-     * Returns true or false whether the bank has the amount specified - DO NOT USE
-     * NEGATIVE AMOUNTS.
-     *
-     * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid   UUID of the account.
-     * @param currency the currency to use.
-     * @param amount to check for
-     * @return true if the bank has the given amount.
-     */
-    boolean bankHas(String pluginName, UUID uuid, String currency, BigDecimal amount);
-
-    /**
-     * Withdraw an amount from a bank account - DO NOT USE NEGATIVE AMOUNTS.
-     *
-     * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid   UUID of the account.
-     * @param amount to withdraw.
-     * @return {@link EconomyResponse} which includes the Economy plugin's
-     *         {@link ResponseType} as to whether the transaction was a Success,
-     *         Failure, Unsupported.
-     */
-    @NotNull
-    EconomyResponse bankWithdraw(String pluginName, UUID uuid, BigDecimal amount);
-
-    /**
-     * Withdraw an amount from a bank account - DO NOT USE NEGATIVE AMOUNTS.
-     *
-     * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid   UUID of the account.
-     * @param currency the currency to use.
-     * @param amount to withdraw.
-     * @return {@link EconomyResponse} which includes the Economy plugin's
-     *         {@link ResponseType} as to whether the transaction was a Success,
-     *         Failure, Unsupported.
-     */
-    @NotNull
-    EconomyResponse bankWithdraw(String pluginName, UUID uuid, String currency, BigDecimal amount);
-
-    /**
-     * Deposit an amount into a bank account - DO NOT USE NEGATIVE AMOUNTS.
-     *
-     * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid   UUID of the account.
-     * @param amount to deposit.
-     * @return {@link EconomyResponse} which includes the Economy plugin's
-     *         {@link ResponseType} as to whether the transaction was a Success,
-     *         Failure, Unsupported.
-     */
-    @NotNull
-    EconomyResponse bankDeposit(String pluginName, UUID uuid, BigDecimal amount);
-
-    /**
-     * Deposit an amount into a bank account - DO NOT USE NEGATIVE AMOUNTS.
-     *
-     * @param pluginName The name of the plugin that is calling the method.
-     * @param uuid   UUID of the account.
-     * @param currency the currency to use.
-     * @param amount to deposit.
-     * @return {@link EconomyResponse} which includes the Economy plugin's
-     *         {@link ResponseType} as to whether the transaction was a Success,
-     *         Failure, Unsupported.
-     */
-    @NotNull
-    EconomyResponse bankDeposit(String pluginName, UUID uuid, String currency, BigDecimal amount);
-
-    /**
-     * Check if a UUID is the owner of a bank account.
-     *
-     * @param uuid     UUID of the player/object who might be an owner.
-     * @param bankUUID UUID of the bank account to check ownership of.
-     * @return true if the uuid is the owner of the bank associated with bankUUID.
-     */
-    boolean isBankOwner(UUID uuid, UUID bankUUID);
-
-    /**
-     * Check if the UUID is a member of the bank account
-     *
-     * @param uuid     UUID of the player/object who might be a member.
-     * @param bankUUID UUID of the bank account to check membership of.
-     * @return @return true if the uuid is a member of the bank associated with bankUUID.
-     */
-    boolean isBankMember(UUID uuid, UUID bankUUID);
-
-    /**
-     * Gets the list of banks' UUIDs.
-     * 
-     * @return the List of Banks' UUIDs.
-     */
-    Collection<UUID> getBanks();
+    boolean updateAccountPermission(final String pluginName, final UUID accountID, final UUID uuid, final AccountPermission permission, final boolean value);
 }
