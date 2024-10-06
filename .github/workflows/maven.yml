@@ -29,8 +29,8 @@ jobs:
         restore-keys: ${{ runner.os }}-m2
     - name: Build Release
       run: mvn -B package --file pom.xml
-    - name: Build javadoc
-      run: mvn -B javadoc:jar --file pom.xml
+    #- name: Build javadoc
+    #  run: mvn -B javadoc:jar --file pom.xml
     - name: Stage the artifact
       run: mkdir staging && cp target/*.jar staging
     - uses: actions/upload-artifact@v3
