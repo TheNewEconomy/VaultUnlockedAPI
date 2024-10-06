@@ -16,6 +16,7 @@
 
 package net.milkbowl.vault2.economy;
 
+import net.kyori.adventure.text.Component;
 import net.milkbowl.vault2.economy.EconomyResponse.ResponseType;
 import org.jetbrains.annotations.NotNull;
 
@@ -84,13 +85,38 @@ public interface Economy {
      * Plugins use this method to format a given BigDecimal amount into a human-readable
      * amount using your economy plugin's currency names/conventions.
      *
-     * @param pluginName The name of the plugin that is calling the method.
      * @param amount to format.
      *
      * @return Human-readable string describing amount, ie 5 Dollars or 5.55 Pounds.
+     * @deprecated Use {@link #format(String, BigDecimal)} instead.
      */
     @NotNull
-    String format(final String pluginName, BigDecimal amount);
+    String format(BigDecimal amount);
+
+    /**
+     * Plugins use this method to format a given BigDecimal amount into a human-readable
+     * amount using your economy plugin's currency names/conventions.
+     *
+     * @param pluginName The name of the plugin that is calling the method.
+     * @param amount to format.
+     *
+     * @return Human-readable {@link Component text component} describing amount, ie 5 Dollars or 5.55 Pounds.
+     */
+    @NotNull
+    Component format(final String pluginName, BigDecimal amount);
+
+    /**
+     * Plugins use this method to format a given BigDecimal amount into a human-readable
+     * amount using your economy plugin's currency names/conventions.
+     *
+     * @param amount to format.
+     * @param currency the currency to use for the format.
+     *
+     * @return Human-readable string describing amount, ie 5 Dollars or 5.55 Pounds.
+     * @deprecated Use {@link #format(String, BigDecimal, String)} instead.
+     */
+    @NotNull
+    String format(BigDecimal amount, final String currency);
 
     /**
      * Plugins use this method to format a given BigDecimal amount into a human-readable
@@ -100,10 +126,10 @@ public interface Economy {
      * @param amount to format.
      * @param currency the currency to use for the format.
      *
-     * @return Human-readable string describing amount, ie 5 Dollars or 5.55 Pounds.
+     * @return Human-readable {@link Component text component} describing amount, ie 5 Dollars or 5.55 Pounds.
      */
     @NotNull
-    String format(final String pluginName, BigDecimal amount, final String currency);
+    Component format(final String pluginName, BigDecimal amount, final String currency);
 
     /**
      * Returns true if a currency with the specified name exists.
