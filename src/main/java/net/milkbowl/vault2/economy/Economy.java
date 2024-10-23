@@ -91,7 +91,7 @@ public interface Economy {
      */
     @NotNull
     @Deprecated
-    String format(BigDecimal amount);
+    String format(final BigDecimal amount);
 
     /**
      * Plugins use this method to format a given BigDecimal amount into a human-readable
@@ -103,7 +103,7 @@ public interface Economy {
      * @return Human-readable String describing amount, ie 5 Dollars or 5.55 Pounds.
      */
     @NotNull
-    String format(final String pluginName, BigDecimal amount);
+    String format(final String pluginName, final BigDecimal amount);
 
     /**
      * Plugins use this method to format a given BigDecimal amount into a human-readable
@@ -117,7 +117,7 @@ public interface Economy {
      */
     @NotNull
     @Deprecated
-    String format(BigDecimal amount, final String currency);
+    String format(final BigDecimal amount, final String currency);
 
     /**
      * Plugins use this method to format a given BigDecimal amount into a human-readable
@@ -130,7 +130,7 @@ public interface Economy {
      * @return Human-readable String describing amount, ie 5 Dollars or 5.55 Pounds.
      */
     @NotNull
-    String format(final String pluginName, BigDecimal amount, final String currency);
+    String format(final String pluginName, final BigDecimal amount, final String currency);
 
     /**
      * Returns true if a currency with the specified name exists.
@@ -193,7 +193,7 @@ public interface Economy {
      * @param name UUID associated with the account.
      * @return true if the account creation was successful.
      */
-    boolean createAccount(UUID accountID, final String name);
+    boolean createAccount(final UUID accountID, final String name);
 
     /**
      * Attempts to create an account for the given UUID on the specified world
@@ -205,7 +205,7 @@ public interface Economy {
      * @param worldName String name of the world.
      * @return if the account creation was successful
      */
-    boolean createAccount(UUID accountID, final String name, final String worldName);
+    boolean createAccount(final UUID accountID, final String name, final String worldName);
 
     /**
      * Returns a map that represents all the UUIDs which have accounts in the
@@ -225,7 +225,7 @@ public interface Economy {
      * @return An optional containing the last known name if the account exists, otherwise an empty
      * optional.
      */
-    Optional<String> getAccountName(UUID accountID);
+    Optional<String> getAccountName(final UUID accountID);
 
     /**
      * Checks if this UUID has an account yet.
@@ -233,7 +233,7 @@ public interface Economy {
      * @param accountID UUID to check for an existing account.
      * @return true if the UUID has an account.
      */
-    boolean hasAccount(UUID accountID);
+    boolean hasAccount(final UUID accountID);
 
     /**
      * Checks if this UUID has an account yet on the given world.
@@ -242,7 +242,7 @@ public interface Economy {
      * @param worldName world-specific account.
      * @return if the UUID has an account.
      */
-    boolean hasAccount(UUID accountID, final String worldName);
+    boolean hasAccount(final UUID accountID, final String worldName);
 
     /**
      * A method which changes the name associated with the given UUID in the
@@ -253,7 +253,27 @@ public interface Economy {
      *             Map<UUID, final String> map.
      * @return true if the name change is successful.
      */
-    boolean renameAccount(UUID accountID, final String name);
+    boolean renameAccount(final UUID accountID, final String name);
+
+    /**
+     * Renames the account with the specified ID in the given plugin to the new name.
+     *
+     * @param plugin The plugin name where the account exists
+     * @param accountID The unique identifier of the account to be renamed
+     * @param name The new name to assign to the account
+     *
+     * @return true if the rename operation was successful, false otherwise
+     */
+    boolean renameAccount(final String plugin, final UUID accountID, final String name);
+
+    /**
+     * Deletes the account associated with the specified UUID.
+     *
+     * @param plugin the name of the plugin managing the account
+     * @param accountID the UUID of the account to be deleted
+     * @return true if the account was successfully deleted, false otherwise
+     */
+    boolean deleteAccount(final String plugin, final UUID accountID);
 
     /*
      * Account balance related methods follow.
