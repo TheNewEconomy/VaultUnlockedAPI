@@ -187,13 +187,24 @@ public interface Economy {
      */
 
     /**
-     * Attempts to create a account for the given UUID.
+     * Attempts to create an account for the given UUID.
      * 
      * @param accountID UUID associated with the account.
      * @param name UUID associated with the account.
      * @return true if the account creation was successful.
      */
     boolean createAccount(final UUID accountID, final String name);
+
+    /**
+     * Creates a new account with the provided information.
+     *
+     * @param accountID The UUID of the account to be created.
+     * @param name The name associated with the account.
+     * @param player A flag indicating if the account is a player account.
+     *
+     * @return true if the account was successfully created, false otherwise.
+     */
+    boolean createAccount(final UUID accountID, final String name, final boolean player);
 
     /**
      * Attempts to create an account for the given UUID on the specified world
@@ -206,6 +217,18 @@ public interface Economy {
      * @return if the account creation was successful
      */
     boolean createAccount(final UUID accountID, final String name, final String worldName);
+
+    /**
+     * Creates a new account with the given parameters.
+     *
+     * @param accountID The UUID of the account to be created.
+     * @param name The name of the account holder.
+     * @param worldName The world name associated with the account.
+     * @param player A boolean indicating if the account belongs to a player.
+     *
+     * @return True if the account was successfully created, false otherwise.
+     */
+    boolean createAccount(final UUID accountID, final String name, final String worldName, final boolean player);
 
     /**
      * Returns a map that represents all the UUIDs which have accounts in the
