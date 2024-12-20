@@ -188,6 +188,9 @@ public interface Economy {
 
     /**
      * Attempts to create an account for the given UUID.
+     *
+     * @deprecated This method is deprecated, and has been replaced by {@link #createAccount(UUID, String, String, boolean)}.
+     * This allows economy plugins to know exactly if the account is a player or not. This will be removed after 3 releases.
      * 
      * @param accountID UUID associated with the account.
      * @param name UUID associated with the account.
@@ -210,6 +213,9 @@ public interface Economy {
      * Attempts to create an account for the given UUID on the specified world
      * IMPLEMENTATION SPECIFIC - if an economy plugin does not support this then
      * false will always be returned.
+     *
+     * @deprecated This method is deprecated, and has been replaced by {@link #createAccount(UUID, String, String, boolean)}.
+     * This allows economy plugins to know exactly if the account is a player or not. This will be removed after 3 releases.
      * 
      * @param accountID      UUID associated with the account.
      * @param name      UUID associated with the account.
