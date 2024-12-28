@@ -8,6 +8,7 @@ How to include the API with Maven:
         <url>https://repo.codemc.org/repository/maven-public</url>
     </repository>
 </repositories>
+
 <dependencies>
     <dependency>
         <groupId>net.milkbowl.vault</groupId>
@@ -75,7 +76,14 @@ along with Vault.  If not, see <http://www.gnu.org/licenses/>.
 VaultUnlockedAPI comes with all libraries needed to build from the current branch.
 
 ## Plugin Support
-While VaultUnlocked works with plugins that support the original Vault, 
+While VaultUnlocked works with plugins that support the original Vault, the VaultUnlocked-specific API adds enhanced functionality that plugins must implement specifically.
+For this, we have created a VaultUnlocked Support badge, which will be assigned to projects that meet a minimum specification outlined in [Minimum Spec Standard](EconomyBadge.md).
+
+### Economy Plugins
+Economy providers that have VaultUnlocked support.
+
+### Economy User Plugins
+Plugins that use VaultUnlocked to interface with Economy Plugins.
 
 ## Implementing VaultUnlocked
 Implementing VaultUnlocked is quite simple. It requires getting the Economy, Permission, or Chat service from the Bukkit ServiceManager. See the example below:
