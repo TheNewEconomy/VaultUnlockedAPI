@@ -74,6 +74,9 @@ along with Vault.  If not, see <http://www.gnu.org/licenses/>.
 ## Building
 VaultUnlockedAPI comes with all libraries needed to build from the current branch.
 
+## Plugin Support
+While VaultUnlocked works with plugins that support the original Vault, 
+
 ## Implementing VaultUnlocked
 Implementing VaultUnlocked is quite simple. It requires getting the Economy, Permission, or Chat service from the Bukkit ServiceManager. See the example below:
 
