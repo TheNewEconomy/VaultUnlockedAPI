@@ -29,7 +29,7 @@ Economy Plugins must implement the following core methods from the Economy inter
     - deleteAccount(String plugin, UUID accountID)
 
 4. **Account Balance Management:**
-    - getBalance(String pluginName, UUID accountID, String worldName, String currency)
+    - balance(String pluginName, UUID accountID, String worldName, String currency)
     - withdraw(String pluginName, UUID accountID, BigDecimal amount)
     - deposit(String pluginName, UUID accountID, BigDecimal amount)
 
