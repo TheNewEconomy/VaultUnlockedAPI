@@ -40,3 +40,67 @@ body:
       placeholder: https://github.com/TheNewEconomy/VaultUnlockedAPI
   validations:
       required: true
+
+### Economy Plugin Checklist
+
+- type: checkboxes
+  id: core-functionality
+  attributes:
+    label: Core Functionality
+    description: Implement all required functionality from the Economy interface.
+    options:
+      - label: "Fully implement all non-default methods from the Economy interface"
+        required: false
+      - label: "Implement boolean hasSharedAccountSupport()"
+        required: false
+      - label: "Implement boolean hasMultiCurrencySupport()"
+        required: false
+      - label: "Default to the base currency if multi-currency functionality is not supported"
+        required: false
+      - label: "Specify lack of multi-currency support on the project page or GitHub repository"
+        required: false
+
+- type: checkboxes
+  id: optional-features
+  attributes:
+    label: Optional Features
+    description: Implement optional shared account methods.
+    options:
+      - label: "Implement createSharedAccount(String pluginName, UUID accountID, String name, UUID owner)"
+        required: false
+      - label: "Implement isAccountOwner(String pluginName, UUID accountID, UUID uuid)"
+        required: false
+      - label: "Implement addAccountMember(String pluginName, UUID accountID, UUID uuid, AccountPermission... permissions)"
+        required: false
+      - label: "Implement removeAccountMember(String pluginName, UUID accountID, UUID uuid)"
+        required: false
+      - label: "Implement hasAccountPermission(String pluginName, UUID accountID, UUID uuid, AccountPermission permission)"
+        required: false
+      - label: "Implement updateAccountPermission(String pluginName, UUID accountID, UUID uuid, AccountPermission permission, boolean value)"
+        required: false
+
+- type: checkboxes
+  id: user-plugin-methods
+  attributes:
+    label: Economy User Plugin Methods
+    description: Implement the required methods for Economy User Plugins.
+    options:
+      - label: "Implement balance(String pluginName, UUID accountID)"
+        required: false
+      - label: "Implement withdraw(String pluginName, UUID accountID, BigDecimal amount)"
+        required: false
+      - label: "Implement deposit(String pluginName, UUID accountID, BigDecimal amount)"
+        required: false
+
+- type: checkboxes
+  id: multi-currency-support
+  attributes:
+    label: Multi-Currency Support
+    description: Verify and document multi-currency support.
+    options:
+      - label: "Properly implement hasMultiCurrencySupport() and ensure it returns true if supported"
+        required: false
+      - label: "Provide functional implementation for currencies()"
+        required: false
+      - label: "Provide functional implementation for getDefaultCurrency(String pluginName)"
+        required: false

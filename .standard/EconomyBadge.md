@@ -7,31 +7,15 @@ The following document outlines the minimum implementation standard required for
 ## **Standards Checklist**
 
 ### **1. Economy Plugins**
-Economy Plugins must implement the following core methods from the Economy interface to provide comprehensive economy functionality:
+Economy Plugins must implement the following core functionality from the Economy interface to provide comprehensive economy functionality:
 
-#### **Required Methods**
-1. **General Methods:**
-    - isEnabled()
-    - getName()
-
-2. **Currency Management:**
-    - hasMultiCurrencySupport()
-    - fractionalDigits(String pluginName)
-    - format(String pluginName, BigDecimal amount, String currency)
-    - getDefaultCurrency(String pluginName)
-    - currencies()
-
-3. **Account Management:**
-    - createAccount(UUID accountID, String name, boolean player)
-    - getUUIDNameMap()
-    - hasAccount(UUID accountID)
-    - renameAccount(UUID accountID, String name)
-    - deleteAccount(String plugin, UUID accountID)
-
-4. **Account Balance Management:**
-    - balance(String pluginName, UUID accountID, String worldName, String currency)
-    - withdraw(String pluginName, UUID accountID, BigDecimal amount)
-    - deposit(String pluginName, UUID accountID, BigDecimal amount)
+#### **Required Functionality**
+- Fully Implement the non-default methods.
+- Implement the methods for optional functionality:
+  - boolean hasSharedAccountSupport();
+  - boolean hasMultiCurrencySupport();
+- If your plugin doesn't support the multi-currency functionality, defaulting to your base currency, and
+specifying this on your project page, or GitHub repository.
 
 #### **Optional Features**
 Economy Plugins may optionally implement shared account and permission-related APIs:
@@ -46,12 +30,12 @@ Economy Plugins may optionally implement shared account and permission-related A
 ---
 
 ### **2. Economy User Plugins**
-Economy User Plugins, such as banks, chest shops, or auction houses, must implement a minimal set of methods from the Economy interface to interact with the active economy plugin:
+Economy User Plugins, such as banks, chest shops, or auction houses, must implement a minimal set of functionality from the Economy interface to achieve "minimum implementation."
 
 #### **Required Methods**
 
 1. **Account Balance Management:**
-    - getBalance(String pluginName, UUID accountID):
+    - balance(String pluginName, UUID accountID):
         - Retrieve the balance for a specific account.
     - withdraw(String pluginName, UUID accountID, BigDecimal amount):
         - Withdraw a specified amount from an account.
@@ -60,12 +44,15 @@ Economy User Plugins, such as banks, chest shops, or auction houses, must implem
 
 ---
 
+#### **Multi-Currency Support**
+If you're third-party plugin doesn't support using a different currency for your plugin, please make
+sure to have this specified on the project page, or GitHub repository.
+
 ### **3. Evidence of Multi-Currency Support (For Economy Plugins Only)**
 Economy Plugins must demonstrate multi-currency support by:
 - Properly implementing hasMultiCurrencySupport() and returning true if supported.
 - Providing functional implementations for:
     - currencies()
-    - format(String pluginName, BigDecimal amount, String currency)
     - getDefaultCurrency(String pluginName)
 
 ---
