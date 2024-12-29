@@ -85,7 +85,7 @@ public interface Economy {
      * amount using your economy plugin's currency names/conventions.
      *
      * @deprecated This method is deprecated as of version 2.8, and has been replaced by {@link #format(String, BigDecimal)}.
-     * This allows economy plugins to know exactly if the account is a player or not. This will be removed after 3 releases.
+     * This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.
      *
      * @param amount to format.
      *
@@ -112,7 +112,7 @@ public interface Economy {
      * amount using your economy plugin's currency names/conventions.
      *
      * @deprecated This method is deprecated as of version 2.8, and has been replaced by {@link #format(String, BigDecimal, String)}.
-     * This allows economy plugins to know exactly if the account is a player or not. This will be removed after 3 releases.
+     * This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.
      *
      * @param amount to format.
      * @param currency the currency to use for the format.
