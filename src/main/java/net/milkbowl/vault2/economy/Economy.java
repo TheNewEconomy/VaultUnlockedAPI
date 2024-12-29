@@ -84,10 +84,12 @@ public interface Economy {
      * Plugins use this method to format a given BigDecimal amount into a human-readable
      * amount using your economy plugin's currency names/conventions.
      *
+     * @deprecated This method is deprecated as of version 2.8, and has been replaced by {@link #format(String, BigDecimal)}.
+     * This allows economy plugins to know exactly if the account is a player or not. This will be removed after 3 releases.
+     *
      * @param amount to format.
      *
      * @return Human-readable string describing amount, ie 5 Dollars or 5.55 Pounds.
-     * @deprecated Use {@link #format(String, BigDecimal)} instead.
      */
     @NotNull
     @Deprecated
@@ -109,11 +111,13 @@ public interface Economy {
      * Plugins use this method to format a given BigDecimal amount into a human-readable
      * amount using your economy plugin's currency names/conventions.
      *
+     * @deprecated This method is deprecated as of version 2.8, and has been replaced by {@link #format(String, BigDecimal, String)}.
+     * This allows economy plugins to know exactly if the account is a player or not. This will be removed after 3 releases.
+     *
      * @param amount to format.
      * @param currency the currency to use for the format.
      *
      * @return Human-readable string describing amount, ie 5 Dollars or 5.55 Pounds.
-     * @deprecated Use {@link #format(String, BigDecimal, String)} instead.
      */
     @NotNull
     @Deprecated
@@ -190,13 +194,14 @@ public interface Economy {
     /**
      * Attempts to create an account for the given UUID.
      *
-     * @deprecated This method is deprecated, and has been replaced by {@link #createAccount(UUID, String, String, boolean)}.
+     * @deprecated This method is deprecated as of version 2.8, and has been replaced by {@link #createAccount(UUID, String, String, boolean)}.
      * This allows economy plugins to know exactly if the account is a player or not. This will be removed after 3 releases.
      * 
      * @param accountID UUID associated with the account.
      * @param name UUID associated with the account.
      * @return true if the account creation was successful.
      */
+    @Deprecated
     boolean createAccount(@NotNull final UUID accountID, @NotNull final String name);
 
     /**
@@ -215,7 +220,7 @@ public interface Economy {
      * IMPLEMENTATION SPECIFIC - if an economy plugin does not support this then
      * false will always be returned.
      *
-     * @deprecated This method is deprecated, and has been replaced by {@link #createAccount(UUID, String, String, boolean)}.
+     * @deprecated This method is deprecated as of version 2.8, and has been replaced by {@link #createAccount(UUID, String, String, boolean)}.
      * This allows economy plugins to know exactly if the account is a player or not. This will be removed after 3 releases.
      * 
      * @param accountID      UUID associated with the account.
@@ -223,6 +228,7 @@ public interface Economy {
      * @param worldName String name of the world.
      * @return if the account creation was successful
      */
+    @Deprecated
     boolean createAccount(@NotNull final UUID accountID, @NotNull final String name, @NotNull final String worldName);
 
     /**
@@ -334,12 +340,61 @@ public interface Economy {
     /**
      * Gets balance of an account associated with a UUID.
      *
+     * @deprecated This method is deprecated as of version 2.9, and has been replaced by {@link #balance(String, UUID)}.
+     * This allows economy plugins to know exactly if the account is a player or not. This will be removed after 3 releases.
+     *
      * @param pluginName The name of the plugin that is calling the method.
      * @param accountID UUID of the account to get a balance for.
      * @return Amount currently held in account associated with the given UUID.
      */
     @NotNull
+    @Deprecated
     BigDecimal getBalance(@NotNull final String pluginName, @NotNull final UUID accountID);
+
+    /**
+     * Gets balance of a UUID on the specified world. IMPLEMENTATION SPECIFIC - if
+     * an economy plugin does not support this the global balance will be returned.
+     *
+     * @deprecated This method is deprecated as of version 2.9, and has been replaced by {@link #balance(String, UUID, String)}.
+     * This allows economy plugins to know exactly if the account is a player or not. This will be removed after 3 releases.
+     *
+     * @param pluginName The name of the plugin that is calling the method.
+     * @param accountID  UUID of the account to get a balance for.
+     * @param world name of the world.
+     * @return Amount currently held in account associated with the given UUID.
+     */
+    @NotNull
+    @Deprecated
+    BigDecimal getBalance(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String world);
+
+    /**
+     * Gets balance of a UUID on the specified world. IMPLEMENTATION SPECIFIC - if
+     * an economy plugin does not support this the global balance will be returned.
+     *
+     * @deprecated This method is deprecated as of version 2.9, and has been replaced by {@link #balance(String, UUID, String, String)}.
+     * This allows economy plugins to know exactly if the account is a player or not. This will be removed after 3 releases.
+     *
+     * @param pluginName The name of the plugin that is calling the method.
+     * @param accountID  UUID of the account to get a balance for.
+     * @param world name of the world.
+     * @param currency the currency to use.
+     * @return Amount currently held in account associated with the given UUID.
+     */
+    @NotNull
+    @Deprecated
+    BigDecimal getBalance(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String world, @NotNull final String currency);
+
+    /**
+     * Gets balance of an account associated with a UUID.
+     *
+     * @param pluginName The name of the plugin that is calling the method.
+     * @param accountID UUID of the account to get a balance for.
+     * @return Amount currently held in account associated with the given UUID.
+     */
+    @NotNull
+    default BigDecimal balance(@NotNull final String pluginName, @NotNull final UUID accountID) {
+        return getBalance(pluginName, accountID);
+    }
 
     /**
      * Gets balance of a UUID on the specified world. IMPLEMENTATION SPECIFIC - if
@@ -351,7 +406,9 @@ public interface Economy {
      * @return Amount currently held in account associated with the given UUID.
      */
     @NotNull
-    BigDecimal getBalance(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String world);
+    default BigDecimal balance(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String world) {
+        return getBalance(pluginName, accountID, world);
+    }
 
     /**
      * Gets balance of a UUID on the specified world. IMPLEMENTATION SPECIFIC - if
@@ -364,7 +421,9 @@ public interface Economy {
      * @return Amount currently held in account associated with the given UUID.
      */
     @NotNull
-    BigDecimal getBalance(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String world, @NotNull final String currency);
+    default BigDecimal balance(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String world, @NotNull final String currency) {
+        return getBalance(pluginName, accountID, world, currency);
+    }
 
     /**
      * Checks if the account associated with the given UUID has the amount - DO NOT
