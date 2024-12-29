@@ -1,4 +1,4 @@
-# VaultUnlockedAPI - Abstraction Library API for Bukkit Plugins - [![Build Status](https://ci.codemc.io/job/creatorfromhell/job/VaultUnlockedAPI/badge/icon)](https://ci.codemc.io/job/creatorfromhell/job/VaultUnlockedAPI/)
+# VaultUnlockedAPI - Abstraction Library API for Bukkit Plugins - [![Build Status](https://ci.codemc.io/job/creatorfromhell/job/VaultUnlockedAPI/badge/icon)](https://ci.codemc.io/job/creatorfromhell/job/VaultUnlockedAPI/) [![Economy Badge](https://github.com/TheNewEconomy/VaultUnlockedAPI/blob/master/.badge/economy%20badge.png)](https://github.com/TheNewEconomy/VaultUnlockedAPI)
 
 How to include the API with Maven: 
 ```xml
