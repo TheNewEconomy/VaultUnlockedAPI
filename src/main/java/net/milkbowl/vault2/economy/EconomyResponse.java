@@ -15,6 +15,8 @@
  */
 package net.milkbowl.vault2.economy;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.math.BigDecimal;
 
 /**
@@ -36,7 +38,7 @@ public class EconomyResponse {
 
         private int id;
 
-        ResponseType(int id) {
+        ResponseType(final int id) {
             this.id = id;
         }
 
@@ -70,7 +72,7 @@ public class EconomyResponse {
      * @param type Success or failure type of the operation
      * @param errorMessage Error message if necessary (commonly null)
      */
-    public EconomyResponse(BigDecimal amount, BigDecimal balance, ResponseType type, String errorMessage) {
+    public EconomyResponse(@NotNull final BigDecimal amount, @NotNull final BigDecimal balance, @NotNull final ResponseType type, @NotNull final String errorMessage) {
         this.amount = amount;
         this.balance = balance;
         this.type = type;

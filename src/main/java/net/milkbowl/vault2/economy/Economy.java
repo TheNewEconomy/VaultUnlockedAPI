@@ -78,20 +78,22 @@ public interface Economy {
      *         if no rounding occurs.
      */
     @NotNull
-    int fractionalDigits(final String pluginName);
+    int fractionalDigits(@NotNull final String pluginName);
 
     /**
      * Plugins use this method to format a given BigDecimal amount into a human-readable
      * amount using your economy plugin's currency names/conventions.
      *
+     * @deprecated This method is deprecated as of version 2.8, and has been replaced by {@link #format(String, BigDecimal)}.
+     * This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.
+     *
      * @param amount to format.
      *
      * @return Human-readable string describing amount, ie 5 Dollars or 5.55 Pounds.
-     * @deprecated Use {@link #format(String, BigDecimal)} instead.
      */
     @NotNull
     @Deprecated
-    String format(final BigDecimal amount);
+    String format(@NotNull final BigDecimal amount);
 
     /**
      * Plugins use this method to format a given BigDecimal amount into a human-readable
@@ -103,21 +105,23 @@ public interface Economy {
      * @return Human-readable String describing amount, ie 5 Dollars or 5.55 Pounds.
      */
     @NotNull
-    String format(final String pluginName, final BigDecimal amount);
+    String format(@NotNull final String pluginName, @NotNull final BigDecimal amount);
 
     /**
      * Plugins use this method to format a given BigDecimal amount into a human-readable
      * amount using your economy plugin's currency names/conventions.
      *
+     * @deprecated This method is deprecated as of version 2.8, and has been replaced by {@link #format(String, BigDecimal, String)}.
+     * This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.
+     *
      * @param amount to format.
      * @param currency the currency to use for the format.
      *
      * @return Human-readable string describing amount, ie 5 Dollars or 5.55 Pounds.
-     * @deprecated Use {@link #format(String, BigDecimal, String)} instead.
      */
     @NotNull
     @Deprecated
-    String format(final BigDecimal amount, final String currency);
+    String format(@NotNull final BigDecimal amount, @NotNull final String currency);
 
     /**
      * Plugins use this method to format a given BigDecimal amount into a human-readable
@@ -130,7 +134,7 @@ public interface Economy {
      * @return Human-readable String describing amount, ie 5 Dollars or 5.55 Pounds.
      */
     @NotNull
-    String format(final String pluginName, final BigDecimal amount, final String currency);
+    String format(@NotNull final String pluginName, @NotNull final BigDecimal amount, @NotNull final String currency);
 
     /**
      * Returns true if a currency with the specified name exists.
@@ -139,7 +143,7 @@ public interface Economy {
      *
      * @return true if a currency with the specified name exists.
      */
-    boolean hasCurrency(final String currency);
+    boolean hasCurrency(@NotNull final String currency);
 
     /**
      * Used to get the default currency. This could be the default currency for the server globally or
@@ -151,7 +155,7 @@ public interface Economy {
      *
      */
     @NotNull
-    String getDefaultCurrency(final String pluginName);
+    String getDefaultCurrency(@NotNull final String pluginName);
 
     /**
      * Returns the name of the default currency in plural form. If the economy being used
@@ -161,7 +165,7 @@ public interface Economy {
      * @return name of the currency (plural) ie: Dollars or Pounds.
      */
     @NotNull
-    String defaultCurrencyNamePlural(final String pluginName);
+    String defaultCurrencyNamePlural(@NotNull final String pluginName);
 
     /**
      * Returns the name of the default currency in singular form. If the economy being used
@@ -171,7 +175,7 @@ public interface Economy {
      * @return name of the currency (singular) ie: Dollar or Pound.
      */
     @NotNull
-    String defaultCurrencyNameSingular(final String pluginName);
+    String defaultCurrencyNameSingular(@NotNull final String pluginName);
 
     /**
      * Returns a list of currencies used by the economy plugin. These are able to be used
@@ -180,6 +184,7 @@ public interface Economy {
      * @return list of currencies used by the economy plugin. These are able to be used
      * in the calls in the methods of the API.
      */
+    @NotNull
     Collection<String> currencies();
 
     /*
@@ -189,14 +194,15 @@ public interface Economy {
     /**
      * Attempts to create an account for the given UUID.
      *
-     * @deprecated This method is deprecated, and has been replaced by {@link #createAccount(UUID, String, String, boolean)}.
-     * This allows economy plugins to know exactly if the account is a player or not. This will be removed after 3 releases.
+     * @deprecated This method is deprecated as of version 2.8, and has been replaced by {@link #createAccount(UUID, String, String, boolean)}.
+     * This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.
      * 
      * @param accountID UUID associated with the account.
      * @param name UUID associated with the account.
      * @return true if the account creation was successful.
      */
-    boolean createAccount(final UUID accountID, final String name);
+    @Deprecated
+    boolean createAccount(@NotNull final UUID accountID, @NotNull final String name);
 
     /**
      * Creates a new account with the provided information.
@@ -207,22 +213,23 @@ public interface Economy {
      *
      * @return true if the account was successfully created, false otherwise.
      */
-    boolean createAccount(final UUID accountID, final String name, final boolean player);
+    boolean createAccount(@NotNull final UUID accountID, @NotNull final String name, final boolean player);
 
     /**
      * Attempts to create an account for the given UUID on the specified world
      * IMPLEMENTATION SPECIFIC - if an economy plugin does not support this then
      * false will always be returned.
      *
-     * @deprecated This method is deprecated, and has been replaced by {@link #createAccount(UUID, String, String, boolean)}.
-     * This allows economy plugins to know exactly if the account is a player or not. This will be removed after 3 releases.
+     * @deprecated This method is deprecated as of version 2.8, and has been replaced by {@link #createAccount(UUID, String, String, boolean)}.
+     * This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.
      * 
      * @param accountID      UUID associated with the account.
      * @param name      UUID associated with the account.
      * @param worldName String name of the world.
      * @return if the account creation was successful
      */
-    boolean createAccount(final UUID accountID, final String name, final String worldName);
+    @Deprecated
+    boolean createAccount(@NotNull final UUID accountID, @NotNull final String name, @NotNull final String worldName);
 
     /**
      * Creates a new account with the given parameters.
@@ -234,7 +241,7 @@ public interface Economy {
      *
      * @return True if the account was successfully created, false otherwise.
      */
-    boolean createAccount(final UUID accountID, final String name, final String worldName, final boolean player);
+    boolean createAccount(@NotNull final UUID accountID, @NotNull final String name, @NotNull final String worldName, final boolean player);
 
     /**
      * Returns a map that represents all the UUIDs which have accounts in the
@@ -244,6 +251,7 @@ public interface Economy {
      * @return a {@link Map} composed of the accounts keyed by their UUID, along
      *         with their associated last-known-name.
      */
+    @NotNull
     Map<UUID, String> getUUIDNameMap();
 
     /**
@@ -254,7 +262,7 @@ public interface Economy {
      * @return An optional containing the last known name if the account exists, otherwise an empty
      * optional.
      */
-    Optional<String> getAccountName(final UUID accountID);
+    Optional<String> getAccountName(@NotNull final UUID accountID);
 
     /**
      * Checks if this UUID has an account yet.
@@ -262,7 +270,7 @@ public interface Economy {
      * @param accountID UUID to check for an existing account.
      * @return true if the UUID has an account.
      */
-    boolean hasAccount(final UUID accountID);
+    boolean hasAccount(@NotNull final UUID accountID);
 
     /**
      * Checks if this UUID has an account yet on the given world.
@@ -271,18 +279,18 @@ public interface Economy {
      * @param worldName world-specific account.
      * @return if the UUID has an account.
      */
-    boolean hasAccount(final UUID accountID, final String worldName);
+    boolean hasAccount(@NotNull final UUID accountID, @NotNull final String worldName);
 
     /**
      * A method which changes the name associated with the given UUID in the
-     * Map<UUID, final String> received from {@link #getUUIDNameMap()}.
+     * Map<UUID, @NotNull final String> received from {@link #getUUIDNameMap()}.
      * 
      * @param accountID UUID whose account is having a name change.
      * @param name String name that will be associated with the UUID in the 
-     *             Map<UUID, final String> map.
+     *             Map<UUID, @NotNull final String> map.
      * @return true if the name change is successful.
      */
-    boolean renameAccount(final UUID accountID, final String name);
+    boolean renameAccount(@NotNull final UUID accountID, @NotNull final String name);
 
     /**
      * Renames the account with the specified ID in the given plugin to the new name.
@@ -293,7 +301,7 @@ public interface Economy {
      *
      * @return true if the rename operation was successful, false otherwise
      */
-    boolean renameAccount(final String plugin, final UUID accountID, final String name);
+    boolean renameAccount(@NotNull final String plugin, @NotNull final UUID accountID, @NotNull final String name);
 
     /**
      * Deletes the account associated with the specified UUID.
@@ -302,7 +310,7 @@ public interface Economy {
      * @param accountID the UUID of the account to be deleted
      * @return true if the account was successfully deleted, false otherwise
      */
-    boolean deleteAccount(final String plugin, final UUID accountID);
+    boolean deleteAccount(@NotNull final String plugin, @NotNull final UUID accountID);
 
     /*
      * Account balance related methods follow.
@@ -316,7 +324,7 @@ public interface Economy {
      * @param currency  the currency to check support for
      * @return true if the account supports the currency, false otherwise
      */
-    boolean accountSupportsCurrency(final String plugin, final UUID accountID, final String currency);
+    boolean accountSupportsCurrency(@NotNull final String plugin, @NotNull final UUID accountID, @NotNull final String currency);
 
     /**
      * Checks if the given account supports the specified currency in the given world.
@@ -327,7 +335,54 @@ public interface Economy {
      * @param world    the name of the world to check in
      * @return true if the account supports the currency in the world, false otherwise
      */
-    boolean accountSupportsCurrency(final String plugin, final UUID accountID, final String currency, final String world);
+    boolean accountSupportsCurrency(@NotNull final String plugin, @NotNull final UUID accountID, @NotNull final String currency, @NotNull final String world);
+
+    /**
+     * Gets balance of an account associated with a UUID.
+     *
+     * @deprecated This method is deprecated as of version 2.9, and has been replaced by {@link #balance(String, UUID)}.
+     * This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.
+     *
+     * @param pluginName The name of the plugin that is calling the method.
+     * @param accountID UUID of the account to get a balance for.
+     * @return Amount currently held in account associated with the given UUID.
+     */
+    @NotNull
+    @Deprecated
+    BigDecimal getBalance(@NotNull final String pluginName, @NotNull final UUID accountID);
+
+    /**
+     * Gets balance of a UUID on the specified world. IMPLEMENTATION SPECIFIC - if
+     * an economy plugin does not support this the global balance will be returned.
+     *
+     * @deprecated This method is deprecated as of version 2.9, and has been replaced by {@link #balance(String, UUID, String)}.
+     * This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.
+     *
+     * @param pluginName The name of the plugin that is calling the method.
+     * @param accountID  UUID of the account to get a balance for.
+     * @param world name of the world.
+     * @return Amount currently held in account associated with the given UUID.
+     */
+    @NotNull
+    @Deprecated
+    BigDecimal getBalance(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String world);
+
+    /**
+     * Gets balance of a UUID on the specified world. IMPLEMENTATION SPECIFIC - if
+     * an economy plugin does not support this the global balance will be returned.
+     *
+     * @deprecated This method is deprecated as of version 2.9, and has been replaced by {@link #balance(String, UUID, String, String)}.
+     * This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.
+     *
+     * @param pluginName The name of the plugin that is calling the method.
+     * @param accountID  UUID of the account to get a balance for.
+     * @param world name of the world.
+     * @param currency the currency to use.
+     * @return Amount currently held in account associated with the given UUID.
+     */
+    @NotNull
+    @Deprecated
+    BigDecimal getBalance(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String world, @NotNull final String currency);
 
     /**
      * Gets balance of an account associated with a UUID.
@@ -337,7 +392,9 @@ public interface Economy {
      * @return Amount currently held in account associated with the given UUID.
      */
     @NotNull
-    BigDecimal getBalance(final String pluginName, final UUID accountID);
+    default BigDecimal balance(@NotNull final String pluginName, @NotNull final UUID accountID) {
+        return getBalance(pluginName, accountID);
+    }
 
     /**
      * Gets balance of a UUID on the specified world. IMPLEMENTATION SPECIFIC - if
@@ -349,7 +406,9 @@ public interface Economy {
      * @return Amount currently held in account associated with the given UUID.
      */
     @NotNull
-    BigDecimal getBalance(final String pluginName, final UUID accountID, final String world);
+    default BigDecimal balance(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String world) {
+        return getBalance(pluginName, accountID, world);
+    }
 
     /**
      * Gets balance of a UUID on the specified world. IMPLEMENTATION SPECIFIC - if
@@ -362,7 +421,9 @@ public interface Economy {
      * @return Amount currently held in account associated with the given UUID.
      */
     @NotNull
-    BigDecimal getBalance(final String pluginName, final UUID accountID, final String world, final String currency);
+    default BigDecimal balance(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String world, @NotNull final String currency) {
+        return getBalance(pluginName, accountID, world, currency);
+    }
 
     /**
      * Checks if the account associated with the given UUID has the amount - DO NOT
@@ -373,7 +434,7 @@ public interface Economy {
      * @param amount the amount to check for.
      * @return True if <b>UUID</b> has <b>amount</b>, False else wise.
      */
-    boolean has(final String pluginName, final UUID accountID, final BigDecimal amount);
+    boolean has(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final BigDecimal amount);
 
     /**
      * Checks if the account associated with the given UUID has the amount in the
@@ -387,7 +448,7 @@ public interface Economy {
      * @return True if <b>UUID</b> has <b>amount</b> in the given <b>world</b>,
      *         False else wise.
      */
-    boolean has(final String pluginName, final UUID accountID, final String worldName, final BigDecimal amount);
+    boolean has(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String worldName, @NotNull final BigDecimal amount);
 
     /**
      * Checks if the account associated with the given UUID has the amount in the
@@ -402,7 +463,7 @@ public interface Economy {
      * @return True if <b>UUID</b> has <b>amount</b> in the given <b>world</b>,
      *         False else wise.
      */
-    boolean has(final String pluginName, final UUID accountID, final String worldName, final String currency, final BigDecimal amount);
+    boolean has(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String worldName, @NotNull final String currency, @NotNull final BigDecimal amount);
 
     /**
      * Withdraw an amount from an account associated with a UUID - DO NOT USE
@@ -416,7 +477,7 @@ public interface Economy {
      *         Failure, Unsupported.
      */
     @NotNull
-    EconomyResponse withdraw(final String pluginName, final UUID accountID, final BigDecimal amount);
+    EconomyResponse withdraw(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final BigDecimal amount);
 
     /**
      * Withdraw an amount from an account associated with a UUID on a given world -
@@ -432,7 +493,7 @@ public interface Economy {
      *         Failure, Unsupported.
      */
     @NotNull
-    EconomyResponse withdraw(final String pluginName, final UUID accountID, final String worldName, final BigDecimal amount);
+    EconomyResponse withdraw(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String worldName, @NotNull final BigDecimal amount);
 
     /**
      * Withdraw an amount from an account associated with a UUID on a given world -
@@ -449,7 +510,7 @@ public interface Economy {
      *         Failure, Unsupported.
      */
     @NotNull
-    EconomyResponse withdraw(final String pluginName, final UUID accountID, final String worldName, final String currency, final BigDecimal amount);
+    EconomyResponse withdraw(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String worldName, @NotNull final String currency, @NotNull final BigDecimal amount);
 
     /**
      * Deposit an amount to an account associated with the given UUID - DO NOT USE
@@ -463,7 +524,7 @@ public interface Economy {
      *         Failure, Unsupported.
      */
     @NotNull
-    EconomyResponse deposit(final String pluginName, final UUID accountID, final BigDecimal amount);
+    EconomyResponse deposit(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final BigDecimal amount);
 
     /**
      * Deposit an amount to an account associated with a UUID on a given world -
@@ -479,7 +540,7 @@ public interface Economy {
      *         Failure, Unsupported.
      */
     @NotNull
-    EconomyResponse deposit(final String pluginName, final UUID accountID, final String worldName, final BigDecimal amount);
+    EconomyResponse deposit(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String worldName, @NotNull final BigDecimal amount);
 
     /**
      * Deposit an amount to an account associated with a UUID on a given world -
@@ -496,7 +557,7 @@ public interface Economy {
      *         Failure, Unsupported.
      */
     @NotNull
-    EconomyResponse deposit(final String pluginName, final UUID accountID, final String worldName, final String currency, final BigDecimal amount);
+    EconomyResponse deposit(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String worldName, @NotNull final String currency, @NotNull final BigDecimal amount);
 
     /*
      * Shared Account Methods
@@ -511,7 +572,7 @@ public interface Economy {
      * @param owner      the {@link UUID} of the account owner
      * @return true if the shared account is successfully created, false otherwise
      */
-    boolean createSharedAccount(final String pluginName, final UUID accountID, final String name, final UUID owner);
+    boolean createSharedAccount(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String name, @NotNull final UUID owner);
 
     /**
      * Determines whether the specified owner ID is the owner of the account associated with the given account ID and plugin name.
@@ -521,7 +582,7 @@ public interface Economy {
      * @param uuid the {@link UUID} to check for ownership of the account
      * @return true if the owner ID is the owner of the account, false otherwise
      */
-    boolean isAccountOwner(final String pluginName, final UUID accountID, final UUID uuid);
+    boolean isAccountOwner(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final UUID uuid);
 
     /**
      * Sets the owner of a specified plugin to the given accountID.
@@ -531,7 +592,7 @@ public interface Economy {
      * @param uuid       The {@link UUID} of the account to set as the owner.
      * @return true if the owner is successfully set, false otherwise.
      */
-    boolean setOwner(final String pluginName, final UUID accountID, final UUID uuid);
+    boolean setOwner(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final UUID uuid);
 
     /**
      * Determines whether a specific member is an account member of a given plugin.
@@ -541,7 +602,7 @@ public interface Economy {
      * @param uuid The {@link UUID} to check for membership.
      * @return true if the member is an account member, false otherwise.
      */
-    boolean isAccountMember(final String pluginName, final UUID accountID, final UUID uuid);
+    boolean isAccountMember(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final UUID uuid);
 
     /**
      * Adds a member to an account.
@@ -551,7 +612,7 @@ public interface Economy {
      * @param uuid       The {@link UUID} of the member to be added.
      * @return true if the member was successfully added, false otherwise.
      */
-    boolean addAccountMember(final String pluginName, final UUID accountID, final UUID uuid);
+    boolean addAccountMember(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final UUID uuid);
 
     /**
      * Adds a member to an account with the specified initial permissions.
@@ -563,7 +624,7 @@ public interface Economy {
      *                           these should be assumed to be "true."
      * @return true if the member was added successfully, false otherwise.
      */
-    boolean addAccountMember(final String pluginName, final UUID accountID, final UUID uuid, final AccountPermission... initialPermissions);
+    boolean addAccountMember(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final UUID uuid, @NotNull final AccountPermission... initialPermissions);
 
     /**
      * Removes a member from an account.
@@ -573,7 +634,7 @@ public interface Economy {
      * @param uuid the {@link UUID} of the member to be removed
      * @return true if the member was successfully removed, false otherwise
      */
-    boolean removeAccountMember(final String pluginName, final UUID accountID, final UUID uuid);
+    boolean removeAccountMember(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final UUID uuid);
 
     /**
      * Checks if the specified account has the given permission for the given plugin.
@@ -584,7 +645,7 @@ public interface Economy {
      * @param permission   the permission to check for
      * @return true if the account has the specified permission, false otherwise
      */
-    boolean hasAccountPermission(final String pluginName, final UUID accountID, final UUID uuid, final AccountPermission permission);
+    boolean hasAccountPermission(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final UUID uuid, @NotNull final AccountPermission permission);
 
     /**
      * Updates the account permission for a specific plugin and user.
@@ -596,5 +657,5 @@ public interface Economy {
      * @param value        the new permission value to set for this value
      * @return true if the account permission was successfully updated, false otherwise
      */
-    boolean updateAccountPermission(final String pluginName, final UUID accountID, final UUID uuid, final AccountPermission permission, final boolean value);
+    boolean updateAccountPermission(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final UUID uuid, @NotNull final AccountPermission permission, final boolean value);
 }
