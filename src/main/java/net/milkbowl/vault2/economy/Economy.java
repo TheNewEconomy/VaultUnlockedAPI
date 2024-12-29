@@ -195,7 +195,7 @@ public interface Economy {
      * Attempts to create an account for the given UUID.
      *
      * @deprecated This method is deprecated as of version 2.8, and has been replaced by {@link #createAccount(UUID, String, String, boolean)}.
-     * This allows economy plugins to know exactly if the account is a player or not. This will be removed after 3 releases.
+     * This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.
      * 
      * @param accountID UUID associated with the account.
      * @param name UUID associated with the account.
@@ -221,7 +221,7 @@ public interface Economy {
      * false will always be returned.
      *
      * @deprecated This method is deprecated as of version 2.8, and has been replaced by {@link #createAccount(UUID, String, String, boolean)}.
-     * This allows economy plugins to know exactly if the account is a player or not. This will be removed after 3 releases.
+     * This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.
      * 
      * @param accountID      UUID associated with the account.
      * @param name      UUID associated with the account.
@@ -341,7 +341,7 @@ public interface Economy {
      * Gets balance of an account associated with a UUID.
      *
      * @deprecated This method is deprecated as of version 2.9, and has been replaced by {@link #balance(String, UUID)}.
-     * This allows economy plugins to know exactly if the account is a player or not. This will be removed after 3 releases.
+     * This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.
      *
      * @param pluginName The name of the plugin that is calling the method.
      * @param accountID UUID of the account to get a balance for.
@@ -356,7 +356,7 @@ public interface Economy {
      * an economy plugin does not support this the global balance will be returned.
      *
      * @deprecated This method is deprecated as of version 2.9, and has been replaced by {@link #balance(String, UUID, String)}.
-     * This allows economy plugins to know exactly if the account is a player or not. This will be removed after 3 releases.
+     * This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.
      *
      * @param pluginName The name of the plugin that is calling the method.
      * @param accountID  UUID of the account to get a balance for.
@@ -372,7 +372,7 @@ public interface Economy {
      * an economy plugin does not support this the global balance will be returned.
      *
      * @deprecated This method is deprecated as of version 2.9, and has been replaced by {@link #balance(String, UUID, String, String)}.
-     * This allows economy plugins to know exactly if the account is a player or not. This will be removed after 3 releases.
+     * This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.
      *
      * @param pluginName The name of the plugin that is calling the method.
      * @param accountID  UUID of the account to get a balance for.
