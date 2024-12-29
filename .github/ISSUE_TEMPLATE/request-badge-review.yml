@@ -68,6 +68,8 @@ body:
     options:
       - label: "Implement createSharedAccount(String pluginName, UUID accountID, String name, UUID owner)"
         required: false
+      - label: I confirm that I have not read these checkboxes, so I just ticked them all.
+        required: false
       - label: "Implement isAccountOwner(String pluginName, UUID accountID, UUID uuid)"
         required: false
       - label: "Implement addAccountMember(String pluginName, UUID accountID, UUID uuid, AccountPermission... permissions)"
