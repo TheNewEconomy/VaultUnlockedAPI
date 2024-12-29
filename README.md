@@ -77,7 +77,7 @@ VaultUnlockedAPI comes with all libraries needed to build from the current branc
 
 ## Plugin Support
 While VaultUnlocked works with plugins that support the original Vault, the VaultUnlocked-specific API adds enhanced functionality that plugins must implement specifically.
-For this, we have created a VaultUnlocked Support badge, which will be assigned to projects that meet a minimum specification outlined in [Minimum Spec Standard](standard/EconomyBadge.md).
+For this, we have created a VaultUnlocked Support badge, which will be assigned to projects that meet a minimum specification outlined in [Minimum Spec Standard](.standard/EconomyBadge.md).
 
 ### Economy Plugins
 Economy providers that have VaultUnlocked support.

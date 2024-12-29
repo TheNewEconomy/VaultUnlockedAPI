@@ -1,0 +1,42 @@
+name: BADGE REVIEW
+description: Request a review of a project for a Vault Unlocked Support Badge.
+title: "[BADGE REVIEW]: "
+labels: [ "badge review" ]
+assignees:
+- creatorfromhell
+
+body:
+- type: dropdown
+  id: dropdown-1
+  attributes:
+      label: Badge Type
+      description: The type of badge that is being requested.
+      options:
+      - Economy
+      default: 0
+  validations:
+      required: true
+- type: input
+  id: input-2
+  attributes:
+      label: Project Name
+      description: The name of your project
+      placeholder: Example Project
+  validations:
+      required: true
+- type: input
+  id: input-3
+  attributes:
+      label: Project URL
+      description: The URL of your project.
+      placeholder: https://tnemc.net
+  validations:
+      required: true
+- type: input
+  id: input-4
+  attributes:
+      label: Source URL
+      description: The source of your project.
+      placeholder: https://github.com/TheNewEconomy/VaultUnlockedAPI
+  validations:
+      required: true

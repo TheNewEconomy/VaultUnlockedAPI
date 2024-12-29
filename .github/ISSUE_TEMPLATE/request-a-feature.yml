@@ -1,0 +1,27 @@
+name: Feature Request
+description: Suggest a feature to be added in order to help Vault Unlocked improve.
+title: "[FEAT]: "
+labels: [ "feature" ]
+assignees:
+  - creatorfromhell
+
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping to improve Vault Unlocked with feature requests!
+  - type: textarea
+    attributes:
+      label: Feature Description
+      description: Describe the feature you're requesting to be added here.
+      placeholder: |
+        Example: "Add a new method that gives everyone funds!"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Reasoning
+      description: Why should this be added? What is the use-case?
+      placeholder: |
+        Example: "Global wealth!@#!@#!"
+    validations:
+      required: true
