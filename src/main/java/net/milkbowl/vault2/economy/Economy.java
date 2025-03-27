@@ -466,6 +466,81 @@ public interface Economy {
     boolean has(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String worldName, @NotNull final String currency, @NotNull final BigDecimal amount);
 
     /**
+     *
+     * Sets the amount of monies for a player.
+     *
+     * @param pluginName the name of the plugin setting the currency
+     * @param accountID the unique identifier of the player's account
+     * @param amount the amount of currency to set for the player in the specified world
+     * @return an EconomyResponse object indicating the result of the operation
+     */
+    default EconomyResponse set(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final BigDecimal amount) {
+
+        final BigDecimal balance = balance(pluginName, accountID);
+        final int compare = balance.compareTo(amount);
+        if(compare > 0) {
+            return withdraw(pluginName, accountID, balance.subtract(amount));
+        }
+
+        if(compare < 0) {
+            return deposit(pluginName, accountID, amount.subtract(balance));
+        }
+
+        return new EconomyResponse(BigDecimal.ZERO, amount, ResponseType.SUCCESS, "");
+    }
+
+    /**
+     *
+     * Sets the amount of monies for a player in a specific world.
+     *
+     * @param pluginName the name of the plugin setting the currency
+     * @param accountID the unique identifier of the player's account
+     * @param worldName the name of the world where the currency amount is being set
+     * @param amount the amount of currency to set for the player in the specified world
+     * @return an EconomyResponse object indicating the result of the operation
+     */
+    default EconomyResponse set(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String worldName, @NotNull final BigDecimal amount) {
+
+        final BigDecimal balance = balance(pluginName, accountID, worldName);
+        final int compare = balance.compareTo(amount);
+        if(compare > 0) {
+            return withdraw(pluginName, accountID, worldName, balance.subtract(amount));
+        }
+
+        if(compare < 0) {
+            return deposit(pluginName, accountID, worldName, amount.subtract(balance));
+        }
+
+        return new EconomyResponse(BigDecimal.ZERO, amount, ResponseType.SUCCESS, "");
+    }
+
+    /**
+     *
+     * Sets the amount of specified currency for a player in a specific world.
+     *
+     * @param pluginName the name of the plugin setting the currency
+     * @param accountID the unique identifier of the player's account
+     * @param worldName the name of the world where the currency amount is being set
+     * @param currency the name of the currency being set
+     * @param amount the amount of currency to set for the player in the specified world
+     * @return an EconomyResponse object indicating the result of the operation
+     */
+    default EconomyResponse set(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String worldName, @NotNull final String currency, @NotNull final BigDecimal amount) {
+
+        final BigDecimal balance = balance(pluginName, accountID, worldName, currency);
+        final int compare = balance.compareTo(amount);
+        if(compare > 0) {
+            return withdraw(pluginName, accountID, worldName, currency, balance.subtract(amount));
+        }
+
+        if(compare < 0) {
+            return deposit(pluginName, accountID, worldName, currency, amount.subtract(balance));
+        }
+
+        return new EconomyResponse(BigDecimal.ZERO, amount, ResponseType.SUCCESS, "");
+    }
+
+    /**
      * Withdraw an amount from an account associated with a UUID - DO NOT USE
      * NEGATIVE AMOUNTS.
      *
