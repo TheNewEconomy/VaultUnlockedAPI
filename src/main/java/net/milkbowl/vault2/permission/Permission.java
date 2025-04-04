@@ -192,6 +192,14 @@ public abstract class Permission {
     abstract public boolean playerAdd(String world, String player, String permission);
 
     /**
+     * Add permission to a player.
+     * Supports NULL value for World if the permission system registered supports global permissions.
+     * But May return odd values if the servers registered permission system does not have a global permission store.
+     *
+     * @param world String world name
+     * @param player to add to
+     * @param permission Permission node
+     * @return Success or Failure
      * @deprecated As of VaultAPI 1.4 use {@link #playerAdd(String, OfflinePlayer, String)} instead.
      */
     @Deprecated
