@@ -283,7 +283,7 @@ public interface Economy {
 
     /**
      * A method which changes the name associated with the given UUID in the
-     * Map<UUID, @NotNull final String> received from {@link #getUUIDNameMap()}.
+     * value returned from {@link #getUUIDNameMap()}.
      * 
      * @param accountID UUID whose account is having a name change.
      * @param name String name that will be associated with the UUID in the 
