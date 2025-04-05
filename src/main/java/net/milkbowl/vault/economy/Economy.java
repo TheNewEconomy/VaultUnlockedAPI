@@ -85,6 +85,7 @@ public interface Economy {
      * as all major economy plugins auto-generate a player account when the player joins the server
      *
      * @param playerName to check
+     * @return success true or false
      * @deprecated As of VaultAPI 1.4 use {@link #hasAccount(OfflinePlayer)} instead.
      */
     @Deprecated
@@ -107,6 +108,7 @@ public interface Economy {
      *
      * @param playerName to check in the world
      * @param worldName world-specific account
+     * @return success true or false
      * @deprecated As of VaultAPI 1.4 use {@link #hasAccount(OfflinePlayer, String)} instead.
      */
     @Deprecated
@@ -182,6 +184,13 @@ public interface Economy {
     boolean has(OfflinePlayer player, double amount);
 
     /**
+     * Checks if the player account has the amount in a given world - DO NOT USE NEGATIVE AMOUNTS
+     * IMPLEMENTATION SPECIFIC - if an economy plugin does not support this the global balance will be returned.
+     *
+     * @param playerName to check
+     * @param worldName to check with
+     * @param amount to check for
+     * @return True if <b>player</b> has <b>amount</b> in the given <b>world</b>, False else wise
      * @deprecated As of VaultAPI 1.4 use {@link #has(OfflinePlayer, String, double)} instead.
      */
     @Deprecated
@@ -219,6 +228,12 @@ public interface Economy {
     EconomyResponse withdrawPlayer(OfflinePlayer player, double amount);
 
     /**
+     * Withdraw an amount from a player on a given world - DO NOT USE NEGATIVE AMOUNTS
+     * IMPLEMENTATION SPECIFIC - if an economy plugin does not support this the global balance will be returned.
+     * @param playerName to withdraw from
+     * @param worldName - name of the world
+     * @param amount Amount to withdraw
+     * @return Detailed response of transaction
      * @deprecated As of VaultAPI 1.4 use {@link #withdrawPlayer(OfflinePlayer, String, double)} instead.
      */
     @Deprecated

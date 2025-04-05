@@ -286,8 +286,7 @@ public interface Economy {
      * value returned from {@link #getUUIDNameMap()}.
      * 
      * @param accountID UUID whose account is having a name change.
-     * @param name String name that will be associated with the UUID in the 
-     *             Map<UUID, @NotNull final String> map.
+     * @param name String name that will be associated with the UUID in the map.
      * @return true if the name change is successful.
      */
     boolean renameAccount(@NotNull final UUID accountID, @NotNull final String name);

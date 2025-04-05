@@ -522,6 +522,7 @@ public abstract class Permission {
      * @param world World Object
      * @param player to check
      * @param group Group name
+     * @return Success or Failure
      * @deprecated As of VaultAPI 1.4 use {@link #playerInGroup(String, OfflinePlayer, String)} instead.
      */
     @Deprecated
@@ -535,6 +536,7 @@ public abstract class Permission {
      * @param world World Object
      * @param player to check
      * @param group Group name
+     * @return Success or Failure
      * @deprecated As of VaultAPI 1.4 use {@link #playerInGroup(String, OfflinePlayer, String)} instead.
      */
     @Deprecated
