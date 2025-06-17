@@ -135,16 +135,16 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
-<td class="colLast"><span class="typeNameLabel">AbstractEconomy.</span><code><span class="memberNameLink"><a href="../../../../../net/milkbowl/vault/economy/AbstractEconomy.html#createBank-java.lang.String-org.bukkit.OfflinePlayer-">createBank</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-          org.bukkit.OfflinePlayer&nbsp;player)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Economy.</span><code><span class="memberNameLink"><a href="../../../../../net/milkbowl/vault/economy/Economy.html#createBank-java.lang.String-org.bukkit.OfflinePlayer-">createBank</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
           org.bukkit.OfflinePlayer&nbsp;player)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <div class="block">Creates a bank account with the specified name and the player as the owner</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
+<td class="colLast"><span class="typeNameLabel">AbstractEconomy.</span><code><span class="memberNameLink"><a href="../../../../../net/milkbowl/vault/economy/AbstractEconomy.html#createBank-java.lang.String-org.bukkit.OfflinePlayer-">createBank</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+          org.bukkit.OfflinePlayer&nbsp;player)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
@@ -164,24 +164,18 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
-<td class="colLast"><span class="typeNameLabel">AbstractEconomy.</span><code><span class="memberNameLink"><a href="../../../../../net/milkbowl/vault/economy/AbstractEconomy.html#depositPlayer-org.bukkit.OfflinePlayer-double-">depositPlayer</a></span>(org.bukkit.OfflinePlayer&nbsp;player,
-             double&nbsp;amount)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Economy.</span><code><span class="memberNameLink"><a href="../../../../../net/milkbowl/vault/economy/Economy.html#depositPlayer-org.bukkit.OfflinePlayer-double-">depositPlayer</a></span>(org.bukkit.OfflinePlayer&nbsp;player,
              double&nbsp;amount)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <div class="block">Deposit an amount to a player - DO NOT USE NEGATIVE AMOUNTS</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
-<td class="colLast"><span class="typeNameLabel">AbstractEconomy.</span><code><span class="memberNameLink"><a href="../../../../../net/milkbowl/vault/economy/AbstractEconomy.html#depositPlayer-org.bukkit.OfflinePlayer-java.lang.String-double-">depositPlayer</a></span>(org.bukkit.OfflinePlayer&nbsp;player,
-             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;worldName,
+<td class="colLast"><span class="typeNameLabel">AbstractEconomy.</span><code><span class="memberNameLink"><a href="../../../../../net/milkbowl/vault/economy/AbstractEconomy.html#depositPlayer-org.bukkit.OfflinePlayer-double-">depositPlayer</a></span>(org.bukkit.OfflinePlayer&nbsp;player,
              double&nbsp;amount)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Economy.</span><code><span class="memberNameLink"><a href="../../../../../net/milkbowl/vault/economy/Economy.html#depositPlayer-org.bukkit.OfflinePlayer-java.lang.String-double-">depositPlayer</a></span>(org.bukkit.OfflinePlayer&nbsp;player,
              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;worldName,
@@ -190,6 +184,12 @@
 <div class="block">Deposit an amount to a player on a given world - DO NOT USE NEGATIVE AMOUNTS
  IMPLEMENTATION SPECIFIC - if an economy plugin does not support this the global balance will be returned.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
+<td class="colLast"><span class="typeNameLabel">AbstractEconomy.</span><code><span class="memberNameLink"><a href="../../../../../net/milkbowl/vault/economy/AbstractEconomy.html#depositPlayer-org.bukkit.OfflinePlayer-java.lang.String-double-">depositPlayer</a></span>(org.bukkit.OfflinePlayer&nbsp;player,
+             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;worldName,
+             double&nbsp;amount)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
@@ -212,16 +212,16 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
-<td class="colLast"><span class="typeNameLabel">AbstractEconomy.</span><code><span class="memberNameLink"><a href="../../../../../net/milkbowl/vault/economy/AbstractEconomy.html#isBankMember-java.lang.String-org.bukkit.OfflinePlayer-">isBankMember</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-            org.bukkit.OfflinePlayer&nbsp;player)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Economy.</span><code><span class="memberNameLink"><a href="../../../../../net/milkbowl/vault/economy/Economy.html#isBankMember-java.lang.String-org.bukkit.OfflinePlayer-">isBankMember</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
             org.bukkit.OfflinePlayer&nbsp;player)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <div class="block">Check if the player is a member of the bank account</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
+<td class="colLast"><span class="typeNameLabel">AbstractEconomy.</span><code><span class="memberNameLink"><a href="../../../../../net/milkbowl/vault/economy/AbstractEconomy.html#isBankMember-java.lang.String-org.bukkit.OfflinePlayer-">isBankMember</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+            org.bukkit.OfflinePlayer&nbsp;player)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
@@ -234,16 +234,16 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
-<td class="colLast"><span class="typeNameLabel">AbstractEconomy.</span><code><span class="memberNameLink"><a href="../../../../../net/milkbowl/vault/economy/AbstractEconomy.html#isBankOwner-java.lang.String-org.bukkit.OfflinePlayer-">isBankOwner</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-           org.bukkit.OfflinePlayer&nbsp;player)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Economy.</span><code><span class="memberNameLink"><a href="../../../../../net/milkbowl/vault/economy/Economy.html#isBankOwner-java.lang.String-org.bukkit.OfflinePlayer-">isBankOwner</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
            org.bukkit.OfflinePlayer&nbsp;player)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <div class="block">Check if a player is the owner of a bank account</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
+<td class="colLast"><span class="typeNameLabel">AbstractEconomy.</span><code><span class="memberNameLink"><a href="../../../../../net/milkbowl/vault/economy/AbstractEconomy.html#isBankOwner-java.lang.String-org.bukkit.OfflinePlayer-">isBankOwner</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+           org.bukkit.OfflinePlayer&nbsp;player)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
@@ -256,24 +256,18 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
-<td class="colLast"><span class="typeNameLabel">AbstractEconomy.</span><code><span class="memberNameLink"><a href="../../../../../net/milkbowl/vault/economy/AbstractEconomy.html#withdrawPlayer-org.bukkit.OfflinePlayer-double-">withdrawPlayer</a></span>(org.bukkit.OfflinePlayer&nbsp;player,
-              double&nbsp;amount)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Economy.</span><code><span class="memberNameLink"><a href="../../../../../net/milkbowl/vault/economy/Economy.html#withdrawPlayer-org.bukkit.OfflinePlayer-double-">withdrawPlayer</a></span>(org.bukkit.OfflinePlayer&nbsp;player,
               double&nbsp;amount)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <div class="block">Withdraw an amount from a player - DO NOT USE NEGATIVE AMOUNTS</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
-<td class="colLast"><span class="typeNameLabel">AbstractEconomy.</span><code><span class="memberNameLink"><a href="../../../../../net/milkbowl/vault/economy/AbstractEconomy.html#withdrawPlayer-org.bukkit.OfflinePlayer-java.lang.String-double-">withdrawPlayer</a></span>(org.bukkit.OfflinePlayer&nbsp;player,
-              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;worldName,
+<td class="colLast"><span class="typeNameLabel">AbstractEconomy.</span><code><span class="memberNameLink"><a href="../../../../../net/milkbowl/vault/economy/AbstractEconomy.html#withdrawPlayer-org.bukkit.OfflinePlayer-double-">withdrawPlayer</a></span>(org.bukkit.OfflinePlayer&nbsp;player,
               double&nbsp;amount)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Economy.</span><code><span class="memberNameLink"><a href="../../../../../net/milkbowl/vault/economy/Economy.html#withdrawPlayer-org.bukkit.OfflinePlayer-java.lang.String-double-">withdrawPlayer</a></span>(org.bukkit.OfflinePlayer&nbsp;player,
               <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;worldName,
@@ -282,6 +276,12 @@
 <div class="block">Withdraw an amount from a player on a given world - DO NOT USE NEGATIVE AMOUNTS
  IMPLEMENTATION SPECIFIC - if an economy plugin does not support this the global balance will be returned.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
+<td class="colLast"><span class="typeNameLabel">AbstractEconomy.</span><code><span class="memberNameLink"><a href="../../../../../net/milkbowl/vault/economy/AbstractEconomy.html#withdrawPlayer-org.bukkit.OfflinePlayer-java.lang.String-double-">withdrawPlayer</a></span>(org.bukkit.OfflinePlayer&nbsp;player,
+              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;worldName,
+              double&nbsp;amount)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></code></td>
