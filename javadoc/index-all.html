@@ -82,6 +82,18 @@
 <dd>
 <div class="block">AccountPermission</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#accountsAccessTo-java.lang.String-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission...-">accountsAccessTo(String, UUID, AccountPermission...)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
+<dd>
+<div class="block">Retrieves a list of account IDs that the specified account has the specified permissions for.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#accountsMemberOf-java.lang.String-java.util.UUID-">accountsMemberOf(String, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
+<dd>
+<div class="block">Retrieves a list of account IDs that the specified account is a member of.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#accountsOwnedBy-java.lang.String-java.util.UUID-">accountsOwnedBy(String, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
+<dd>
+<div class="block">Retrieves a list of account IDs owned by the specified account ID.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#accountSupportsCurrency-java.lang.String-java.util.UUID-java.lang.String-">accountSupportsCurrency(String, UUID, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Determines whether an account supports a specific currency.</div>
@@ -648,14 +660,14 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerGroups-java.lang.String-java.lang.String-">getPlayerGroups(String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerGroups-java.lang.String-org.bukkit.OfflinePlayer-"><code>getPlayerGroups(String, OfflinePlayer)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerGroups-java.lang.String-org.bukkit.OfflinePlayer-"><code>Chat.getPlayerGroups(String, OfflinePlayer)</code></a> instead.
  Gets the list of groups that this player has</span></div>
 </div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerGroups-org.bukkit.World-java.lang.String-">getPlayerGroups(World, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerGroups-java.lang.String-org.bukkit.OfflinePlayer-"><code>getPlayerGroups(String, OfflinePlayer)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerGroups-java.lang.String-org.bukkit.OfflinePlayer-"><code>Chat.getPlayerGroups(String, OfflinePlayer)</code></a> instead.
  Gets the list of groups that this player has</span></div>
 </div>
 </dd>
@@ -738,7 +750,7 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoBoolean-java.lang.String-java.lang.String-java.lang.String-boolean-">getPlayerInfoBoolean(String, String, String, boolean)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoBoolean-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-boolean-"><code>getPlayerInfoBoolean(String, OfflinePlayer, String, boolean)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoBoolean-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-boolean-"><code>Chat.getPlayerInfoBoolean(String, OfflinePlayer, String, boolean)</code></a> instead.
  
  Get a players informational node (Boolean) value</span></div>
 </div>
@@ -746,7 +758,7 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoBoolean-org.bukkit.World-java.lang.String-java.lang.String-boolean-">getPlayerInfoBoolean(World, String, String, boolean)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoBoolean-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-boolean-"><code>getPlayerInfoBoolean(String, OfflinePlayer, String, boolean)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoBoolean-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-boolean-"><code>Chat.getPlayerInfoBoolean(String, OfflinePlayer, String, boolean)</code></a> instead.
  
  Get a players informational node (Boolean) value</span></div>
 </div>
@@ -788,7 +800,7 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoDouble-java.lang.String-java.lang.String-java.lang.String-double-">getPlayerInfoDouble(String, String, String, double)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoDouble-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-double-"><code>getPlayerInfoDouble(String, OfflinePlayer, String, double)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoDouble-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-double-"><code>Chat.getPlayerInfoDouble(String, OfflinePlayer, String, double)</code></a> instead.
  
  Get a players informational node (Double) value</span></div>
 </div>
@@ -796,7 +808,7 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoDouble-org.bukkit.World-java.lang.String-java.lang.String-double-">getPlayerInfoDouble(World, String, String, double)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoDouble-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-double-"><code>getPlayerInfoDouble(String, OfflinePlayer, String, double)</code></a> instead
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoDouble-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-double-"><code>Chat.getPlayerInfoDouble(String, OfflinePlayer, String, double)</code></a> instead
  
  Get a players informational node (Double) value</span></div>
 </div>
@@ -838,14 +850,14 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoInteger-java.lang.String-java.lang.String-java.lang.String-int-">getPlayerInfoInteger(String, String, String, int)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoInteger-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-int-"><code>getPlayerInfoInteger(String, OfflinePlayer, String, int)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoInteger-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-int-"><code>Chat.getPlayerInfoInteger(String, OfflinePlayer, String, int)</code></a> instead.
  Get a players informational node (Integer) value</span></div>
 </div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoInteger-org.bukkit.World-java.lang.String-java.lang.String-int-">getPlayerInfoInteger(World, String, String, int)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoInteger-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-int-"><code>getPlayerInfoInteger(String, OfflinePlayer, String, int)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoInteger-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-int-"><code>Chat.getPlayerInfoInteger(String, OfflinePlayer, String, int)</code></a> instead.
  
  Get a players informational node (Integer) value</span></div>
 </div>
@@ -886,7 +898,7 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoString-java.lang.String-java.lang.String-java.lang.String-java.lang.String-">getPlayerInfoString(String, String, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoString-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-java.lang.String-"><code>getPlayerInfoString(String, OfflinePlayer, String, String)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoString-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-java.lang.String-"><code>Chat.getPlayerInfoString(String, OfflinePlayer, String, String)</code></a> instead.
 
  Get a players informational node (String) value</span></div>
 </div>
@@ -894,7 +906,7 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoString-org.bukkit.World-java.lang.String-java.lang.String-java.lang.String-">getPlayerInfoString(World, String, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoString-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-java.lang.String-"><code>getPlayerInfoString(String, OfflinePlayer, String, String)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoString-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-java.lang.String-"><code>Chat.getPlayerInfoString(String, OfflinePlayer, String, String)</code></a> instead.
  Get a players informational node (String) value</span></div>
 </div>
 </dd>
@@ -929,7 +941,7 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerPrefix-java.lang.String-java.lang.String-">getPlayerPrefix(String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerPrefix-java.lang.String-org.bukkit.OfflinePlayer-"><code>getPlayerPrefix(String, OfflinePlayer)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerPrefix-java.lang.String-org.bukkit.OfflinePlayer-"><code>Chat.getPlayerPrefix(String, OfflinePlayer)</code></a> instead.
  
  Get players prefix</span></div>
 </div>
@@ -943,7 +955,7 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerPrefix-org.bukkit.World-java.lang.String-">getPlayerPrefix(World, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerPrefix-java.lang.String-org.bukkit.OfflinePlayer-"><code>getPlayerPrefix(String, OfflinePlayer)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerPrefix-java.lang.String-org.bukkit.OfflinePlayer-"><code>Chat.getPlayerPrefix(String, OfflinePlayer)</code></a> instead.
  
  Get players prefix</span></div>
 </div>
@@ -981,7 +993,7 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerSuffix-java.lang.String-java.lang.String-">getPlayerSuffix(String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerSuffix-java.lang.String-org.bukkit.OfflinePlayer-"><code>getPlayerSuffix(String, OfflinePlayer)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerSuffix-java.lang.String-org.bukkit.OfflinePlayer-"><code>Chat.getPlayerSuffix(String, OfflinePlayer)</code></a> instead.
  
  Get players suffix</span></div>
 </div>
@@ -994,7 +1006,7 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerSuffix-org.bukkit.World-java.lang.String-">getPlayerSuffix(World, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerSuffix-java.lang.String-org.bukkit.OfflinePlayer-"><code>getPlayerSuffix(String, OfflinePlayer)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPlayerSuffix-java.lang.String-org.bukkit.OfflinePlayer-"><code>Chat.getPlayerSuffix(String, OfflinePlayer)</code></a> instead.
  
  Get players suffix</span></div>
 </div>
@@ -1036,14 +1048,14 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPrimaryGroup-java.lang.String-java.lang.String-">getPrimaryGroup(String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPrimaryGroup-java.lang.String-org.bukkit.OfflinePlayer-"><code>getPrimaryGroup(String, OfflinePlayer)</code></a> instead. 
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPrimaryGroup-java.lang.String-org.bukkit.OfflinePlayer-"><code>Chat.getPrimaryGroup(String, OfflinePlayer)</code></a> instead. 
  Gets players primary group</span></div>
 </div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPrimaryGroup-org.bukkit.World-java.lang.String-">getPrimaryGroup(World, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPrimaryGroup-java.lang.String-org.bukkit.OfflinePlayer-"><code>getPrimaryGroup(String, OfflinePlayer)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#getPrimaryGroup-java.lang.String-org.bukkit.OfflinePlayer-"><code>Chat.getPrimaryGroup(String, OfflinePlayer)</code></a> instead.
  Gets players primary group</span></div>
 </div>
 </dd>
@@ -1629,14 +1641,14 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#playerInGroup-java.lang.String-java.lang.String-java.lang.String-">playerInGroup(String, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#playerInGroup-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>playerInGroup(String, OfflinePlayer, String)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#playerInGroup-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Chat.playerInGroup(String, OfflinePlayer, String)</code></a> instead.
  Check if player is member of a group.</span></div>
 </div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#playerInGroup-org.bukkit.World-java.lang.String-java.lang.String-">playerInGroup(World, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#playerInGroup-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>playerInGroup(String, OfflinePlayer, String)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#playerInGroup-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Chat.playerInGroup(String, OfflinePlayer, String)</code></a> instead.
  Check if player is member of a group.</span></div>
 </div>
 </dd>
@@ -1982,14 +1994,14 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoBoolean-java.lang.String-java.lang.String-java.lang.String-boolean-">setPlayerInfoBoolean(String, String, String, boolean)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoBoolean-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-boolean-"><code>setPlayerInfoBoolean(String, OfflinePlayer, String, boolean)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoBoolean-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-boolean-"><code>Chat.setPlayerInfoBoolean(String, OfflinePlayer, String, boolean)</code></a> instead.
  Set a players informational node (Boolean) value</span></div>
 </div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoBoolean-org.bukkit.World-java.lang.String-java.lang.String-boolean-">setPlayerInfoBoolean(World, String, String, boolean)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoBoolean-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-boolean-"><code>setPlayerInfoBoolean(String, OfflinePlayer, String, boolean)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoBoolean-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-boolean-"><code>Chat.setPlayerInfoBoolean(String, OfflinePlayer, String, boolean)</code></a> instead.
  Set a players informational node (Boolean) value</span></div>
 </div>
 </dd>
@@ -2028,14 +2040,14 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoDouble-java.lang.String-java.lang.String-java.lang.String-double-">setPlayerInfoDouble(String, String, String, double)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoDouble-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-double-"><code>setPlayerInfoDouble(String, OfflinePlayer, String, double)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoDouble-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-double-"><code>Chat.setPlayerInfoDouble(String, OfflinePlayer, String, double)</code></a> instead.
  Set a players informational node (Double) value</span></div>
 </div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoDouble-org.bukkit.World-java.lang.String-java.lang.String-double-">setPlayerInfoDouble(World, String, String, double)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoDouble-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-double-"><code>setPlayerInfoDouble(String, OfflinePlayer, String, double)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoDouble-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-double-"><code>Chat.setPlayerInfoDouble(String, OfflinePlayer, String, double)</code></a> instead.
  Set a players informational node (Double) value</span></div>
 </div>
 </dd>
@@ -2074,7 +2086,7 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoInteger-java.lang.String-java.lang.String-java.lang.String-int-">setPlayerInfoInteger(String, String, String, int)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoInteger-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-int-"><code>setPlayerInfoInteger(String, OfflinePlayer, String, int)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoInteger-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-int-"><code>Chat.setPlayerInfoInteger(String, OfflinePlayer, String, int)</code></a> instead.
  
  Set a players informational node (Integer) value</span></div>
 </div>
@@ -2082,7 +2094,7 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoInteger-org.bukkit.World-java.lang.String-java.lang.String-int-">setPlayerInfoInteger(World, String, String, int)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoInteger-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-int-"><code>setPlayerInfoInteger(String, OfflinePlayer, String, int)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoInteger-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-int-"><code>Chat.setPlayerInfoInteger(String, OfflinePlayer, String, int)</code></a> instead.
 
  Set a players informational node (Integer) value</span></div>
 </div>
@@ -2124,14 +2136,14 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoString-java.lang.String-java.lang.String-java.lang.String-java.lang.String-">setPlayerInfoString(String, String, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoString-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-java.lang.String-"><code>setPlayerInfoString(String, OfflinePlayer, String, String)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoString-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-java.lang.String-"><code>Chat.setPlayerInfoString(String, OfflinePlayer, String, String)</code></a> instead.
  Set a players informational node (String) value</span></div>
 </div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoString-org.bukkit.World-java.lang.String-java.lang.String-java.lang.String-">setPlayerInfoString(World, String, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoString-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-java.lang.String-"><code>setPlayerInfoString(String, OfflinePlayer, String, String)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoString-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-java.lang.String-"><code>Chat.setPlayerInfoString(String, OfflinePlayer, String, String)</code></a> instead.
  Set a players informational node (String) value</span></div>
 </div>
 </dd>
@@ -2165,7 +2177,7 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setPlayerPrefix-java.lang.String-java.lang.String-java.lang.String-">setPlayerPrefix(String, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerPrefix-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>setPlayerPrefix(String, OfflinePlayer, String)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerPrefix-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Chat.setPlayerPrefix(String, OfflinePlayer, String)</code></a> instead.
  
  Set players prefix</span></div>
 </div>
@@ -2178,7 +2190,7 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setPlayerPrefix-org.bukkit.World-java.lang.String-java.lang.String-">setPlayerPrefix(World, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerPrefix-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>setPlayerPrefix(String, OfflinePlayer, String)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerPrefix-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Chat.setPlayerPrefix(String, OfflinePlayer, String)</code></a> instead.
  
  Set players prefix in the given world.</span></div>
 </div>
@@ -2215,7 +2227,7 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setPlayerSuffix-java.lang.String-java.lang.String-java.lang.String-">setPlayerSuffix(String, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerSuffix-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>setPlayerSuffix(String, OfflinePlayer, String)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerSuffix-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Chat.setPlayerSuffix(String, OfflinePlayer, String)</code></a> instead.
  
  Set players suffix</span></div>
 </div>
@@ -2228,7 +2240,7 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setPlayerSuffix-org.bukkit.World-java.lang.String-java.lang.String-">setPlayerSuffix(World, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerSuffix-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>setPlayerSuffix(String, OfflinePlayer, String)</code></a> instead.
+<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault/chat/Chat.html#setPlayerSuffix-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Chat.setPlayerSuffix(String, OfflinePlayer, String)</code></a> instead.
  
  Set players suffix</span></div>
 </div>

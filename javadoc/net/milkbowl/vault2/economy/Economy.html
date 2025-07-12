@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":18,"i5":18,"i6":18,"i7":38,"i8":6,"i9":38,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":38,"i20":38,"i21":6,"i22":6,"i23":6,"i24":6,"i25":38,"i26":38,"i27":38,"i28":6,"i29":6,"i30":6,"i31":6,"i32":6,"i33":6,"i34":6,"i35":6,"i36":6,"i37":6,"i38":6,"i39":6,"i40":6,"i41":6,"i42":6,"i43":6,"i44":6,"i45":6,"i46":18,"i47":18,"i48":18,"i49":6,"i50":6,"i51":6,"i52":6,"i53":6};
+var methods = {"i0":18,"i1":18,"i2":18,"i3":6,"i4":6,"i5":6,"i6":6,"i7":18,"i8":18,"i9":18,"i10":38,"i11":6,"i12":38,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":38,"i23":38,"i24":6,"i25":6,"i26":6,"i27":6,"i28":38,"i29":38,"i30":38,"i31":6,"i32":6,"i33":6,"i34":6,"i35":6,"i36":6,"i37":6,"i38":6,"i39":6,"i40":6,"i41":6,"i42":6,"i43":6,"i44":6,"i45":6,"i46":6,"i47":6,"i48":6,"i49":18,"i50":18,"i51":18,"i52":6,"i53":6,"i54":6,"i55":6,"i56":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -101,7 +101,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <hr>
 <br>
-<pre>public interface <a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.32">Economy</a></pre>
+<pre>public interface <a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.34">Economy</a></pre>
 <div class="block">The main economy API</div>
 </li>
 </ul>
@@ -122,6 +122,28 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#accountsAccessTo-java.lang.String-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission...-">accountsAccessTo</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
+                @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
+                <a href="../../../../net/milkbowl/vault2/economy/AccountPermission.html" title="enum in net.milkbowl.vault2.economy">AccountPermission</a>...&nbsp;permissions)</code>
+<div class="block">Retrieves a list of account IDs that the specified account has the specified permissions for.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#accountsMemberOf-java.lang.String-java.util.UUID-">accountsMemberOf</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
+                @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID)</code>
+<div class="block">Retrieves a list of account IDs that the specified account is a member of.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#accountsOwnedBy-java.lang.String-java.util.UUID-">accountsOwnedBy</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
+               @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID)</code>
+<div class="block">Retrieves a list of account IDs owned by the specified account ID.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#accountSupportsCurrency-java.lang.String-java.util.UUID-java.lang.String-">accountSupportsCurrency</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;plugin,
                        @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -129,7 +151,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Determines whether an account supports a specific currency.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#accountSupportsCurrency-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-">accountSupportsCurrency</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;plugin,
                        @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -138,7 +160,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Checks if the given account supports the specified currency in the given world.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#addAccountMember-java.lang.String-java.util.UUID-java.util.UUID-">addAccountMember</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                 @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -146,7 +168,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Adds a member to an account.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#addAccountMember-java.lang.String-java.util.UUID-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission...-">addAccountMember</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                 @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -155,14 +177,14 @@ var activeTableTab = "activeTableTab";
 <div class="block">Adds a member to an account with the specified initial permissions.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>default @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#balance-java.lang.String-java.util.UUID-">balance</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
        @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID)</code>
 <div class="block">Gets balance of an account associated with a UUID.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>default @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#balance-java.lang.String-java.util.UUID-java.lang.String-">balance</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
        @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -170,7 +192,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Gets balance of a UUID on the specified world.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>default @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#balance-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-">balance</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
        @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -179,7 +201,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Gets balance of a UUID on the specified world.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#createAccount-java.util.UUID-java.lang.String-">createAccount</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
@@ -189,7 +211,7 @@ var activeTableTab = "activeTableTab";
 </div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#createAccount-java.util.UUID-java.lang.String-boolean-">createAccount</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
@@ -197,7 +219,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Creates a new account with the provided information.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#createAccount-java.util.UUID-java.lang.String-java.lang.String-">createAccount</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
@@ -208,7 +230,7 @@ var activeTableTab = "activeTableTab";
 </div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#createAccount-java.util.UUID-java.lang.String-java.lang.String-boolean-">createAccount</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
@@ -217,7 +239,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Creates a new account with the given parameters.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#createSharedAccount-java.lang.String-java.util.UUID-java.lang.String-java.util.UUID-">createSharedAccount</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                    @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -226,32 +248,32 @@ var activeTableTab = "activeTableTab";
 <div class="block">Creates a shared account with the specified parameters.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#currencies--">currencies</a></span>()</code>
 <div class="block">Returns a list of currencies used by the economy plugin.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#defaultCurrencyNamePlural-java.lang.String-">defaultCurrencyNamePlural</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName)</code>
 <div class="block">Returns the name of the default currency in plural form.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#defaultCurrencyNameSingular-java.lang.String-">defaultCurrencyNameSingular</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName)</code>
 <div class="block">Returns the name of the default currency in singular form.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#deleteAccount-java.lang.String-java.util.UUID-">deleteAccount</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;plugin,
              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID)</code>
 <div class="block">Deletes the account associated with the specified UUID.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#deposit-java.lang.String-java.util.UUID-java.math.BigDecimal-">deposit</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
        @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -260,7 +282,7 @@ var activeTableTab = "activeTableTab";
  NEGATIVE AMOUNTS.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#deposit-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">deposit</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
        @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -271,7 +293,7 @@ var activeTableTab = "activeTableTab";
  does not support this the global balance will be returned.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#deposit-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">deposit</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
        @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -283,7 +305,7 @@ var activeTableTab = "activeTableTab";
  does not support this the global balance will be returned.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#format-java.math.BigDecimal-">format</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
@@ -292,7 +314,7 @@ var activeTableTab = "activeTableTab";
 </div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#format-java.math.BigDecimal-java.lang.String-">format</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount,
       @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;currency)</code>
@@ -302,7 +324,7 @@ var activeTableTab = "activeTableTab";
 </div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#format-java.lang.String-java.math.BigDecimal-">format</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
       @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount)</code>
@@ -310,7 +332,7 @@ var activeTableTab = "activeTableTab";
  amount using your economy plugin's currency names/conventions.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#format-java.lang.String-java.math.BigDecimal-java.lang.String-">format</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
       @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount,
@@ -319,19 +341,19 @@ var activeTableTab = "activeTableTab";
  amount using your economy plugin's currency names/conventions.</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code>@NotNull int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#fractionalDigits-java.lang.String-">fractionalDigits</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName)</code>
 <div class="block">Some economy plugins round off after a certain number of digits.</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#getAccountName-java.util.UUID-">getAccountName</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID)</code>
 <div class="block">Gets the last known name of an account owned by the given UUID.</div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#getBalance-java.lang.String-java.util.UUID-">getBalance</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID)</code>
@@ -341,7 +363,7 @@ var activeTableTab = "activeTableTab";
 </div>
 </td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i29" class="rowColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#getBalance-java.lang.String-java.util.UUID-java.lang.String-">getBalance</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -352,7 +374,7 @@ var activeTableTab = "activeTableTab";
 </div>
 </td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i30" class="altColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#getBalance-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-">getBalance</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -364,26 +386,26 @@ var activeTableTab = "activeTableTab";
 </div>
 </td>
 </tr>
-<tr id="i28" class="altColor">
+<tr id="i31" class="rowColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#getDefaultCurrency-java.lang.String-">getDefaultCurrency</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName)</code>
 <div class="block">Used to get the default currency.</div>
 </td>
 </tr>
-<tr id="i29" class="rowColor">
+<tr id="i32" class="altColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#getName--">getName</a></span>()</code>
 <div class="block">Gets name of the economy plugin.</div>
 </td>
 </tr>
-<tr id="i30" class="altColor">
+<tr id="i33" class="rowColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#getUUIDNameMap--">getUUIDNameMap</a></span>()</code>
 <div class="block">Returns a map that represents all the UUIDs which have accounts in the
  plugin, as well as their last-known-name.</div>
 </td>
 </tr>
-<tr id="i31" class="rowColor">
+<tr id="i34" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#has-java.lang.String-java.util.UUID-java.math.BigDecimal-">has</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
    @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -392,7 +414,7 @@ var activeTableTab = "activeTableTab";
  USE NEGATIVE AMOUNTS.</div>
 </td>
 </tr>
-<tr id="i32" class="altColor">
+<tr id="i35" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#has-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">has</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
    @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -403,7 +425,7 @@ var activeTableTab = "activeTableTab";
  economy plugin does not support this the global balance will be returned.</div>
 </td>
 </tr>
-<tr id="i33" class="rowColor">
+<tr id="i36" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#has-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">has</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
    @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -415,20 +437,20 @@ var activeTableTab = "activeTableTab";
  economy plugin does not support this the global balance will be returned.</div>
 </td>
 </tr>
-<tr id="i34" class="altColor">
+<tr id="i37" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#hasAccount-java.util.UUID-">hasAccount</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID)</code>
 <div class="block">Checks if this UUID has an account yet.</div>
 </td>
 </tr>
-<tr id="i35" class="rowColor">
+<tr id="i38" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#hasAccount-java.util.UUID-java.lang.String-">hasAccount</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;worldName)</code>
 <div class="block">Checks if this UUID has an account yet on the given world.</div>
 </td>
 </tr>
-<tr id="i36" class="altColor">
+<tr id="i39" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#hasAccountPermission-java.lang.String-java.util.UUID-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission-">hasAccountPermission</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                     @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -437,25 +459,25 @@ var activeTableTab = "activeTableTab";
 <div class="block">Checks if the specified account has the given permission for the given plugin.</div>
 </td>
 </tr>
-<tr id="i37" class="rowColor">
+<tr id="i40" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#hasCurrency-java.lang.String-">hasCurrency</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;currency)</code>
 <div class="block">Returns true if a currency with the specified name exists.</div>
 </td>
 </tr>
-<tr id="i38" class="altColor">
+<tr id="i41" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#hasMultiCurrencySupport--">hasMultiCurrencySupport</a></span>()</code>
 <div class="block">Returns true if the economy plugin supports multiple currencies.</div>
 </td>
 </tr>
-<tr id="i39" class="rowColor">
+<tr id="i42" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#hasSharedAccountSupport--">hasSharedAccountSupport</a></span>()</code>
 <div class="block">Returns true if the economy plugin supports shared accounts.</div>
 </td>
 </tr>
-<tr id="i40" class="altColor">
+<tr id="i43" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#isAccountMember-java.lang.String-java.util.UUID-java.util.UUID-">isAccountMember</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -463,7 +485,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Determines whether a specific member is an account member of a given plugin.</div>
 </td>
 </tr>
-<tr id="i41" class="rowColor">
+<tr id="i44" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#isAccountOwner-java.lang.String-java.util.UUID-java.util.UUID-">isAccountOwner</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
               @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -471,13 +493,13 @@ var activeTableTab = "activeTableTab";
 <div class="block">Determines whether the specified owner ID is the owner of the account associated with the given account ID and plugin name.</div>
 </td>
 </tr>
-<tr id="i42" class="altColor">
+<tr id="i45" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#isEnabled--">isEnabled</a></span>()</code>
 <div class="block">Checks if economy plugin is enabled.</div>
 </td>
 </tr>
-<tr id="i43" class="rowColor">
+<tr id="i46" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#removeAccountMember-java.lang.String-java.util.UUID-java.util.UUID-">removeAccountMember</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                    @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -485,7 +507,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Removes a member from an account.</div>
 </td>
 </tr>
-<tr id="i44" class="altColor">
+<tr id="i47" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#renameAccount-java.lang.String-java.util.UUID-java.lang.String-">renameAccount</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;plugin,
              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -493,7 +515,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Renames the account with the specified ID in the given plugin to the new name.</div>
 </td>
 </tr>
-<tr id="i45" class="rowColor">
+<tr id="i48" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#renameAccount-java.util.UUID-java.lang.String-">renameAccount</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
@@ -501,7 +523,7 @@ var activeTableTab = "activeTableTab";
  value returned from <a href="../../../../net/milkbowl/vault2/economy/Economy.html#getUUIDNameMap--"><code>getUUIDNameMap()</code></a>.</div>
 </td>
 </tr>
-<tr id="i46" class="altColor">
+<tr id="i49" class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#set-java.lang.String-java.util.UUID-java.math.BigDecimal-">set</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
    @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -509,7 +531,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Sets the amount of monies for a player.</div>
 </td>
 </tr>
-<tr id="i47" class="rowColor">
+<tr id="i50" class="altColor">
 <td class="colFirst"><code>default <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#set-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">set</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
    @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -518,7 +540,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Sets the amount of monies for a player in a specific world.</div>
 </td>
 </tr>
-<tr id="i48" class="altColor">
+<tr id="i51" class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#set-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">set</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
    @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -528,7 +550,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Sets the amount of specified currency for a player in a specific world.</div>
 </td>
 </tr>
-<tr id="i49" class="rowColor">
+<tr id="i52" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#setOwner-java.lang.String-java.util.UUID-java.util.UUID-">setOwner</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
         @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -536,7 +558,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Sets the owner of a specified plugin to the given accountID.</div>
 </td>
 </tr>
-<tr id="i50" class="altColor">
+<tr id="i53" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#updateAccountPermission-java.lang.String-java.util.UUID-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission-boolean-">updateAccountPermission</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                        @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -546,7 +568,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Updates the account permission for a specific plugin and user.</div>
 </td>
 </tr>
-<tr id="i51" class="rowColor">
+<tr id="i54" class="altColor">
 <td class="colFirst"><code>@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#withdraw-java.lang.String-java.util.UUID-java.math.BigDecimal-">withdraw</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
         @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -555,7 +577,7 @@ var activeTableTab = "activeTableTab";
  NEGATIVE AMOUNTS.</div>
 </td>
 </tr>
-<tr id="i52" class="altColor">
+<tr id="i55" class="rowColor">
 <td class="colFirst"><code>@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#withdraw-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">withdraw</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
         @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -566,7 +588,7 @@ var activeTableTab = "activeTableTab";
  does not support this the global balance will be returned.</div>
 </td>
 </tr>
-<tr id="i53" class="rowColor">
+<tr id="i56" class="altColor">
 <td class="colFirst"><code>@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#withdraw-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">withdraw</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
         @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -599,7 +621,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>isEnabled</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.43">isEnabled</a>()</pre>
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.45">isEnabled</a>()</pre>
 <div class="block">Checks if economy plugin is enabled.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -614,7 +636,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>getName</h4>
 <pre>@NotNull
-@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.51">getName</a>()</pre>
+@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.53">getName</a>()</pre>
 <div class="block">Gets name of the economy plugin.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -628,7 +650,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>hasSharedAccountSupport</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.58">hasSharedAccountSupport</a>()</pre>
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.60">hasSharedAccountSupport</a>()</pre>
 <div class="block">Returns true if the economy plugin supports shared accounts.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -642,7 +664,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>hasMultiCurrencySupport</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.65">hasMultiCurrencySupport</a>()</pre>
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.67">hasMultiCurrencySupport</a>()</pre>
 <div class="block">Returns true if the economy plugin supports multiple currencies.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -657,7 +679,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>fractionalDigits</h4>
 <pre>@NotNull
-@NotNull int&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.81">fractionalDigits</a>(@NotNull
+@NotNull int&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.83">fractionalDigits</a>(@NotNull
                                        @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName)</pre>
 <div class="block">Some economy plugins round off after a certain number of digits. This
  function returns the number of digits the plugin keeps or -1 if no rounding
@@ -679,7 +701,7 @@ var activeTableTab = "activeTableTab";
 <h4>format</h4>
 <pre>@NotNull
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.96">format</a>(@NotNull
+@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.98">format</a>(@NotNull
                                              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount)</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">This method is deprecated as of version 2.8, and has been replaced by <a href="../../../../net/milkbowl/vault2/economy/Economy.html#format-java.lang.String-java.math.BigDecimal-"><code>format(String, BigDecimal)</code></a>.
  This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.</span></div>
@@ -700,7 +722,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>format</h4>
 <pre>@NotNull
-@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.108">format</a>(@NotNull
+@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.110">format</a>(@NotNull
                                 @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                                 @NotNull
                                 @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount)</pre>
@@ -723,7 +745,7 @@ var activeTableTab = "activeTableTab";
 <h4>format</h4>
 <pre>@NotNull
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.124">format</a>(@NotNull
+@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.126">format</a>(@NotNull
                                              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount,
                                              @NotNull
                                              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;currency)</pre>
@@ -747,7 +769,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>format</h4>
 <pre>@NotNull
-@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.137">format</a>(@NotNull
+@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.139">format</a>(@NotNull
                                 @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                                 @NotNull
                                 @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount,
@@ -771,7 +793,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>hasCurrency</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.146">hasCurrency</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.148">hasCurrency</a>(@NotNull
                     @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;currency)</pre>
 <div class="block">Returns true if a currency with the specified name exists.</div>
 <dl>
@@ -789,7 +811,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>getDefaultCurrency</h4>
 <pre>@NotNull
-@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.158">getDefaultCurrency</a>(@NotNull
+@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.160">getDefaultCurrency</a>(@NotNull
                                             @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName)</pre>
 <div class="block">Used to get the default currency. This could be the default currency for the server globally or
  for the default world if the implementation supports multi-world.</div>
@@ -809,7 +831,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>defaultCurrencyNamePlural</h4>
 <pre>@NotNull
-@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.168">defaultCurrencyNamePlural</a>(@NotNull
+@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.170">defaultCurrencyNamePlural</a>(@NotNull
                                                    @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName)</pre>
 <div class="block">Returns the name of the default currency in plural form. If the economy being used
  does not support currency names then an empty string will be returned.</div>
@@ -828,7 +850,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>defaultCurrencyNameSingular</h4>
 <pre>@NotNull
-@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.178">defaultCurrencyNameSingular</a>(@NotNull
+@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.180">defaultCurrencyNameSingular</a>(@NotNull
                                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName)</pre>
 <div class="block">Returns the name of the default currency in singular form. If the economy being used
  does not support currency names then an empty string will be returned.</div>
@@ -847,7 +869,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>currencies</h4>
 <pre>@NotNull
-@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.188">currencies</a>()</pre>
+@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.190">currencies</a>()</pre>
 <div class="block">Returns a list of currencies used by the economy plugin. These are able to be used
  in the calls in the methods of the API. May not be human-readable.</div>
 <dl>
@@ -864,7 +886,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>createAccount</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.205">createAccount</a>(@NotNull
+boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.207">createAccount</a>(@NotNull
                                   @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
                                   @NotNull
                                   @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
@@ -886,7 +908,7 @@ boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.h
 <ul class="blockList">
 <li class="blockList">
 <h4>createAccount</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.216">createAccount</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.218">createAccount</a>(@NotNull
                       @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
                       @NotNull
                       @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
@@ -909,7 +931,7 @@ boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.h
 <li class="blockList">
 <h4>createAccount</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.232">createAccount</a>(@NotNull
+boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.234">createAccount</a>(@NotNull
                                   @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
                                   @NotNull
                                   @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
@@ -936,7 +958,7 @@ boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.h
 <ul class="blockList">
 <li class="blockList">
 <h4>createAccount</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.244">createAccount</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.246">createAccount</a>(@NotNull
                       @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
                       @NotNull
                       @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
@@ -962,7 +984,7 @@ boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.h
 <li class="blockList">
 <h4>getUUIDNameMap</h4>
 <pre>@NotNull
-@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.255">getUUIDNameMap</a>()</pre>
+@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.257">getUUIDNameMap</a>()</pre>
 <div class="block">Returns a map that represents all the UUIDs which have accounts in the
  plugin, as well as their last-known-name. This is used for Vault's economy
  converter and should be given every account available.</div>
@@ -979,7 +1001,7 @@ boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getAccountName</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.265">getAccountName</a>(@NotNull
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.267">getAccountName</a>(@NotNull
                                 @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID)</pre>
 <div class="block">Gets the last known name of an account owned by the given UUID. Required for
  messages to be more human-readable than UUIDs alone can provide.</div>
@@ -998,7 +1020,7 @@ boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.h
 <ul class="blockList">
 <li class="blockList">
 <h4>hasAccount</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.273">hasAccount</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.275">hasAccount</a>(@NotNull
                    @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID)</pre>
 <div class="block">Checks if this UUID has an account yet.</div>
 <dl>
@@ -1015,7 +1037,7 @@ boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.h
 <ul class="blockList">
 <li class="blockList">
 <h4>hasAccount</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.282">hasAccount</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.284">hasAccount</a>(@NotNull
                    @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
                    @NotNull
                    @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;worldName)</pre>
@@ -1035,7 +1057,7 @@ boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.h
 <ul class="blockList">
 <li class="blockList">
 <h4>renameAccount</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.292">renameAccount</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.294">renameAccount</a>(@NotNull
                       @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
                       @NotNull
                       @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
@@ -1056,7 +1078,7 @@ boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.h
 <ul class="blockList">
 <li class="blockList">
 <h4>renameAccount</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.303">renameAccount</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.305">renameAccount</a>(@NotNull
                       @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;plugin,
                       @NotNull
                       @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1079,7 +1101,7 @@ boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.h
 <ul class="blockList">
 <li class="blockList">
 <h4>deleteAccount</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.312">deleteAccount</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.314">deleteAccount</a>(@NotNull
                       @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;plugin,
                       @NotNull
                       @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID)</pre>
@@ -1099,7 +1121,7 @@ boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.h
 <ul class="blockList">
 <li class="blockList">
 <h4>accountSupportsCurrency</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.326">accountSupportsCurrency</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.328">accountSupportsCurrency</a>(@NotNull
                                 @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;plugin,
                                 @NotNull
                                 @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1122,7 +1144,7 @@ boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.h
 <ul class="blockList">
 <li class="blockList">
 <h4>accountSupportsCurrency</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.337">accountSupportsCurrency</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.339">accountSupportsCurrency</a>(@NotNull
                                 @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;plugin,
                                 @NotNull
                                 @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1150,7 +1172,7 @@ boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.h
 <h4>getBalance</h4>
 <pre>@NotNull
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.351">getBalance</a>(@NotNull
+@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.353">getBalance</a>(@NotNull
                                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                                                      @NotNull
                                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID)</pre>
@@ -1174,7 +1196,7 @@ boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.h
 <h4>getBalance</h4>
 <pre>@NotNull
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.367">getBalance</a>(@NotNull
+@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.369">getBalance</a>(@NotNull
                                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                                                      @NotNull
                                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1202,7 +1224,7 @@ boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.h
 <h4>getBalance</h4>
 <pre>@NotNull
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.384">getBalance</a>(@NotNull
+@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.386">getBalance</a>(@NotNull
                                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                                                      @NotNull
                                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1232,7 +1254,7 @@ boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.h
 <li class="blockList">
 <h4>balance</h4>
 <pre>@NotNull
-default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.394">balance</a>(@NotNull
+default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.396">balance</a>(@NotNull
                                              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                                              @NotNull
                                              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID)</pre>
@@ -1253,7 +1275,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <li class="blockList">
 <h4>balance</h4>
 <pre>@NotNull
-default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.408">balance</a>(@NotNull
+default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.410">balance</a>(@NotNull
                                              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                                              @NotNull
                                              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1278,7 +1300,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <li class="blockList">
 <h4>balance</h4>
 <pre>@NotNull
-default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.423">balance</a>(@NotNull
+default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.425">balance</a>(@NotNull
                                              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                                              @NotNull
                                              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1305,7 +1327,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <ul class="blockList">
 <li class="blockList">
 <h4>has</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.436">has</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.438">has</a>(@NotNull
             @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
             @NotNull
             @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1329,7 +1351,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <ul class="blockList">
 <li class="blockList">
 <h4>has</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.450">has</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.452">has</a>(@NotNull
             @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
             @NotNull
             @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1358,7 +1380,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <ul class="blockList">
 <li class="blockList">
 <h4>has</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.465">has</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.467">has</a>(@NotNull
             @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
             @NotNull
             @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1390,7 +1412,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <ul class="blockList">
 <li class="blockList">
 <h4>set</h4>
-<pre>default&nbsp;<a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.476">set</a>(@NotNull
+<pre>default&nbsp;<a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.478">set</a>(@NotNull
                             @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                             @NotNull
                             @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1413,7 +1435,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <ul class="blockList">
 <li class="blockList">
 <h4>set</h4>
-<pre>default&nbsp;<a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.501">set</a>(@NotNull
+<pre>default&nbsp;<a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.503">set</a>(@NotNull
                             @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                             @NotNull
                             @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1439,7 +1461,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <ul class="blockList">
 <li class="blockList">
 <h4>set</h4>
-<pre>default&nbsp;<a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.527">set</a>(@NotNull
+<pre>default&nbsp;<a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.529">set</a>(@NotNull
                             @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                             @NotNull
                             @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1469,7 +1491,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <li class="blockList">
 <h4>withdraw</h4>
 <pre>@NotNull
-@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.554">withdraw</a>(@NotNull
+@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.556">withdraw</a>(@NotNull
                                            @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                                            @NotNull
                                            @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1496,7 +1518,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <li class="blockList">
 <h4>withdraw</h4>
 <pre>@NotNull
-@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.570">withdraw</a>(@NotNull
+@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.572">withdraw</a>(@NotNull
                                            @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                                            @NotNull
                                            @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1527,7 +1549,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <li class="blockList">
 <h4>withdraw</h4>
 <pre>@NotNull
-@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.587">withdraw</a>(@NotNull
+@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.589">withdraw</a>(@NotNull
                                            @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                                            @NotNull
                                            @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1561,7 +1583,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <li class="blockList">
 <h4>deposit</h4>
 <pre>@NotNull
-@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.601">deposit</a>(@NotNull
+@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.603">deposit</a>(@NotNull
                                           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                                           @NotNull
                                           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1588,7 +1610,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <li class="blockList">
 <h4>deposit</h4>
 <pre>@NotNull
-@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.617">deposit</a>(@NotNull
+@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.619">deposit</a>(@NotNull
                                           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                                           @NotNull
                                           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1619,7 +1641,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <li class="blockList">
 <h4>deposit</h4>
 <pre>@NotNull
-@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.634">deposit</a>(@NotNull
+@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.636">deposit</a>(@NotNull
                                           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                                           @NotNull
                                           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1652,7 +1674,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <ul class="blockList">
 <li class="blockList">
 <h4>createSharedAccount</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.649">createSharedAccount</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.651">createSharedAccount</a>(@NotNull
                             @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                             @NotNull
                             @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1672,13 +1694,82 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 </dl>
 </li>
 </ul>
+<a name="accountsOwnedBy-java.lang.String-java.util.UUID-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>accountsOwnedBy</h4>
+<pre>default&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.662">accountsOwnedBy</a>(@NotNull
+                                     @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
+                                     @NotNull
+                                     @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID)</pre>
+<div class="block">Retrieves a list of account IDs owned by the specified account ID.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pluginName</code> - the name of the plugin</dd>
+<dd><code>accountID</code> - the unique identifier of the account</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a list of account names owned by the specified account ID</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>2.14</dd>
+</dl>
+</li>
+</ul>
+<a name="accountsMemberOf-java.lang.String-java.util.UUID-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>accountsMemberOf</h4>
+<pre>default&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.675">accountsMemberOf</a>(@NotNull
+                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
+                                      @NotNull
+                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID)</pre>
+<div class="block">Retrieves a list of account IDs that the specified account is a member of.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pluginName</code> - the name of the plugin</dd>
+<dd><code>accountID</code> - the UUID of the account to check membership for</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a List of String values representing the accounts that the account is a member of</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>2.14</dd>
+</dl>
+</li>
+</ul>
+<a name="accountsAccessTo-java.lang.String-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission...-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>accountsAccessTo</h4>
+<pre>default&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.689">accountsAccessTo</a>(@NotNull
+                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
+                                      @NotNull
+                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
+                                      @NotNull
+                                      <a href="../../../../net/milkbowl/vault2/economy/AccountPermission.html" title="enum in net.milkbowl.vault2.economy">AccountPermission</a>...&nbsp;permissions)</pre>
+<div class="block">Retrieves a list of account IDs that the specified account has the specified permissions for.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pluginName</code> - the name of the plugin</dd>
+<dd><code>accountID</code> - the UUID of the account to check access for</dd>
+<dd><code>permissions</code> - variable number of permissions to check for</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a list of accounts that the account has the specified permissions to</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>2.14</dd>
+</dl>
+</li>
+</ul>
 <a name="isAccountOwner-java.lang.String-java.util.UUID-java.util.UUID-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>isAccountOwner</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.659">isAccountOwner</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.701">isAccountOwner</a>(@NotNull
                        @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                        @NotNull
                        @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1701,7 +1792,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <ul class="blockList">
 <li class="blockList">
 <h4>setOwner</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.669">setOwner</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.711">setOwner</a>(@NotNull
                  @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                  @NotNull
                  @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1724,7 +1815,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <ul class="blockList">
 <li class="blockList">
 <h4>isAccountMember</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.679">isAccountMember</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.721">isAccountMember</a>(@NotNull
                         @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                         @NotNull
                         @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1747,7 +1838,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <ul class="blockList">
 <li class="blockList">
 <h4>addAccountMember</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.689">addAccountMember</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.731">addAccountMember</a>(@NotNull
                          @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                          @NotNull
                          @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1770,7 +1861,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <ul class="blockList">
 <li class="blockList">
 <h4>addAccountMember</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.701">addAccountMember</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.743">addAccountMember</a>(@NotNull
                          @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                          @NotNull
                          @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1797,7 +1888,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <ul class="blockList">
 <li class="blockList">
 <h4>removeAccountMember</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.711">removeAccountMember</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.753">removeAccountMember</a>(@NotNull
                             @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                             @NotNull
                             @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1820,7 +1911,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <ul class="blockList">
 <li class="blockList">
 <h4>hasAccountPermission</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.722">hasAccountPermission</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.764">hasAccountPermission</a>(@NotNull
                              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                              @NotNull
                              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1846,7 +1937,7 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
 <ul class="blockListLast">
 <li class="blockList">
 <h4>updateAccountPermission</h4>
-<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.734">updateAccountPermission</a>(@NotNull
+<pre>boolean&nbsp;<a href="../../../../src-html/net/milkbowl/vault2/economy/Economy.html#line.776">updateAccountPermission</a>(@NotNull
                                 @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                                 @NotNull
                                 @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
