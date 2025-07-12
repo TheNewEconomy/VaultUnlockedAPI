@@ -20,7 +20,9 @@ import net.milkbowl.vault2.economy.EconomyResponse.ResponseType;
 import org.jetbrains.annotations.NotNull;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
@@ -647,6 +649,46 @@ public interface Economy {
      * @return true if the shared account is successfully created, false otherwise
      */
     boolean createSharedAccount(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String name, @NotNull final UUID owner);
+
+    /**
+     * Retrieves a list of account IDs owned by the specified account ID.
+     *
+     * @param pluginName the name of the plugin
+     * @param accountID the unique identifier of the account
+     * @return a list of account names owned by the specified account ID
+     *
+     * @since 2.14
+     */
+    default List<String> accountsOwnedBy(@NotNull final String pluginName, @NotNull final UUID accountID) {
+        return accountsAccessTo(pluginName, accountID, AccountPermission.OWNER);
+    }
+
+    /**
+     * Retrieves a list of account IDs that the specified account is a member of.
+     *
+     * @param pluginName the name of the plugin
+     * @param accountID the UUID of the account to check membership for
+     * @return a List of String values representing the accounts that the account is a member of
+     *
+     * @since 2.14
+     */
+    default List<String> accountsMemberOf(@NotNull final String pluginName, @NotNull final UUID accountID) {
+        return accountsAccessTo(pluginName, accountID, AccountPermission.BALANCE, AccountPermission.DEPOSIT, AccountPermission.WITHDRAW);
+    }
+
+    /**
+     * Retrieves a list of account IDs that the specified account has the specified permissions for.
+     *
+     * @param pluginName the name of the plugin
+     * @param accountID the UUID of the account to check access for
+     * @param permissions variable number of permissions to check for
+     * @return a list of accounts that the account has the specified permissions to
+     *
+     * @since 2.14
+     */
+    default List<String> accountsAccessTo(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final AccountPermission... permissions) {
+        return new ArrayList<>();
+    }
 
     /**
      * Determines whether the specified owner ID is the owner of the account associated with the given account ID and plugin name.
