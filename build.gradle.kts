@@ -57,8 +57,10 @@ publishing {
                 url = "https://tnemc.net"
             }
             licenses {
-                name = "GNU Lesser General Public License, Version 3 (LGPL-3.0)"
-                url = "https://github.com/TheNewEconomy/VaultUnlockedAPI/blob/master/license.txt"
+                license {
+                    name = "GNU Lesser General Public License, Version 3 (LGPL-3.0)"
+                    url = "https://github.com/TheNewEconomy/VaultUnlockedAPI/blob/master/license.txt"
+                }
             }
             developers {
                 developer {
