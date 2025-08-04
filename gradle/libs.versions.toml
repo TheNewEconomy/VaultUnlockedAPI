@@ -2,11 +2,11 @@
 # https://docs.gradle.org/current/userguide/platforms.html#sub::toml-dependencies-format
 
 [versions]
-junit-junit = "4.13.1"
-org-bukkit-bukkit = "1.13.1-R0.1-SNAPSHOT"
-org-jetbrains-annotations = "24.0.0"
+junit = "4.13.1"
+bukkit = "1.13.1-R0.1-SNAPSHOT"
+annotations-jetbrains = "24.0.0"
 
 [libraries]
-junit-junit = { module = "junit:junit", version.ref = "junit-junit" }
-org-bukkit-bukkit = { module = "org.bukkit:bukkit", version.ref = "org-bukkit-bukkit" }
-org-jetbrains-annotations = { module = "org.jetbrains:annotations", version.ref = "org-jetbrains-annotations" }
+junit = { module = "junit:junit", version.ref = "junit" }
+bukkit = { module = "org.bukkit:bukkit", version.ref = "bukkit" }
+annotations-jetbrains = { module = "org.jetbrains:annotations", version.ref = "annotations-jetbrains" }
