@@ -83,21 +83,17 @@ publishing {
     }
 
     repositories {
-        // Credentials set with environment variables. [Change them how you like them.]
         maven {
-            name = "codemcReleases"
-            url = uri("https://repo.codemc.io/repository/maven-releases/")
-            credentials {
-                username = System.getenv("CODEMC_USER")
-                password = System.getenv("CODEMC_PASS")
-            }
-        }
-        maven {
-            name = "codemcSnapshots"
-            url = uri("https://repo.codemc.io/repository/maven-snapshots/")
-            credentials {
-                username = System.getenv("CODEMC_USER")
-                password = System.getenv("CODEMC_PASS")
+            name = "CodeMC"
+            url = uri("https://repo.codemc.io/repository/creatorfromhell/")
+
+            val mavenUsername = System.getenv("GRADLE_PROJECT_MAVEN_USERNAME")
+            val mavenPassword = System.getenv("GRADLE_PROJECT_MAVEN_PASSWORD")
+            if (mavenUsername != null && mavenPassword != null) {
+                credentials {
+                    username = mavenUsername
+                    password = mavenPassword
+                }
             }
         }
     }
