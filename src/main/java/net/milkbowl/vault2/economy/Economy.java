@@ -79,7 +79,6 @@ public interface Economy {
      * @return number of digits after the decimal point this plugin supports or -1
      *         if no rounding occurs.
      */
-    @NotNull
     int fractionalDigits(@NotNull final String pluginName);
 
     /**
