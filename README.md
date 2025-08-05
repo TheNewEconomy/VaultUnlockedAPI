@@ -5,8 +5,8 @@ How to include the API with Maven:
 ```xml
 <repositories>
     <repository>
-        <id>codemc-repo</id>
-        <url>https://repo.codemc.org/repository/maven-public</url>
+        <id>codemc-creatorfromhell</id>
+        <url>https://repo.codemc.io/repository/creatorfromhell/</url>
     </repository>
 </repositories>
 
@@ -14,7 +14,7 @@ How to include the API with Maven:
     <dependency>
         <groupId>net.milkbowl.vault</groupId>
         <artifactId>VaultUnlockedAPI</artifactId>
-        <version>2.11</version><!-- Validate this is the most recent version from the CI -->
+        <version>2.15</version><!-- Validate this is the most recent version from the CI -->
         <scope>provided</scope>
     </dependency>
 </dependencies>
@@ -23,10 +23,10 @@ How to include the API with Maven:
 How to include the API with Gradle:
 ```groovy
 repositories {
-    maven { url 'https://repo.codemc.org/repository/maven-public' }
+    maven { url 'https://repo.codemc.io/repository/creatorfromhell/' }
 }
 dependencies {
-    compileOnly "net.milkbowl.vault:VaultUnlockedAPI:2.11"
+    compileOnly "net.milkbowl.vault:VaultUnlockedAPI:2.15"
 }
 ```
 
