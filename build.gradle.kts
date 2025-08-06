@@ -8,7 +8,7 @@ version = "2.15"
 description = "VaultUnlockedAPI"
 
 repositories {
-    mavenLocal()
+    mavenCentral()
     maven {
         name = "Spigot"
         url = uri("https://hub.spigotmc.org/nexus/content/groups/public/")
