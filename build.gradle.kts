@@ -51,7 +51,7 @@ publishing {
             description = "VaultUnlocked is a Permissions & Economy API to allow plugins to more easily hook into" +
                     " these systems without needing to hook each individual system themselves. " +
                     "VaultUnlocked supports all plugins that support Vault 1.7"
-            url = "https://dev.bukkit.org/server-mods/vault/"
+            url = "https://modrinth.com/plugin/vaultunlocked"
             organization {
                 name = "The New Economy"
                 url = "https://tnemc.net"

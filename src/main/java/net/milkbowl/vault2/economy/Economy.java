@@ -81,6 +81,20 @@ public interface Economy {
      */
     int fractionalDigits(@NotNull final String pluginName);
 
+  /**
+   * Retrieves the number of fractional digits for the specified currency associated with the given plugin. This
+   * function returns the number of digits the plugin keeps or -1 if no rounding
+   * occurs.
+   *
+   * @param pluginName the name of the plugin; must not be null
+   * @param currency the currency for which the fractional digits are to be retrieved; must not be null
+   * @return the number of fractional digits for the specified currency or -1
+   *         if no rounding occurs.
+   */
+    default int fractionalDigits(@NotNull final String pluginName, @NotNull final String currency) {
+      return fractionalDigits(pluginName);
+    }
+
     /**
      * Plugins use this method to format a given BigDecimal amount into a human-readable
      * amount using your economy plugin's currency names/conventions.
