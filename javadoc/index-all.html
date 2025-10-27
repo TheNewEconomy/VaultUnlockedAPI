@@ -82,15 +82,21 @@
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#accountsAccessTo-java.lang.String-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission...-">accountsAccessTo(String, UUID, AccountPermission...)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
-<div class="block">Retrieves a list of account IDs that the specified account has the specified permissions for.</div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>
+<div class="block"><span class="deprecationComment">Use <a href="net/milkbowl/vault2/economy/Economy.html#accountsWithAccessTo-java.lang.String-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission...-"><code>Economy.accountsWithAccessTo(String, UUID, AccountPermission...)</code></a> instead as the string return allows ambiguity.</span></div>
+</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#accountsMemberOf-java.lang.String-java.util.UUID-">accountsMemberOf(String, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
-<div class="block">Retrieves a list of account IDs that the specified account is a member of.</div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>
+<div class="block"><span class="deprecationComment">Use <a href="net/milkbowl/vault2/economy/Economy.html#accountsWithMembershipTo-java.lang.String-java.util.UUID-"><code>Economy.accountsWithMembershipTo(String, UUID)</code></a> instead as the string return allows ambiguity.</span></div>
+</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#accountsOwnedBy-java.lang.String-java.util.UUID-">accountsOwnedBy(String, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
-<div class="block">Retrieves a list of account IDs owned by the specified account ID.</div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>
+<div class="block"><span class="deprecationComment">Use <a href="net/milkbowl/vault2/economy/Economy.html#accountsWithOwnerOf-java.lang.String-java.util.UUID-"><code>Economy.accountsWithOwnerOf(String, UUID)</code></a> instead as the string return allows ambiguity.</span></div>
+</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#accountSupportsCurrency-java.lang.String-java.util.UUID-java.lang.String-">accountSupportsCurrency(String, UUID, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
@@ -99,6 +105,18 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#accountSupportsCurrency-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-">accountSupportsCurrency(String, UUID, String, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Checks if the given account supports the specified currency in the given world.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#accountsWithAccessTo-java.lang.String-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission...-">accountsWithAccessTo(String, UUID, AccountPermission...)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
+<dd>
+<div class="block">Retrieves a list of account IDs that the specified account has the specified permissions for.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#accountsWithMembershipTo-java.lang.String-java.util.UUID-">accountsWithMembershipTo(String, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
+<dd>
+<div class="block">Retrieves a list of account IDs that the specified account is a member of.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#accountsWithOwnerOf-java.lang.String-java.util.UUID-">accountsWithOwnerOf(String, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
+<dd>
+<div class="block">Retrieves a list of account IDs owned by the specified account ID.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#addAccountMember-java.lang.String-java.util.UUID-java.util.UUID-">addAccountMember(String, UUID, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
@@ -138,7 +156,7 @@
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#balance-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-">balance(String, UUID, String, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
-<div class="block">Gets balance of a UUID on the specified world.</div>
+<div class="block">Gets balance of a UUID on the specified world and currency.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyResponse.html#balance">balance</a></span> - Variable in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></dt>
 <dd>
@@ -189,8 +207,9 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#createAccount-java.util.UUID-java.lang.String-">createAccount(UUID, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">This method is deprecated as of version 2.8, and has been replaced by <a href="net/milkbowl/vault2/economy/Economy.html#createAccount-java.util.UUID-java.lang.String-java.lang.String-boolean-"><code>Economy.createAccount(UUID, String, String, boolean)</code></a>.
- This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.</span></div>
+<div class="block"><span class="deprecationComment">This method is deprecated as of version 2.8, and has been replaced by
+ <a href="net/milkbowl/vault2/economy/Economy.html#createAccount-java.util.UUID-java.lang.String-java.lang.String-boolean-"><code>Economy.createAccount(UUID, String, String, boolean)</code></a>. This allows economy plugins to know
+ exactly if the account is a player or not. This may be removed in a future release.</span></div>
 </div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#createAccount-java.util.UUID-java.lang.String-boolean-">createAccount(UUID, String, boolean)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
@@ -200,8 +219,9 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#createAccount-java.util.UUID-java.lang.String-java.lang.String-">createAccount(UUID, String, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">This method is deprecated as of version 2.8, and has been replaced by <a href="net/milkbowl/vault2/economy/Economy.html#createAccount-java.util.UUID-java.lang.String-java.lang.String-boolean-"><code>Economy.createAccount(UUID, String, String, boolean)</code></a>.
- This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.</span></div>
+<div class="block"><span class="deprecationComment">This method is deprecated as of version 2.8, and has been replaced by
+ <a href="net/milkbowl/vault2/economy/Economy.html#createAccount-java.util.UUID-java.lang.String-java.lang.String-boolean-"><code>Economy.createAccount(UUID, String, String, boolean)</code></a>. This allows economy plugins to know
+ exactly if the account is a player or not. This may be removed in a future release.</span></div>
 </div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#createAccount-java.util.UUID-java.lang.String-java.lang.String-boolean-">createAccount(UUID, String, String, boolean)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
@@ -291,20 +311,15 @@
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#deposit-java.lang.String-java.util.UUID-java.math.BigDecimal-">deposit(String, UUID, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
-<div class="block">Deposit an amount to an account associated with the given UUID - DO NOT USE
- NEGATIVE AMOUNTS.</div>
+<div class="block">Deposit an amount to an account associated with the given UUID</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#deposit-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">deposit(String, UUID, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
-<div class="block">Deposit an amount to an account associated with a UUID on a given world -
- DO NOT USE NEGATIVE AMOUNTS IMPLEMENTATION SPECIFIC - if an economy plugin
- does not support this the global balance will be returned.</div>
+<div class="block">Deposit an amount to an account associated with a UUID on a given world</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#deposit-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">deposit(String, UUID, String, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
-<div class="block">Deposit an amount to an account associated with a UUID on a given world -
- DO NOT USE NEGATIVE AMOUNTS IMPLEMENTATION SPECIFIC - if an economy plugin
- does not support this the global balance will be returned.</div>
+<div class="block">Deposit an amount to an account associated with a UUID on a given world</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/economy/AbstractEconomy.html#depositPlayer-org.bukkit.OfflinePlayer-double-">depositPlayer(OfflinePlayer, double)</a></span> - Method in class net.milkbowl.vault.economy.<a href="net/milkbowl/vault/economy/AbstractEconomy.html" title="class in net.milkbowl.vault.economy">AbstractEconomy</a></dt>
 <dd>&nbsp;</dd>
@@ -401,26 +416,28 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#format-java.math.BigDecimal-">format(BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">This method is deprecated as of version 2.8, and has been replaced by <a href="net/milkbowl/vault2/economy/Economy.html#format-java.lang.String-java.math.BigDecimal-"><code>Economy.format(String, BigDecimal)</code></a>.
- This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.</span></div>
+<div class="block"><span class="deprecationComment">This method is deprecated as of version 2.8, and has been replaced by
+ <a href="net/milkbowl/vault2/economy/Economy.html#format-java.lang.String-java.math.BigDecimal-"><code>Economy.format(String, BigDecimal)</code></a>. This allows economy plugins to know exactly if the account
+ is a player or not. This may be removed in a future release.</span></div>
 </div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#format-java.lang.String-java.math.BigDecimal-">format(String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
-<div class="block">Plugins use this method to format a given BigDecimal amount into a human-readable
- amount using your economy plugin's currency names/conventions.</div>
+<div class="block">Plugins use this method to format a given BigDecimal amount into a human-readable amount using
+ your economy plugin's currency names/conventions.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#format-java.math.BigDecimal-java.lang.String-">format(BigDecimal, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">This method is deprecated as of version 2.8, and has been replaced by <a href="net/milkbowl/vault2/economy/Economy.html#format-java.lang.String-java.math.BigDecimal-java.lang.String-"><code>Economy.format(String, BigDecimal, String)</code></a>.
- This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.</span></div>
+<div class="block"><span class="deprecationComment">This method is deprecated as of version 2.8, and has been replaced by
+ <a href="net/milkbowl/vault2/economy/Economy.html#format-java.lang.String-java.math.BigDecimal-java.lang.String-"><code>Economy.format(String, BigDecimal, String)</code></a>. This allows economy plugins to know exactly if the
+ account is a player or not. This may be removed in a future release.</span></div>
 </div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#format-java.lang.String-java.math.BigDecimal-java.lang.String-">format(String, BigDecimal, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
-<div class="block">Plugins use this method to format a given BigDecimal amount into a human-readable
- amount using your economy plugin's currency names/conventions.</div>
+<div class="block">Plugins use this method to format a given BigDecimal amount into a human-readable amount using
+ your economy plugin's currency names/conventions.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/economy/Economy.html#fractionalDigits--">fractionalDigits()</a></span> - Method in interface net.milkbowl.vault.economy.<a href="net/milkbowl/vault/economy/Economy.html" title="interface in net.milkbowl.vault.economy">Economy</a></dt>
 <dd>
@@ -433,7 +450,8 @@
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#fractionalDigits-java.lang.String-java.lang.String-">fractionalDigits(String, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
-<div class="block">Retrieves the number of fractional digits for the specified currency associated with the given plugin.</div>
+<div class="block">Retrieves the number of fractional digits for the specified currency associated with the given
+ plugin.</div>
 </dd>
 </dl>
 <a name="I:G">
@@ -474,22 +492,25 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#getBalance-java.lang.String-java.util.UUID-">getBalance(String, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">This method is deprecated as of version 2.9, and has been replaced by <a href="net/milkbowl/vault2/economy/Economy.html#balance-java.lang.String-java.util.UUID-"><code>Economy.balance(String, UUID)</code></a>.
- This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.</span></div>
+<div class="block"><span class="deprecationComment">This method is deprecated as of version 2.9, and has been replaced by
+ <a href="net/milkbowl/vault2/economy/Economy.html#balance-java.lang.String-java.util.UUID-"><code>Economy.balance(String, UUID)</code></a>. This allows economy plugins to know exactly if the account is a
+ player or not. This may be removed in a future release.</span></div>
 </div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#getBalance-java.lang.String-java.util.UUID-java.lang.String-">getBalance(String, UUID, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">This method is deprecated as of version 2.9, and has been replaced by <a href="net/milkbowl/vault2/economy/Economy.html#balance-java.lang.String-java.util.UUID-java.lang.String-"><code>Economy.balance(String, UUID, String)</code></a>.
- This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.</span></div>
+<div class="block"><span class="deprecationComment">This method is deprecated as of version 2.9, and has been replaced by
+ <a href="net/milkbowl/vault2/economy/Economy.html#balance-java.lang.String-java.util.UUID-java.lang.String-"><code>Economy.balance(String, UUID, String)</code></a>. This allows economy plugins to know exactly if the
+ account is a player or not. This may be removed in a future release.</span></div>
 </div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#getBalance-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-">getBalance(String, UUID, String, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">This method is deprecated as of version 2.9, and has been replaced by <a href="net/milkbowl/vault2/economy/Economy.html#balance-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-"><code>Economy.balance(String, UUID, String, String)</code></a>.
- This allows economy plugins to know exactly if the account is a player or not. This may be removed in a future release.</span></div>
+<div class="block"><span class="deprecationComment">This method is deprecated as of version 2.9, and has been replaced by
+ <a href="net/milkbowl/vault2/economy/Economy.html#balance-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-"><code>Economy.balance(String, UUID, String, String)</code></a>. This allows economy plugins to know exactly if
+ the account is a player or not. This may be removed in a future release.</span></div>
 </div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/economy/Economy.html#getBanks--">getBanks()</a></span> - Method in interface net.milkbowl.vault.economy.<a href="net/milkbowl/vault/economy/Economy.html" title="interface in net.milkbowl.vault.economy">Economy</a></dt>
@@ -1134,8 +1155,8 @@
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#getUUIDNameMap--">getUUIDNameMap()</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
-<div class="block">Returns a map that represents all the UUIDs which have accounts in the
- plugin, as well as their last-known-name.</div>
+<div class="block">Returns a map that represents all the UUIDs which have accounts in the plugin, as well as their
+ last-known-name.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/permission/Permission.html#groupAdd-java.lang.String-java.lang.String-java.lang.String-">groupAdd(String, String, String)</a></span> - Method in class net.milkbowl.vault.permission.<a href="net/milkbowl/vault/permission/Permission.html" title="class in net.milkbowl.vault.permission">Permission</a></dt>
 <dd>
@@ -1248,20 +1269,15 @@
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#has-java.lang.String-java.util.UUID-java.math.BigDecimal-">has(String, UUID, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
-<div class="block">Checks if the account associated with the given UUID has the amount - DO NOT
- USE NEGATIVE AMOUNTS.</div>
+<div class="block">Checks if the account associated with the given UUID has the amount</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#has-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">has(String, UUID, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
-<div class="block">Checks if the account associated with the given UUID has the amount in the
- given world - DO NOT USE NEGATIVE AMOUNTS IMPLEMENTATION SPECIFIC - if an
- economy plugin does not support this the global balance will be returned.</div>
+<div class="block">Checks if the account associated with the given UUID has the amount in the given world</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#has-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">has(String, UUID, String, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
-<div class="block">Checks if the account associated with the given UUID has the amount in the
- given world - DO NOT USE NEGATIVE AMOUNTS IMPLEMENTATION SPECIFIC - if an
- economy plugin does not support this the global balance will be returned.</div>
+<div class="block">Checks if the account associated with the given UUID has the amount in the given world</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#has-java.lang.String-java.lang.String-java.lang.String-">has(String, String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
 <dd>
@@ -1319,7 +1335,7 @@
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#hasAccount-java.util.UUID-java.lang.String-">hasAccount(UUID, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
-<div class="block">Checks if this UUID has an account yet on the given world.</div>
+<div class="block">Checks if this UUID has an account yet in the given world.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#hasAccountPermission-java.lang.String-java.util.UUID-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission-">hasAccountPermission(String, UUID, UUID, AccountPermission)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
@@ -1372,7 +1388,8 @@
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#isAccountOwner-java.lang.String-java.util.UUID-java.util.UUID-">isAccountOwner(String, UUID, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
-<div class="block">Determines whether the specified owner ID is the owner of the account associated with the given account ID and plugin name.</div>
+<div class="block">Determines whether the specified owner ID is the owner of the account associated with the given
+ account ID and plugin name.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/economy/AbstractEconomy.html#isBankMember-java.lang.String-org.bukkit.OfflinePlayer-">isBankMember(String, OfflinePlayer)</a></span> - Method in class net.milkbowl.vault.economy.<a href="net/milkbowl/vault/economy/AbstractEconomy.html" title="class in net.milkbowl.vault.economy">AbstractEconomy</a></dt>
 <dd>&nbsp;</dd>
@@ -1869,8 +1886,8 @@
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#renameAccount-java.util.UUID-java.lang.String-">renameAccount(UUID, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
-<div class="block">A method which changes the name associated with the given UUID in the
- value returned from <a href="net/milkbowl/vault2/economy/Economy.html#getUUIDNameMap--"><code>Economy.getUUIDNameMap()</code></a>.</div>
+<div class="block">A method which changes the name associated with the given UUID in the value returned from
+ <a href="net/milkbowl/vault2/economy/Economy.html#getUUIDNameMap--"><code>Economy.getUUIDNameMap()</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#renameAccount-java.lang.String-java.util.UUID-java.lang.String-">renameAccount(String, UUID, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
@@ -2371,20 +2388,15 @@ the order they are declared.</div>
 <dl>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#withdraw-java.lang.String-java.util.UUID-java.math.BigDecimal-">withdraw(String, UUID, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
-<div class="block">Withdraw an amount from an account associated with a UUID - DO NOT USE
- NEGATIVE AMOUNTS.</div>
+<div class="block">Withdraw an amount from an account associated with a UUID</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#withdraw-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">withdraw(String, UUID, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
-<div class="block">Withdraw an amount from an account associated with a UUID on a given world -
- DO NOT USE NEGATIVE AMOUNTS IMPLEMENTATION SPECIFIC - if an economy plugin
- does not support this the global balance will be returned.</div>
+<div class="block">Withdraw an amount from an account associated with a UUID on a given world</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#withdraw-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">withdraw(String, UUID, String, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
-<div class="block">Withdraw an amount from an account associated with a UUID on a given world -
- DO NOT USE NEGATIVE AMOUNTS IMPLEMENTATION SPECIFIC - if an economy plugin
- does not support this the global balance will be returned.</div>
+<div class="block">Withdraw an amount from an account associated with a UUID on a given world</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/economy/AbstractEconomy.html#withdrawPlayer-org.bukkit.OfflinePlayer-double-">withdrawPlayer(OfflinePlayer, double)</a></span> - Method in class net.milkbowl.vault.economy.<a href="net/milkbowl/vault/economy/AbstractEconomy.html" title="class in net.milkbowl.vault.economy">AbstractEconomy</a></dt>
 <dd>&nbsp;</dd>
