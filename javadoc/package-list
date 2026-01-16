@@ -3,4 +3,8 @@ net.milkbowl.vault.economy
 net.milkbowl.vault.permission
 net.milkbowl.vault2.chat
 net.milkbowl.vault2.economy
+net.milkbowl.vault2.helper
+net.milkbowl.vault2.helper.context
+net.milkbowl.vault2.helper.subject
+net.milkbowl.vault2.minecraft
 net.milkbowl.vault2.permission

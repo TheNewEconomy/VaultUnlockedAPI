@@ -126,6 +126,14 @@
 <dd>
 <div class="block">Adds a member to an account with the specified initial permissions.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#addGroup-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-">addGroup(Context, Subject, String)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Assigns the specified subject to a given group within the provided context.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#addGroupAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-">addGroupAsync(Context, Subject, String)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Adds a group to the specified subject within the provided context.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/economy/EconomyResponse.html#amount">amount</a></span> - Variable in class net.milkbowl.vault.economy.<a href="net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
@@ -135,6 +143,12 @@
 <dd>
 <div class="block">Amount modified by calling method</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/TriState.html#asBool--">asBool()</a></span> - Method in enum net.milkbowl.vault2.helper.<a href="net/milkbowl/vault2/helper/TriState.html" title="enum in net.milkbowl.vault2.helper">TriState</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/Context.html#asMap--">asMap()</a></span> - Method in class net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/Context.html" title="class in net.milkbowl.vault2.helper.context">Context</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/subject/Subject.html#asUUID--">asUUID()</a></span> - Method in class net.milkbowl.vault2.helper.subject.<a href="net/milkbowl/vault2/helper/subject/Subject.html" title="class in net.milkbowl.vault2.helper.subject">Subject</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <a name="I:B">
 <!--   -->
@@ -182,6 +196,15 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Withdraw an amount from a bank account - DO NOT USE NEGATIVE AMOUNTS</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/InfoKey.html#boolKey-java.lang.String-">boolKey(String)</a></span> - Static method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/InfoKey.html" title="class in net.milkbowl.vault2.chat">InfoKey</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="net/milkbowl/vault2/minecraft/BukkitHelper.html" title="class in net.milkbowl.vault2.minecraft"><span class="typeNameLink">BukkitHelper</span></a> - Class in <a href="net/milkbowl/vault2/minecraft/package-summary.html">net.milkbowl.vault2.minecraft</a></dt>
+<dd>
+<div class="block">A utility class designed to assist with common operations and functionalities
+ in the Bukkit or Spigot API environment.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/minecraft/BukkitHelper.html#BukkitHelper--">BukkitHelper()</a></span> - Constructor for class net.milkbowl.vault2.minecraft.<a href="net/milkbowl/vault2/minecraft/BukkitHelper.html" title="class in net.milkbowl.vault2.minecraft">BukkitHelper</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <a name="I:C">
 <!--   -->
@@ -198,12 +221,72 @@
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 &nbsp;</dd>
-<dt><a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat"><span class="typeNameLink">Chat</span></a> - Class in <a href="net/milkbowl/vault2/chat/package-summary.html">net.milkbowl.vault2.chat</a></dt>
+<dt><a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat"><span class="typeNameLink">ChatUnlocked</span></a> - Interface in <a href="net/milkbowl/vault2/chat/package-summary.html">net.milkbowl.vault2.chat</a></dt>
 <dd>
-<div class="block">The main Chat API - allows for Prefix/Suffix nodes along with generic Info nodes if the linked Chat system supports them</div>
+<div class="block">Represents a chat provider that allows customization and management of prefixes,
+ suffixes, and related information for both individual subjects and groups within
+ a specified context.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#Chat-net.milkbowl.vault2.permission.Permission-">Chat(Permission)</a></span> - Constructor for class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
+<dt><a href="net/milkbowl/vault2/helper/context/Context.html" title="class in net.milkbowl.vault2.helper.context"><span class="typeNameLink">Context</span></a> - Class in <a href="net/milkbowl/vault2/helper/context/package-summary.html">net.milkbowl.vault2.helper.context</a></dt>
+<dd>
+<div class="block">Represents an operational context that can optionally be associated with a specific world.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/Context.html#Context--">Context()</a></span> - Constructor for class net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/Context.html" title="class in net.milkbowl.vault2.helper.context">Context</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/Context.html#Context-java.lang.String-">Context(String)</a></span> - Constructor for class net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/Context.html" title="class in net.milkbowl.vault2.helper.context">Context</a></dt>
+<dd>
+<div class="block">Constructs a new Context object and associates it with the specified world.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/Context.html#Context-java.lang.String-net.milkbowl.vault2.helper.context.LookupMode-">Context(String, LookupMode)</a></span> - Constructor for class net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/Context.html" title="class in net.milkbowl.vault2.helper.context">Context</a></dt>
+<dd>
+<div class="block">Constructs a new <code>Context</code> object with the specified world and lookup mode.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/Context.html#Context-java.util.Map-">Context(Map&lt;String, String&gt;)</a></span> - Constructor for class net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/Context.html" title="class in net.milkbowl.vault2.helper.context">Context</a></dt>
+<dd>
+<div class="block">Constructs a new Context object with the specified context values.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/Context.html#Context-java.util.Map-net.milkbowl.vault2.helper.context.LookupMode-">Context(Map&lt;String, String&gt;, LookupMode)</a></span> - Constructor for class net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/Context.html" title="class in net.milkbowl.vault2.helper.context">Context</a></dt>
+<dd>
+<div class="block">Constructs a new Context object with the specified context values and lookup mode.</div>
+</dd>
+<dt><a href="net/milkbowl/vault2/helper/context/ContextKeys.html" title="class in net.milkbowl.vault2.helper.context"><span class="typeNameLink">ContextKeys</span></a> - Class in <a href="net/milkbowl/vault2/helper/context/package-summary.html">net.milkbowl.vault2.helper.context</a></dt>
+<dd>
+<div class="block">Provides predefined keys used for defining or interacting with various contexts.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/ContextKeys.html#ContextKeys--">ContextKeys()</a></span> - Constructor for class net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/ContextKeys.html" title="class in net.milkbowl.vault2.helper.context">ContextKeys</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#copyGroups-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-net.milkbowl.vault2.helper.subject.Subject-">copyGroups(Context, Subject, Subject)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Copies all groups from the source subject to the target subject.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#copyGroupsAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-net.milkbowl.vault2.helper.subject.Subject-">copyGroupsAsync(Context, Subject, Subject)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Asynchronously copies groups from one subject to another subject within the given context.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#copyPermissions-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-net.milkbowl.vault2.helper.subject.Subject-boolean-">copyPermissions(Context, Subject, Subject, boolean)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Copies permissions from one subject to another.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#copyPermissionsAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-net.milkbowl.vault2.helper.subject.Subject-boolean-">copyPermissionsAsync(Context, Subject, Subject, boolean)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Asynchronously copies permissions from one subject to another.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#copyPrefix-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-net.milkbowl.vault2.helper.subject.Subject-">copyPrefix(Context, Subject, Subject)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
+<dd>
+<div class="block">Copies the prefix from one subject to another within a given context.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#copyPrefixAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-net.milkbowl.vault2.helper.subject.Subject-">copyPrefixAsync(Context, Subject, Subject)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
+<dd>
+<div class="block">Asynchronously copies the prefix from one subject to another within the given context.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#copySuffix-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-net.milkbowl.vault2.helper.subject.Subject-">copySuffix(Context, Subject, Subject)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
+<dd>
+<div class="block">Copies the suffix from one subject to another within the given context.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#copySuffixAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-net.milkbowl.vault2.helper.subject.Subject-">copySuffixAsync(Context, Subject, Subject)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
+<dd>
+<div class="block">Asynchronously copies the suffix from one subject to another in the provided context.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#createAccount-java.util.UUID-java.lang.String-">createAccount(UUID, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
@@ -348,6 +431,10 @@
 <div class="block">Deposit an amount to a player on a given world - DO NOT USE NEGATIVE AMOUNTS
  IMPLEMENTATION SPECIFIC - if an economy plugin does not support this the global balance will be returned.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/subject/Subject.html#displayIdentifier--">displayIdentifier()</a></span> - Method in class net.milkbowl.vault2.helper.subject.<a href="net/milkbowl/vault2/helper/subject/Subject.html" title="class in net.milkbowl.vault2.helper.subject">Subject</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/InfoKey.html#doubleKey-java.lang.String-">doubleKey(String)</a></span> - Static method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/InfoKey.html" title="class in net.milkbowl.vault2.chat">InfoKey</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <a name="I:E">
 <!--   -->
@@ -453,15 +540,35 @@
 <div class="block">Retrieves the number of fractional digits for the specified currency associated with the given
  plugin.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/minecraft/BukkitHelper.html#fromPlayer-org.bukkit.OfflinePlayer-">fromPlayer(OfflinePlayer)</a></span> - Static method in class net.milkbowl.vault2.minecraft.<a href="net/milkbowl/vault2/minecraft/BukkitHelper.html" title="class in net.milkbowl.vault2.minecraft">BukkitHelper</a></dt>
+<dd>
+<div class="block">Creates a <code>Subject</code> instance representing a player using the provided <code>OfflinePlayer</code>.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/Context.html#fromWorld-java.lang.String-">fromWorld(String)</a></span> - Static method in class net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/Context.html" title="class in net.milkbowl.vault2.helper.context">Context</a></dt>
+<dd>
+<div class="block">Creates a new <code>Context</code> object associated with the specified world.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/Context.html#fromWorld-java.lang.String-net.milkbowl.vault2.helper.context.LookupMode-">fromWorld(String, LookupMode)</a></span> - Static method in class net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/Context.html" title="class in net.milkbowl.vault2.helper.context">Context</a></dt>
+<dd>
+<div class="block">Creates a new <code>Context</code> object associated with a specific world and lookup mode.</div>
+</dd>
 </dl>
 <a name="I:G">
 <!--   -->
 </a>
 <h2 class="title">G</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#get-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-net.milkbowl.vault2.chat.InfoKey-">get(Context, Subject, InfoKey&lt;T&gt;)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
+<dd>
+<div class="block">Retrieves the value associated with the specified key for the given subject within the provided context.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#getAccountName-java.util.UUID-">getAccountName(UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Gets the last known name of an account owned by the given UUID.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#getAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-net.milkbowl.vault2.chat.InfoKey-">getAsync(Context, Subject, InfoKey&lt;T&gt;)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
+<dd>
+<div class="block">Retrieves an asynchronous result wrapped in a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html?is-external=true" title="class or interface in java.util.concurrent"><code>CompletableFuture</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/economy/AbstractEconomy.html#getBalance-org.bukkit.OfflinePlayer-">getBalance(OfflinePlayer)</a></span> - Method in class net.milkbowl.vault.economy.<a href="net/milkbowl/vault/economy/AbstractEconomy.html" title="class in net.milkbowl.vault.economy">AbstractEconomy</a></dt>
 <dd>&nbsp;</dd>
@@ -532,14 +639,6 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Set a players informational node (Boolean) value</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getGroupInfoBoolean-java.lang.String-java.lang.String-java.lang.String-boolean-">getGroupInfoBoolean(String, String, String, boolean)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Get a groups informational node (Boolean) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getGroupInfoBoolean-org.bukkit.World-java.lang.String-java.lang.String-boolean-">getGroupInfoBoolean(World, String, String, boolean)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Set a players informational node (Boolean) value</div>
-</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getGroupInfoDouble-java.lang.String-java.lang.String-java.lang.String-double-">getGroupInfoDouble(String, String, String, double)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
@@ -548,14 +647,6 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getGroupInfoDouble-org.bukkit.World-java.lang.String-java.lang.String-double-">getGroupInfoDouble(World, String, String, double)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">Get a groups informational node (Double) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getGroupInfoDouble-java.lang.String-java.lang.String-java.lang.String-double-">getGroupInfoDouble(String, String, String, double)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Get a groups informational node (Double) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getGroupInfoDouble-org.bukkit.World-java.lang.String-java.lang.String-double-">getGroupInfoDouble(World, String, String, double)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
 <div class="block">Get a groups informational node (Double) value</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getGroupInfoInteger-java.lang.String-java.lang.String-java.lang.String-int-">getGroupInfoInteger(String, String, String, int)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
@@ -568,14 +659,6 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Get a groups informational node (Integer) value</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getGroupInfoInteger-java.lang.String-java.lang.String-java.lang.String-int-">getGroupInfoInteger(String, String, String, int)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Get a groups informational node (Integer) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getGroupInfoInteger-org.bukkit.World-java.lang.String-java.lang.String-int-">getGroupInfoInteger(World, String, String, int)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Get a groups informational node (Integer) value</div>
-</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getGroupInfoString-java.lang.String-java.lang.String-java.lang.String-java.lang.String-">getGroupInfoString(String, String, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
@@ -584,14 +667,6 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getGroupInfoString-org.bukkit.World-java.lang.String-java.lang.String-java.lang.String-">getGroupInfoString(World, String, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">Set a players informational node (String) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getGroupInfoString-java.lang.String-java.lang.String-java.lang.String-java.lang.String-">getGroupInfoString(String, String, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Get a groups informational node (String) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getGroupInfoString-org.bukkit.World-java.lang.String-java.lang.String-java.lang.String-">getGroupInfoString(World, String, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
 <div class="block">Set a players informational node (String) value</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getGroupPrefix-java.lang.String-java.lang.String-">getGroupPrefix(String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
@@ -604,14 +679,6 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Get group prefix</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getGroupPrefix-java.lang.String-java.lang.String-">getGroupPrefix(String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Get group prefix</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getGroupPrefix-org.bukkit.World-java.lang.String-">getGroupPrefix(World, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Get group prefix</div>
-</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getGroups--">getGroups()</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
@@ -622,13 +689,13 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Returns a list of all known groups</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getGroups--">getGroups()</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#getGroups-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-">getGroups(Context, Subject)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
 <dd>
-<div class="block">Returns a list of all known groups</div>
+<div class="block">Retrieves the groups associated with the provided subject in the specified context.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#getGroups--">getGroups()</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#getGroupsAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-">getGroupsAsync(Context, Subject)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
 <dd>
-<div class="block">Returns a list of all known groups</div>
+<div class="block">Asynchronously retrieves the groups associated with the specified subject within the given context.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getGroupSuffix-java.lang.String-java.lang.String-">getGroupSuffix(String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
@@ -638,14 +705,6 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getGroupSuffix-org.bukkit.World-java.lang.String-">getGroupSuffix(World, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">Get group suffix</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getGroupSuffix-java.lang.String-java.lang.String-">getGroupSuffix(String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Get group suffix</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getGroupSuffix-org.bukkit.World-java.lang.String-">getGroupSuffix(World, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
 <div class="block">Get group suffix</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getName--">getName()</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
@@ -663,17 +722,21 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Gets name of permission method</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getName--">getName()</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#getName--">getName()</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
 <dd>
-<div class="block">Gets name of permission method</div>
+<div class="block">Retrieves the name of this chat provider.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#getName--">getName()</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Gets name of the economy plugin.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#getName--">getName()</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#getName--">getName()</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
 <dd>
-<div class="block">Gets name of permission method</div>
+<div class="block">Retrieves the name of this permission provider.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#getOrDefault-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-net.milkbowl.vault2.chat.InfoKey-T-">getOrDefault(Context, Subject, InfoKey&lt;T&gt;, T)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
+<dd>
+<div class="block">Retrieves the value associated with the specified key for the given subject within the provided context.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerGroups-java.lang.String-org.bukkit.OfflinePlayer-">getPlayerGroups(String, OfflinePlayer)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
@@ -722,49 +785,6 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Returns a list of world-specific groups that this player is currently in.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerGroups-java.lang.String-org.bukkit.OfflinePlayer-">getPlayerGroups(String, OfflinePlayer)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Gets the list of groups that this player has</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerGroups-java.lang.String-java.lang.String-">getPlayerGroups(String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#getPlayerGroups-java.lang.String-org.bukkit.OfflinePlayer-"><code>Chat.getPlayerGroups(String, OfflinePlayer)</code></a> instead.
- Gets the list of groups that this player has</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerGroups-org.bukkit.World-java.lang.String-">getPlayerGroups(World, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#getPlayerGroups-java.lang.String-org.bukkit.OfflinePlayer-"><code>Chat.getPlayerGroups(String, OfflinePlayer)</code></a> instead.
- Gets the list of groups that this player has</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerGroups-org.bukkit.entity.Player-">getPlayerGroups(Player)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Gets the list of groups that this player has</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#getPlayerGroups-java.lang.String-java.lang.String-">getPlayerGroups(String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use <a href="net/milkbowl/vault2/permission/Permission.html#getPlayerGroups-java.lang.String-org.bukkit.OfflinePlayer-"><code>Permission.getPlayerGroups(String, OfflinePlayer)</code></a> instead.</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#getPlayerGroups-org.bukkit.World-java.lang.String-">getPlayerGroups(World, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use <a href="net/milkbowl/vault2/permission/Permission.html#getPlayerGroups-java.lang.String-org.bukkit.OfflinePlayer-"><code>Permission.getPlayerGroups(String, OfflinePlayer)</code></a> instead.</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#getPlayerGroups-java.lang.String-org.bukkit.OfflinePlayer-">getPlayerGroups(String, OfflinePlayer)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Gets the list of groups that this player has
- Supports NULL value for World if the permission system registered supports global permissions.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#getPlayerGroups-org.bukkit.entity.Player-">getPlayerGroups(Player)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Returns a list of world-specific groups that this player is currently in.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoBoolean-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-boolean-">getPlayerInfoBoolean(String, OfflinePlayer, String, boolean)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
@@ -789,30 +809,6 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoBoolean-org.bukkit.entity.Player-java.lang.String-boolean-">getPlayerInfoBoolean(Player, String, boolean)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">Get a players informational node (Boolean) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoBoolean-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-boolean-">getPlayerInfoBoolean(String, OfflinePlayer, String, boolean)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Get a players informational node (Boolean) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoBoolean-java.lang.String-java.lang.String-java.lang.String-boolean-">getPlayerInfoBoolean(String, String, String, boolean)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoBoolean-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-boolean-"><code>Chat.getPlayerInfoBoolean(String, OfflinePlayer, String, boolean)</code></a> instead.
- 
- Get a players informational node (Boolean) value</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoBoolean-org.bukkit.World-java.lang.String-java.lang.String-boolean-">getPlayerInfoBoolean(World, String, String, boolean)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoBoolean-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-boolean-"><code>Chat.getPlayerInfoBoolean(String, OfflinePlayer, String, boolean)</code></a> instead.
- 
- Get a players informational node (Boolean) value</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoBoolean-org.bukkit.entity.Player-java.lang.String-boolean-">getPlayerInfoBoolean(Player, String, boolean)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
 <div class="block">Get a players informational node (Boolean) value</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoDouble-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-double-">getPlayerInfoDouble(String, OfflinePlayer, String, double)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
@@ -841,30 +837,6 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Get a players informational node (Double) value</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoDouble-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-double-">getPlayerInfoDouble(String, OfflinePlayer, String, double)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Get a players informational node (Double) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoDouble-java.lang.String-java.lang.String-java.lang.String-double-">getPlayerInfoDouble(String, String, String, double)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoDouble-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-double-"><code>Chat.getPlayerInfoDouble(String, OfflinePlayer, String, double)</code></a> instead.
- 
- Get a players informational node (Double) value</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoDouble-org.bukkit.World-java.lang.String-java.lang.String-double-">getPlayerInfoDouble(World, String, String, double)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoDouble-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-double-"><code>Chat.getPlayerInfoDouble(String, OfflinePlayer, String, double)</code></a> instead
- 
- Get a players informational node (Double) value</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoDouble-org.bukkit.entity.Player-java.lang.String-double-">getPlayerInfoDouble(Player, String, double)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Get a players informational node (Double) value</div>
-</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoInteger-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-int-">getPlayerInfoInteger(String, OfflinePlayer, String, int)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
@@ -890,29 +862,6 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Get a players informational node (Integer) value</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoInteger-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-int-">getPlayerInfoInteger(String, OfflinePlayer, String, int)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Get a players informational node (Integer) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoInteger-java.lang.String-java.lang.String-java.lang.String-int-">getPlayerInfoInteger(String, String, String, int)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoInteger-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-int-"><code>Chat.getPlayerInfoInteger(String, OfflinePlayer, String, int)</code></a> instead.
- Get a players informational node (Integer) value</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoInteger-org.bukkit.World-java.lang.String-java.lang.String-int-">getPlayerInfoInteger(World, String, String, int)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoInteger-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-int-"><code>Chat.getPlayerInfoInteger(String, OfflinePlayer, String, int)</code></a> instead.
- 
- Get a players informational node (Integer) value</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoInteger-org.bukkit.entity.Player-java.lang.String-int-">getPlayerInfoInteger(Player, String, int)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Get a players informational node (Integer) value</div>
-</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoString-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-java.lang.String-">getPlayerInfoString(String, OfflinePlayer, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
@@ -936,29 +885,6 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerInfoString-org.bukkit.entity.Player-java.lang.String-java.lang.String-">getPlayerInfoString(Player, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">Get a players informational node (String) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoString-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-java.lang.String-">getPlayerInfoString(String, OfflinePlayer, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Get a players informational node (String) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoString-java.lang.String-java.lang.String-java.lang.String-java.lang.String-">getPlayerInfoString(String, String, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoString-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-java.lang.String-"><code>Chat.getPlayerInfoString(String, OfflinePlayer, String, String)</code></a> instead.
-
- Get a players informational node (String) value</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoString-org.bukkit.World-java.lang.String-java.lang.String-java.lang.String-">getPlayerInfoString(World, String, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoString-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-java.lang.String-"><code>Chat.getPlayerInfoString(String, OfflinePlayer, String, String)</code></a> instead.
- Get a players informational node (String) value</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerInfoString-org.bukkit.entity.Player-java.lang.String-java.lang.String-">getPlayerInfoString(Player, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
 <div class="block">Get a players informational node (String) value</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerPrefix-java.lang.String-java.lang.String-">getPlayerPrefix(String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
@@ -988,31 +914,6 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Get players prefix from the world they are currently in.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerPrefix-java.lang.String-java.lang.String-">getPlayerPrefix(String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#getPlayerPrefix-java.lang.String-org.bukkit.OfflinePlayer-"><code>Chat.getPlayerPrefix(String, OfflinePlayer)</code></a> instead.
- 
- Get players prefix</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerPrefix-java.lang.String-org.bukkit.OfflinePlayer-">getPlayerPrefix(String, OfflinePlayer)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Get a players prefix in the given world
- Use NULL for world if requesting a global prefix</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerPrefix-org.bukkit.World-java.lang.String-">getPlayerPrefix(World, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#getPlayerPrefix-java.lang.String-org.bukkit.OfflinePlayer-"><code>Chat.getPlayerPrefix(String, OfflinePlayer)</code></a> instead.
- 
- Get players prefix</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerPrefix-org.bukkit.entity.Player-">getPlayerPrefix(Player)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Get players prefix from the world they are currently in.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPlayerSuffix-java.lang.String-java.lang.String-">getPlayerSuffix(String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
@@ -1039,29 +940,17 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Get players suffix in the world they are currently in.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerSuffix-java.lang.String-java.lang.String-">getPlayerSuffix(String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#getPrefix-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-">getPrefix(Context, Subject)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
 <dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#getPlayerSuffix-java.lang.String-org.bukkit.OfflinePlayer-"><code>Chat.getPlayerSuffix(String, OfflinePlayer)</code></a> instead.
- 
- Get players suffix</span></div>
-</div>
+<div class="block">Retrieves the prefix for the specified subject within the given context.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerSuffix-java.lang.String-org.bukkit.OfflinePlayer-">getPlayerSuffix(String, OfflinePlayer)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#getPrefixAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-">getPrefixAsync(Context, Subject)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
 <dd>
-<div class="block">Get players suffix in the specified world.</div>
+<div class="block">Asynchronously retrieves the prefix associated with the given subject in the specified context.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerSuffix-org.bukkit.World-java.lang.String-">getPlayerSuffix(World, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#getPrefixOrNull-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-">getPrefixOrNull(Context, Subject)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
 <dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#getPlayerSuffix-java.lang.String-org.bukkit.OfflinePlayer-"><code>Chat.getPlayerSuffix(String, OfflinePlayer)</code></a> instead.
- 
- Get players suffix</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPlayerSuffix-org.bukkit.entity.Player-">getPlayerSuffix(Player)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Get players suffix in the world they are currently in.</div>
+<div class="block">Retrieves the prefix for the specified subject within the provided context, or null if no prefix exists.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#getPrimaryGroup-java.lang.String-org.bukkit.OfflinePlayer-">getPrimaryGroup(String, OfflinePlayer)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
@@ -1110,53 +999,29 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Get players primary group.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPrimaryGroup-java.lang.String-org.bukkit.OfflinePlayer-">getPrimaryGroup(String, OfflinePlayer)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#getSuffix-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-">getSuffix(Context, Subject)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
 <dd>
-<div class="block">Gets players primary group</div>
+<div class="block">Retrieves the suffix for the specified subject within the given context.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPrimaryGroup-java.lang.String-java.lang.String-">getPrimaryGroup(String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#getSuffixAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-">getSuffixAsync(Context, Subject)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
 <dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#getPrimaryGroup-java.lang.String-org.bukkit.OfflinePlayer-"><code>Chat.getPrimaryGroup(String, OfflinePlayer)</code></a> instead. 
- Gets players primary group</span></div>
-</div>
+<div class="block">Asynchronously retrieves the suffix associated with the provided subject
+ within the given context.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPrimaryGroup-org.bukkit.World-java.lang.String-">getPrimaryGroup(World, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#getSuffixOrNull-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-">getSuffixOrNull(Context, Subject)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
 <dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#getPrimaryGroup-java.lang.String-org.bukkit.OfflinePlayer-"><code>Chat.getPrimaryGroup(String, OfflinePlayer)</code></a> instead.
- Gets players primary group</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#getPrimaryGroup-org.bukkit.entity.Player-">getPrimaryGroup(Player)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Get players primary group</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#getPrimaryGroup-java.lang.String-java.lang.String-">getPrimaryGroup(String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use <a href="net/milkbowl/vault2/permission/Permission.html#getPrimaryGroup-java.lang.String-org.bukkit.OfflinePlayer-"><code>Permission.getPrimaryGroup(String, OfflinePlayer)</code></a> instead.</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#getPrimaryGroup-org.bukkit.World-java.lang.String-">getPrimaryGroup(World, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use <a href="net/milkbowl/vault2/permission/Permission.html#getPrimaryGroup-java.lang.String-org.bukkit.OfflinePlayer-"><code>Permission.getPrimaryGroup(String, OfflinePlayer)</code></a> instead.</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#getPrimaryGroup-java.lang.String-org.bukkit.OfflinePlayer-">getPrimaryGroup(String, OfflinePlayer)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Gets players primary group
- Supports NULL value for World if the permission system registered supports global permissions.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#getPrimaryGroup-org.bukkit.entity.Player-">getPrimaryGroup(Player)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Get players primary group.</div>
+<div class="block">Retrieves the suffix for the specified subject in the provided context, or returns null if not available.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#getUUIDNameMap--">getUUIDNameMap()</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Returns a map that represents all the UUIDs which have accounts in the plugin, as well as their
  last-known-name.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/Context.html#GLOBAL">GLOBAL</a></span> - Static variable in class net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/Context.html" title="class in net.milkbowl.vault2.helper.context">Context</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/subject/Subject.html#group-java.lang.String-">group(String)</a></span> - Static method in class net.milkbowl.vault2.helper.subject.<a href="net/milkbowl/vault2/helper/subject/Subject.html" title="class in net.milkbowl.vault2.helper.subject">Subject</a></dt>
+<dd>
+<div class="block">Creates a <code>Subject</code> instance representing a group using the given group name.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/permission/Permission.html#groupAdd-java.lang.String-java.lang.String-java.lang.String-">groupAdd(String, String, String)</a></span> - Method in class net.milkbowl.vault.permission.<a href="net/milkbowl/vault/permission/Permission.html" title="class in net.milkbowl.vault.permission">Permission</a></dt>
 <dd>
@@ -1166,14 +1031,6 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/permission/Permission.html#groupAdd-org.bukkit.World-java.lang.String-java.lang.String-">groupAdd(World, String, String)</a></span> - Method in class net.milkbowl.vault.permission.<a href="net/milkbowl/vault/permission/Permission.html" title="class in net.milkbowl.vault.permission">Permission</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">Add permission to a group.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#groupAdd-java.lang.String-java.lang.String-java.lang.String-">groupAdd(String, String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Add permission to a group.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#groupAdd-org.bukkit.World-java.lang.String-java.lang.String-">groupAdd(World, String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
 <div class="block">Add permission to a group.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/permission/Permission.html#groupHas-java.lang.String-java.lang.String-java.lang.String-">groupHas(String, String, String)</a></span> - Method in class net.milkbowl.vault.permission.<a href="net/milkbowl/vault/permission/Permission.html" title="class in net.milkbowl.vault.permission">Permission</a></dt>
@@ -1186,13 +1043,13 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Checks if group has a permission node.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#groupHas-java.lang.String-java.lang.String-java.lang.String-">groupHas(String, String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#groupHas-net.milkbowl.vault2.helper.context.Context-java.lang.String-java.lang.String-">groupHas(Context, String, String)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
 <dd>
-<div class="block">Checks if group has a permission node.</div>
+<div class="block">Checks whether the specified group has the given permission within the context.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#groupHas-org.bukkit.World-java.lang.String-java.lang.String-">groupHas(World, String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#groupHasAsync-net.milkbowl.vault2.helper.context.Context-java.lang.String-java.lang.String-">groupHasAsync(Context, String, String)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
 <dd>
-<div class="block">Checks if group has a permission node.</div>
+<div class="block">Checks if a specific group has a given permission within a provided context.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/permission/Permission.html#groupRemove-java.lang.String-java.lang.String-java.lang.String-">groupRemove(String, String, String)</a></span> - Method in class net.milkbowl.vault.permission.<a href="net/milkbowl/vault/permission/Permission.html" title="class in net.milkbowl.vault.permission">Permission</a></dt>
 <dd>
@@ -1204,13 +1061,25 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Remove permission from a group.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#groupRemove-java.lang.String-java.lang.String-java.lang.String-">groupRemove(String, String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#groups--">groups()</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
 <dd>
-<div class="block">Remove permission from a group.</div>
+<div class="block">Retrieves the array of group names associated with this permission provider.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#groupRemove-org.bukkit.World-java.lang.String-java.lang.String-">groupRemove(World, String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#groupSetPermission-net.milkbowl.vault2.helper.context.Context-java.lang.String-java.lang.String-net.milkbowl.vault2.helper.TriState-">groupSetPermission(Context, String, String, TriState)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
 <dd>
-<div class="block">Remove permission from a group.</div>
+<div class="block">Sets the specified permission in a given group within a specified context to a desired state.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#groupSetPermissionAsync-net.milkbowl.vault2.helper.context.Context-java.lang.String-java.lang.String-net.milkbowl.vault2.helper.TriState-">groupSetPermissionAsync(Context, String, String, TriState)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Sets a specific permission for a group associated in the provided context.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#groupSetTransientPermission-net.milkbowl.vault2.helper.context.Context-java.lang.String-java.lang.String-net.milkbowl.vault2.helper.TriState-">groupSetTransientPermission(Context, String, String, TriState)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Sets a transient permission for a specific group within a given context.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#groupSetTransientPermissionAsync-net.milkbowl.vault2.helper.context.Context-java.lang.String-java.lang.String-net.milkbowl.vault2.helper.TriState-">groupSetTransientPermissionAsync(Context, String, String, TriState)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Sets a transient permission for a specific group within the given context.</div>
 </dd>
 </dl>
 <a name="I:H">
@@ -1279,25 +1148,9 @@
 <dd>
 <div class="block">Checks if the account associated with the given UUID has the amount in the given world</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#has-java.lang.String-java.lang.String-java.lang.String-">has(String, String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#has-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-">has(Context, Subject, String)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
 <dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use <a href="net/milkbowl/vault2/permission/Permission.html#playerHas-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Permission.playerHas(String, OfflinePlayer, String)</code></a> instead.</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#has-org.bukkit.World-java.lang.String-java.lang.String-">has(World, String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use <a href="net/milkbowl/vault2/permission/Permission.html#playerHas-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Permission.playerHas(String, OfflinePlayer, String)</code></a> instead.</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#has-org.bukkit.command.CommandSender-java.lang.String-">has(CommandSender, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Checks if a CommandSender has a permission node.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#has-org.bukkit.entity.Player-java.lang.String-">has(Player, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Checks if player has a permission node.</div>
+<div class="block">Retrieves the permission state for a given context, subject, and permission identifier.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/economy/AbstractEconomy.html#hasAccount-org.bukkit.OfflinePlayer-">hasAccount(OfflinePlayer)</a></span> - Method in class net.milkbowl.vault.economy.<a href="net/milkbowl/vault/economy/AbstractEconomy.html" title="class in net.milkbowl.vault.economy">AbstractEconomy</a></dt>
 <dd>&nbsp;</dd>
@@ -1341,6 +1194,10 @@
 <dd>
 <div class="block">Checks if the specified account has the given permission for the given plugin.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#hasAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-">hasAsync(Context, Subject, String)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Asynchronously retrieves the permission state for a given context, subject, and permission identifier.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/economy/Economy.html#hasBankSupport--">hasBankSupport()</a></span> - Method in interface net.milkbowl.vault.economy.<a href="net/milkbowl/vault/economy/Economy.html" title="interface in net.milkbowl.vault.economy">Economy</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
@@ -1355,9 +1212,13 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Returns true if the given implementation supports groups.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#hasGroupSupport--">hasGroupSupport()</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#hasGroupSupport--">hasGroupSupport()</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
 <dd>
-<div class="block">Returns true if the given implementation supports groups.</div>
+<div class="block">Checks whether the chat provider supports group-based prefixes, suffixes, and info nodes.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#hasGroupSupport--">hasGroupSupport()</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Checks whether the permission provider supports group-based permissions.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#hasMultiCurrencySupport--">hasMultiCurrencySupport()</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
@@ -1372,9 +1233,9 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Returns if the permission system is or attempts to be compatible with super-perms.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#hasSuperPermsCompat--">hasSuperPermsCompat()</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#hasSuperPermsSupport--">hasSuperPermsSupport()</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
 <dd>
-<div class="block">Returns if the permission system is or attempts to be compatible with super-perms.</div>
+<div class="block">Checks whether the permission provider supports SuperPerms.</div>
 </dd>
 </dl>
 <a name="I:I">
@@ -1382,6 +1243,32 @@
 </a>
 <h2 class="title">I</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/subject/Subject.html#identifier--">identifier()</a></span> - Method in class net.milkbowl.vault2.helper.subject.<a href="net/milkbowl/vault2/helper/subject/Subject.html" title="class in net.milkbowl.vault2.helper.subject">Subject</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="net/milkbowl/vault2/chat/InfoKey.html" title="class in net.milkbowl.vault2.chat"><span class="typeNameLink">InfoKey</span></a>&lt;<a href="net/milkbowl/vault2/chat/InfoKey.html" title="type parameter in InfoKey">T</a>&gt; - Class in <a href="net/milkbowl/vault2/chat/package-summary.html">net.milkbowl.vault2.chat</a></dt>
+<dd>
+<div class="block">Represents a key structure used to store and organize information.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/InfoKey.html#InfoKey-java.lang.String-">InfoKey(String)</a></span> - Constructor for class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/InfoKey.html" title="class in net.milkbowl.vault2.chat">InfoKey</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#inGroup-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-">inGroup(Context, Subject)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Determines whether the specified subject is in a group within the given context.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#inGroup-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-">inGroup(Context, Subject, String)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Determines whether the specified subject belongs to the given group within the provided context.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#inGroupAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-">inGroupAsync(Context, Subject)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Asynchronously checks if the specified subject is part of a group in the given context.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#inGroupAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-">inGroupAsync(Context, Subject, String)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Asynchronously checks if the given subject is part of the specified group within the provided context.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/InfoKey.html#intKey-java.lang.String-">intKey(String)</a></span> - Static method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/InfoKey.html" title="class in net.milkbowl.vault2.chat">InfoKey</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#isAccountMember-java.lang.String-java.util.UUID-java.util.UUID-">isAccountMember(String, UUID, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Determines whether a specific member is an account member of a given plugin.</div>
@@ -1432,17 +1319,17 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Checks if permission method is enabled.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#isEnabled--">isEnabled()</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#isEnabled--">isEnabled()</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
 <dd>
-<div class="block">Checks if permission method is enabled.</div>
+<div class="block">Checks whether this chat provider is enabled.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#isEnabled--">isEnabled()</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Checks if economy plugin is enabled.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#isEnabled--">isEnabled()</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#isEnabled--">isEnabled()</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
 <dd>
-<div class="block">Checks if permission method is enabled.</div>
+<div class="block">Checks whether this permission provider is enabled.</div>
 </dd>
 </dl>
 <a name="I:L">
@@ -1454,8 +1341,14 @@
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 &nbsp;</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#log">log</a></span> - Static variable in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/Context.html#lookupMode--">lookupMode()</a></span> - Method in class net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/Context.html" title="class in net.milkbowl.vault2.helper.context">Context</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/Context.html#lookupMode-net.milkbowl.vault2.helper.context.LookupMode-">lookupMode(LookupMode)</a></span> - Method in class net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/Context.html" title="class in net.milkbowl.vault2.helper.context">Context</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="net/milkbowl/vault2/helper/context/LookupMode.html" title="enum in net.milkbowl.vault2.helper.context"><span class="typeNameLink">LookupMode</span></a> - Enum in <a href="net/milkbowl/vault2/helper/context/package-summary.html">net.milkbowl.vault2.helper.context</a></dt>
+<dd>
+<div class="block">Defines the modes used for resolving or retrieving values within a given context.</div>
+</dd>
 </dl>
 <a name="I:N">
 <!--   -->
@@ -1472,7 +1365,17 @@
 <dd>&nbsp;</dd>
 <dt><a href="net/milkbowl/vault2/economy/package-summary.html">net.milkbowl.vault2.economy</a> - package net.milkbowl.vault2.economy</dt>
 <dd>&nbsp;</dd>
+<dt><a href="net/milkbowl/vault2/helper/package-summary.html">net.milkbowl.vault2.helper</a> - package net.milkbowl.vault2.helper</dt>
+<dd>&nbsp;</dd>
+<dt><a href="net/milkbowl/vault2/helper/context/package-summary.html">net.milkbowl.vault2.helper.context</a> - package net.milkbowl.vault2.helper.context</dt>
+<dd>&nbsp;</dd>
+<dt><a href="net/milkbowl/vault2/helper/subject/package-summary.html">net.milkbowl.vault2.helper.subject</a> - package net.milkbowl.vault2.helper.subject</dt>
+<dd>&nbsp;</dd>
+<dt><a href="net/milkbowl/vault2/minecraft/package-summary.html">net.milkbowl.vault2.minecraft</a> - package net.milkbowl.vault2.minecraft</dt>
+<dd>&nbsp;</dd>
 <dt><a href="net/milkbowl/vault2/permission/package-summary.html">net.milkbowl.vault2.permission</a> - package net.milkbowl.vault2.permission</dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/InfoKey.html#node--">node()</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/InfoKey.html" title="class in net.milkbowl.vault2.chat">InfoKey</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <a name="I:P">
@@ -1490,12 +1393,15 @@
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 &nbsp;</dd>
-<dt><a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission"><span class="typeNameLink">Permission</span></a> - Class in <a href="net/milkbowl/vault2/permission/package-summary.html">net.milkbowl.vault2.permission</a></dt>
+<dt><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission"><span class="typeNameLink">PermissionUnlocked</span></a> - Interface in <a href="net/milkbowl/vault2/permission/package-summary.html">net.milkbowl.vault2.permission</a></dt>
 <dd>
-<div class="block">The main Permission API - allows for group and player based permission tests</div>
+<div class="block">Represents a permission provider to manage permissions, groups, and related operations
+ within specific contexts and for specific subjects.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#Permission--">Permission()</a></span> - Constructor for class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/subject/Subject.html#player-java.util.UUID-java.lang.String-">player(UUID, String)</a></span> - Static method in class net.milkbowl.vault2.helper.subject.<a href="net/milkbowl/vault2/helper/subject/Subject.html" title="class in net.milkbowl.vault2.helper.subject">Subject</a></dt>
+<dd>
+<div class="block">Creates a <code>Subject</code> instance representing a player using the given unique identifier and username.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/permission/Permission.html#playerAdd-java.lang.String-java.lang.String-java.lang.String-">playerAdd(String, String, String)</a></span> - Method in class net.milkbowl.vault.permission.<a href="net/milkbowl/vault/permission/Permission.html" title="class in net.milkbowl.vault.permission">Permission</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
@@ -1521,29 +1427,6 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Add permission to a player ONLY for the world the player is currently on.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerAdd-java.lang.String-java.lang.String-java.lang.String-">playerAdd(String, String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use <a href="net/milkbowl/vault2/permission/Permission.html#playerAdd-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Permission.playerAdd(String, OfflinePlayer, String)</code></a> instead.
- Add permission to a player.
- Supports NULL value for World if the permission system registered supports global permissions.
- But May return odd values if the servers registered permission system does not have a global permission store.</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerAdd-org.bukkit.World-java.lang.String-java.lang.String-">playerAdd(World, String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use <a href="net/milkbowl/vault2/permission/Permission.html#playerAdd-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Permission.playerAdd(String, OfflinePlayer, String)</code></a> instead.</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerAdd-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-">playerAdd(String, OfflinePlayer, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Add permission to a player.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerAdd-org.bukkit.entity.Player-java.lang.String-">playerAdd(Player, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Add permission to a player ONLY for the world the player is currently on.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/permission/Permission.html#playerAddGroup-java.lang.String-java.lang.String-java.lang.String-">playerAddGroup(String, String, String)</a></span> - Method in class net.milkbowl.vault.permission.<a href="net/milkbowl/vault/permission/Permission.html" title="class in net.milkbowl.vault.permission">Permission</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
@@ -1566,26 +1449,6 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Add player to a group.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerAddGroup-java.lang.String-java.lang.String-java.lang.String-">playerAddGroup(String, String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use <a href="net/milkbowl/vault2/permission/Permission.html#playerAddGroup-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Permission.playerAddGroup(String, OfflinePlayer, String)</code></a> instead.</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerAddGroup-org.bukkit.World-java.lang.String-java.lang.String-">playerAddGroup(World, String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use <a href="net/milkbowl/vault2/permission/Permission.html#playerAddGroup-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Permission.playerAddGroup(String, OfflinePlayer, String)</code></a> instead.</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerAddGroup-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-">playerAddGroup(String, OfflinePlayer, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Add player to a group.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerAddGroup-org.bukkit.entity.Player-java.lang.String-">playerAddGroup(Player, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Add player to a group.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/permission/Permission.html#playerAddTransient-org.bukkit.OfflinePlayer-java.lang.String-">playerAddTransient(OfflinePlayer, String)</a></span> - Method in class net.milkbowl.vault.permission.<a href="net/milkbowl/vault/permission/Permission.html" title="class in net.milkbowl.vault.permission">Permission</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
@@ -1604,22 +1467,6 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/permission/Permission.html#playerAddTransient-java.lang.String-org.bukkit.entity.Player-java.lang.String-">playerAddTransient(String, Player, String)</a></span> - Method in class net.milkbowl.vault.permission.<a href="net/milkbowl/vault/permission/Permission.html" title="class in net.milkbowl.vault.permission">Permission</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">Adds a world specific transient permission to the player, may only work with some permission managers.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerAddTransient-org.bukkit.OfflinePlayer-java.lang.String-">playerAddTransient(OfflinePlayer, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Add transient permission to a player.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerAddTransient-org.bukkit.entity.Player-java.lang.String-">playerAddTransient(Player, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Add transient permission to a player.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerAddTransient-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-">playerAddTransient(String, OfflinePlayer, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Adds a world specific transient permission to the player, may only work with some permission managers.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerAddTransient-java.lang.String-org.bukkit.entity.Player-java.lang.String-">playerAddTransient(String, Player, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
 <div class="block">Adds a world specific transient permission to the player, may only work with some permission managers.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/permission/Permission.html#playerHas-java.lang.String-java.lang.String-java.lang.String-">playerHas(String, String, String)</a></span> - Method in class net.milkbowl.vault.permission.<a href="net/milkbowl/vault/permission/Permission.html" title="class in net.milkbowl.vault.permission">Permission</a></dt>
@@ -1642,26 +1489,6 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/permission/Permission.html#playerHas-org.bukkit.entity.Player-java.lang.String-">playerHas(Player, String)</a></span> - Method in class net.milkbowl.vault.permission.<a href="net/milkbowl/vault/permission/Permission.html" title="class in net.milkbowl.vault.permission">Permission</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">Checks if player has a permission node.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerHas-java.lang.String-java.lang.String-java.lang.String-">playerHas(String, String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use <a href="net/milkbowl/vault2/permission/Permission.html#playerHas-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Permission.playerHas(String, OfflinePlayer, String)</code></a> instead.</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerHas-org.bukkit.World-java.lang.String-java.lang.String-">playerHas(World, String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use <a href="net/milkbowl/vault2/permission/Permission.html#playerHas-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Permission.playerHas(String, OfflinePlayer, String)</code></a> instead.</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerHas-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-">playerHas(String, OfflinePlayer, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Checks if player has a permission node.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerHas-org.bukkit.entity.Player-java.lang.String-">playerHas(Player, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
 <div class="block">Checks if player has a permission node.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#playerInGroup-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-">playerInGroup(String, OfflinePlayer, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
@@ -1710,48 +1537,6 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Check if player is member of a group.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#playerInGroup-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-">playerInGroup(String, OfflinePlayer, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Check if player is member of a group.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#playerInGroup-java.lang.String-java.lang.String-java.lang.String-">playerInGroup(String, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#playerInGroup-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Chat.playerInGroup(String, OfflinePlayer, String)</code></a> instead.
- Check if player is member of a group.</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#playerInGroup-org.bukkit.World-java.lang.String-java.lang.String-">playerInGroup(World, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#playerInGroup-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Chat.playerInGroup(String, OfflinePlayer, String)</code></a> instead.
- Check if player is member of a group.</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#playerInGroup-org.bukkit.entity.Player-java.lang.String-">playerInGroup(Player, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Check if player is member of a group.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerInGroup-java.lang.String-java.lang.String-java.lang.String-">playerInGroup(String, String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use <a href="net/milkbowl/vault2/permission/Permission.html#playerInGroup-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Permission.playerInGroup(String, OfflinePlayer, String)</code></a> instead.</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerInGroup-org.bukkit.World-java.lang.String-java.lang.String-">playerInGroup(World, String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use <a href="net/milkbowl/vault2/permission/Permission.html#playerInGroup-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Permission.playerInGroup(String, OfflinePlayer, String)</code></a> instead.</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerInGroup-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-">playerInGroup(String, OfflinePlayer, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Check if player is member of a group.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerInGroup-org.bukkit.entity.Player-java.lang.String-">playerInGroup(Player, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Check if player is member of a group.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/permission/Permission.html#playerRemove-java.lang.String-java.lang.String-java.lang.String-">playerRemove(String, String, String)</a></span> - Method in class net.milkbowl.vault.permission.<a href="net/milkbowl/vault/permission/Permission.html" title="class in net.milkbowl.vault.permission">Permission</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
@@ -1770,24 +1555,6 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/permission/Permission.html#playerRemove-org.bukkit.entity.Player-java.lang.String-">playerRemove(Player, String)</a></span> - Method in class net.milkbowl.vault.permission.<a href="net/milkbowl/vault/permission/Permission.html" title="class in net.milkbowl.vault.permission">Permission</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">Remove permission from a player.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerRemove-java.lang.String-java.lang.String-java.lang.String-">playerRemove(String, String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use <a href="net/milkbowl/vault2/permission/Permission.html#playerRemove-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Permission.playerRemove(String, OfflinePlayer, String)</code></a> instead.</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerRemove-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-">playerRemove(String, OfflinePlayer, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Remove permission from a player.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerRemove-org.bukkit.World-java.lang.String-java.lang.String-">playerRemove(World, String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerRemove-org.bukkit.entity.Player-java.lang.String-">playerRemove(Player, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
 <div class="block">Remove permission from a player.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/permission/Permission.html#playerRemoveGroup-java.lang.String-java.lang.String-java.lang.String-">playerRemoveGroup(String, String, String)</a></span> - Method in class net.milkbowl.vault.permission.<a href="net/milkbowl/vault/permission/Permission.html" title="class in net.milkbowl.vault.permission">Permission</a></dt>
@@ -1812,26 +1579,6 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Remove player from a group.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerRemoveGroup-java.lang.String-java.lang.String-java.lang.String-">playerRemoveGroup(String, String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use <a href="net/milkbowl/vault2/permission/Permission.html#playerRemoveGroup-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Permission.playerRemoveGroup(String, OfflinePlayer, String)</code></a> instead.</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerRemoveGroup-org.bukkit.World-java.lang.String-java.lang.String-">playerRemoveGroup(World, String, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use <a href="net/milkbowl/vault2/permission/Permission.html#playerRemoveGroup-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Permission.playerRemoveGroup(String, OfflinePlayer, String)</code></a> instead.</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerRemoveGroup-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-">playerRemoveGroup(String, OfflinePlayer, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Remove player from a group.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerRemoveGroup-org.bukkit.entity.Player-java.lang.String-">playerRemoveGroup(Player, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Remove player from a group.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/permission/Permission.html#playerRemoveTransient-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-">playerRemoveTransient(String, OfflinePlayer, String)</a></span> - Method in class net.milkbowl.vault.permission.<a href="net/milkbowl/vault/permission/Permission.html" title="class in net.milkbowl.vault.permission">Permission</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
@@ -1852,28 +1599,18 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Remove transient permission from a player.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerRemoveTransient-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-">playerRemoveTransient(String, OfflinePlayer, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Removes a world specific transient permission from the player, may only work with some permission managers.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerRemoveTransient-java.lang.String-org.bukkit.entity.Player-java.lang.String-">playerRemoveTransient(String, Player, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Removes a world specific transient permission from the player, may only work with some permission managers.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerRemoveTransient-org.bukkit.OfflinePlayer-java.lang.String-">playerRemoveTransient(OfflinePlayer, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Remove transient permission from a player.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#playerRemoveTransient-org.bukkit.entity.Player-java.lang.String-">playerRemoveTransient(Player, String)</a></span> - Method in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>
-<div class="block">Remove transient permission from a player.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/permission/Permission.html#plugin">plugin</a></span> - Variable in class net.milkbowl.vault.permission.<a href="net/milkbowl/vault/permission/Permission.html" title="class in net.milkbowl.vault.permission">Permission</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 &nbsp;</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/Permission.html#plugin">plugin</a></span> - Variable in class net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/Permission.html" title="class in net.milkbowl.vault2.permission">Permission</a></dt>
-<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#primaryGroup-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-">primaryGroup(Context, Subject)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Retrieves the primary group associated with the specified subject in the given context.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#primaryGroupAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-">primaryGroupAsync(Context, Subject)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Asynchronously retrieves the primary group associated with the specified subject in the given context.</div>
+</dd>
 </dl>
 <a name="I:R">
 <!--   -->
@@ -1883,6 +1620,14 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#removeAccountMember-java.lang.String-java.util.UUID-java.util.UUID-">removeAccountMember(String, UUID, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Removes a member from an account.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#removeGroup-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-">removeGroup(Context, Subject, String)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Removes the specified subject from the given group within the provided context.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#removeGroupAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-">removeGroupAsync(Context, Subject, String)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Removes the specified group from the given subject within the provided context.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#renameAccount-java.util.UUID-java.lang.String-">renameAccount(UUID, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
@@ -1899,6 +1644,10 @@
 </a>
 <h2 class="title">S</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#set-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-net.milkbowl.vault2.chat.InfoKey-T-">set(Context, Subject, InfoKey&lt;T&gt;, T)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
+<dd>
+<div class="block">Sets the value associated with a specific key for a given subject in the specified context.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#set-java.lang.String-java.util.UUID-java.math.BigDecimal-">set(String, UUID, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Sets the amount of monies for a player.</div>
@@ -1911,6 +1660,10 @@
 <dd>
 <div class="block">Sets the amount of specified currency for a player in a specific world.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#setAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-net.milkbowl.vault2.chat.InfoKey-T-">setAsync(Context, Subject, InfoKey&lt;T&gt;, T)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
+<dd>
+<div class="block">Asynchronously sets a value in the specified context for the given subject and key.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setGroupInfoBoolean-java.lang.String-java.lang.String-java.lang.String-boolean-">setGroupInfoBoolean(String, String, String, boolean)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
@@ -1919,14 +1672,6 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setGroupInfoBoolean-org.bukkit.World-java.lang.String-java.lang.String-boolean-">setGroupInfoBoolean(World, String, String, boolean)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">Set a players informational node (Boolean) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setGroupInfoBoolean-java.lang.String-java.lang.String-java.lang.String-boolean-">setGroupInfoBoolean(String, String, String, boolean)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Set a groups informational node (Boolean) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setGroupInfoBoolean-org.bukkit.World-java.lang.String-java.lang.String-boolean-">setGroupInfoBoolean(World, String, String, boolean)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
 <div class="block">Set a players informational node (Boolean) value</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setGroupInfoDouble-java.lang.String-java.lang.String-java.lang.String-double-">setGroupInfoDouble(String, String, String, double)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
@@ -1939,14 +1684,6 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Set a groups informational node (Double) value</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setGroupInfoDouble-java.lang.String-java.lang.String-java.lang.String-double-">setGroupInfoDouble(String, String, String, double)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Set a groups informational node (Double) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setGroupInfoDouble-org.bukkit.World-java.lang.String-java.lang.String-double-">setGroupInfoDouble(World, String, String, double)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Set a groups informational node (Double) value</div>
-</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setGroupInfoInteger-java.lang.String-java.lang.String-java.lang.String-int-">setGroupInfoInteger(String, String, String, int)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
@@ -1955,14 +1692,6 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setGroupInfoInteger-org.bukkit.World-java.lang.String-java.lang.String-int-">setGroupInfoInteger(World, String, String, int)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">Set a groups informational node (Integer) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setGroupInfoInteger-java.lang.String-java.lang.String-java.lang.String-int-">setGroupInfoInteger(String, String, String, int)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Set a groups informational node (Integer) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setGroupInfoInteger-org.bukkit.World-java.lang.String-java.lang.String-int-">setGroupInfoInteger(World, String, String, int)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
 <div class="block">Set a groups informational node (Integer) value</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setGroupInfoString-java.lang.String-java.lang.String-java.lang.String-java.lang.String-">setGroupInfoString(String, String, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
@@ -1975,14 +1704,6 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Set a groups informational node (String) value</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setGroupInfoString-java.lang.String-java.lang.String-java.lang.String-java.lang.String-">setGroupInfoString(String, String, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Set a groups informational node (String) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setGroupInfoString-org.bukkit.World-java.lang.String-java.lang.String-java.lang.String-">setGroupInfoString(World, String, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Set a groups informational node (String) value</div>
-</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setGroupPrefix-java.lang.String-java.lang.String-java.lang.String-">setGroupPrefix(String, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
@@ -1991,14 +1712,6 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setGroupPrefix-org.bukkit.World-java.lang.String-java.lang.String-">setGroupPrefix(World, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">Set group prefix</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setGroupPrefix-java.lang.String-java.lang.String-java.lang.String-">setGroupPrefix(String, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Set group prefix</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setGroupPrefix-org.bukkit.World-java.lang.String-java.lang.String-">setGroupPrefix(World, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
 <div class="block">Set group prefix</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setGroupSuffix-java.lang.String-java.lang.String-java.lang.String-">setGroupSuffix(String, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
@@ -2011,17 +1724,17 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Set group suffix</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setGroupSuffix-java.lang.String-java.lang.String-java.lang.String-">setGroupSuffix(String, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Set group suffix</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setGroupSuffix-org.bukkit.World-java.lang.String-java.lang.String-">setGroupSuffix(World, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Set group suffix</div>
-</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#setOwner-java.lang.String-java.util.UUID-java.util.UUID-">setOwner(String, UUID, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Sets the owner of a specified plugin to the given accountID.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#setPermission-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-net.milkbowl.vault2.helper.TriState-">setPermission(Context, Subject, String, TriState)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Sets the specified permission for a subject within a given context to a specified state.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#setPermissionAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-net.milkbowl.vault2.helper.TriState-">setPermissionAsync(Context, Subject, String, TriState)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Asynchronously sets the specified permission to a given tri-state value for a subject within a context.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoBoolean-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-boolean-">setPlayerInfoBoolean(String, OfflinePlayer, String, boolean)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
@@ -2047,28 +1760,6 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Set a players informational node (Boolean) value</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoBoolean-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-boolean-">setPlayerInfoBoolean(String, OfflinePlayer, String, boolean)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Set a players informational node (Boolean) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoBoolean-java.lang.String-java.lang.String-java.lang.String-boolean-">setPlayerInfoBoolean(String, String, String, boolean)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoBoolean-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-boolean-"><code>Chat.setPlayerInfoBoolean(String, OfflinePlayer, String, boolean)</code></a> instead.
- Set a players informational node (Boolean) value</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoBoolean-org.bukkit.World-java.lang.String-java.lang.String-boolean-">setPlayerInfoBoolean(World, String, String, boolean)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoBoolean-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-boolean-"><code>Chat.setPlayerInfoBoolean(String, OfflinePlayer, String, boolean)</code></a> instead.
- Set a players informational node (Boolean) value</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoBoolean-org.bukkit.entity.Player-java.lang.String-boolean-">setPlayerInfoBoolean(Player, String, boolean)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Set a players informational node (Boolean) value</div>
-</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoDouble-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-double-">setPlayerInfoDouble(String, OfflinePlayer, String, double)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
@@ -2091,28 +1782,6 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoDouble-org.bukkit.entity.Player-java.lang.String-double-">setPlayerInfoDouble(Player, String, double)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">Set a players informational node (Double) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoDouble-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-double-">setPlayerInfoDouble(String, OfflinePlayer, String, double)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Set a players informational node (Double) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoDouble-java.lang.String-java.lang.String-java.lang.String-double-">setPlayerInfoDouble(String, String, String, double)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoDouble-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-double-"><code>Chat.setPlayerInfoDouble(String, OfflinePlayer, String, double)</code></a> instead.
- Set a players informational node (Double) value</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoDouble-org.bukkit.World-java.lang.String-java.lang.String-double-">setPlayerInfoDouble(World, String, String, double)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoDouble-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-double-"><code>Chat.setPlayerInfoDouble(String, OfflinePlayer, String, double)</code></a> instead.
- Set a players informational node (Double) value</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoDouble-org.bukkit.entity.Player-java.lang.String-double-">setPlayerInfoDouble(Player, String, double)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
 <div class="block">Set a players informational node (Double) value</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoInteger-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-int-">setPlayerInfoInteger(String, OfflinePlayer, String, int)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
@@ -2141,30 +1810,6 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Set a players informational node (Integer) value</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoInteger-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-int-">setPlayerInfoInteger(String, OfflinePlayer, String, int)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Set a players informational node (Integer) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoInteger-java.lang.String-java.lang.String-java.lang.String-int-">setPlayerInfoInteger(String, String, String, int)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoInteger-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-int-"><code>Chat.setPlayerInfoInteger(String, OfflinePlayer, String, int)</code></a> instead.
- 
- Set a players informational node (Integer) value</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoInteger-org.bukkit.World-java.lang.String-java.lang.String-int-">setPlayerInfoInteger(World, String, String, int)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoInteger-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-int-"><code>Chat.setPlayerInfoInteger(String, OfflinePlayer, String, int)</code></a> instead.
-
- Set a players informational node (Integer) value</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoInteger-org.bukkit.entity.Player-java.lang.String-int-">setPlayerInfoInteger(Player, String, int)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Set a players informational node (Integer) value</div>
-</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoString-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-java.lang.String-">setPlayerInfoString(String, OfflinePlayer, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
@@ -2187,28 +1832,6 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setPlayerInfoString-org.bukkit.entity.Player-java.lang.String-java.lang.String-">setPlayerInfoString(Player, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
-<div class="block">Set a players informational node (String) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoString-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-java.lang.String-">setPlayerInfoString(String, OfflinePlayer, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Set a players informational node (String) value</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoString-java.lang.String-java.lang.String-java.lang.String-java.lang.String-">setPlayerInfoString(String, String, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoString-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-java.lang.String-"><code>Chat.setPlayerInfoString(String, OfflinePlayer, String, String)</code></a> instead.
- Set a players informational node (String) value</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoString-org.bukkit.World-java.lang.String-java.lang.String-java.lang.String-">setPlayerInfoString(World, String, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoString-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-java.lang.String-"><code>Chat.setPlayerInfoString(String, OfflinePlayer, String, String)</code></a> instead.
- Set a players informational node (String) value</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerInfoString-org.bukkit.entity.Player-java.lang.String-java.lang.String-">setPlayerInfoString(Player, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
 <div class="block">Set a players informational node (String) value</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setPlayerPrefix-java.lang.String-java.lang.String-java.lang.String-">setPlayerPrefix(String, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
@@ -2237,30 +1860,6 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Set players prefix in the world they are currently in.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerPrefix-java.lang.String-java.lang.String-java.lang.String-">setPlayerPrefix(String, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#setPlayerPrefix-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Chat.setPlayerPrefix(String, OfflinePlayer, String)</code></a> instead.
- 
- Set players prefix</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerPrefix-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-">setPlayerPrefix(String, OfflinePlayer, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Sets players prefix in the given world.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerPrefix-org.bukkit.World-java.lang.String-java.lang.String-">setPlayerPrefix(World, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#setPlayerPrefix-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Chat.setPlayerPrefix(String, OfflinePlayer, String)</code></a> instead.
- 
- Set players prefix in the given world.</span></div>
-</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerPrefix-org.bukkit.entity.Player-java.lang.String-">setPlayerPrefix(Player, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
-<dd>
-<div class="block">Set players prefix in the world they are currently in.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/chat/Chat.html#setPlayerSuffix-java.lang.String-java.lang.String-java.lang.String-">setPlayerSuffix(String, String, String)</a></span> - Method in class net.milkbowl.vault.chat.<a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat">Chat</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
@@ -2287,29 +1886,40 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Set players suffix in the world they currently occupy.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerSuffix-java.lang.String-java.lang.String-java.lang.String-">setPlayerSuffix(String, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#setPrefix-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-">setPrefix(Context, Subject, String)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
 <dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#setPlayerSuffix-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Chat.setPlayerSuffix(String, OfflinePlayer, String)</code></a> instead.
- 
- Set players suffix</span></div>
-</div>
+<div class="block">Sets the prefix for the specified subject within the given context.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerSuffix-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-">setPlayerSuffix(String, OfflinePlayer, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#setPrefixAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-">setPrefixAsync(Context, Subject, String)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
 <dd>
-<div class="block">Set players suffix for the world specified</div>
+<div class="block">Asynchronously sets a prefix for a given subject within a specified context.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerSuffix-org.bukkit.World-java.lang.String-java.lang.String-">setPlayerSuffix(World, String, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#setSuffix-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-">setSuffix(Context, Subject, String)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
 <dd>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>
-<div class="block"><span class="deprecationComment">As of VaultAPI 1.4 use {<a href="net/milkbowl/vault2/chat/Chat.html#setPlayerSuffix-java.lang.String-org.bukkit.OfflinePlayer-java.lang.String-"><code>Chat.setPlayerSuffix(String, OfflinePlayer, String)</code></a> instead.
- 
- Set players suffix</span></div>
-</div>
+<div class="block">Sets the suffix for the specified subject within the given context.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/Chat.html#setPlayerSuffix-org.bukkit.entity.Player-java.lang.String-">setPlayerSuffix(Player, String)</a></span> - Method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/Chat.html" title="class in net.milkbowl.vault2.chat">Chat</a></dt>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#setSuffixAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-">setSuffixAsync(Context, Subject, String)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
 <dd>
-<div class="block">Set players suffix in the world they currently occupy.</div>
+<div class="block">Asynchronously sets a suffix for the given subject within the specified context.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#setTransientPermission-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-net.milkbowl.vault2.helper.TriState-">setTransientPermission(Context, Subject, String, TriState)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Sets a transient permission for a specific subject within a given context to a specified value.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#setTransientPermissionAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-net.milkbowl.vault2.helper.TriState-">setTransientPermissionAsync(Context, Subject, String, TriState)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
+<dd>
+<div class="block">Asynchronously sets a transient permission for the specified subject in the given context.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/InfoKey.html#stringKey-java.lang.String-">stringKey(String)</a></span> - Static method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/InfoKey.html" title="class in net.milkbowl.vault2.chat">InfoKey</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="net/milkbowl/vault2/helper/subject/Subject.html" title="class in net.milkbowl.vault2.helper.subject"><span class="typeNameLink">Subject</span></a> - Class in <a href="net/milkbowl/vault2/helper/subject/package-summary.html">net.milkbowl.vault2.helper.subject</a></dt>
+<dd>
+<div class="block">Represents a subject with a unique identifier, a name, and a flag indicating
+ whether the subject is a player.</div>
+</dd>
+<dt><a href="net/milkbowl/vault2/helper/subject/SubjectType.html" title="enum in net.milkbowl.vault2.helper.subject"><span class="typeNameLink">SubjectType</span></a> - Enum in <a href="net/milkbowl/vault2/helper/subject/package-summary.html">net.milkbowl.vault2.helper.subject</a></dt>
+<dd>
+<div class="block">Represents the type of a subject, which can either be a player or a group.</div>
 </dd>
 </dl>
 <a name="I:T">
@@ -2326,6 +1936,10 @@
 <dd>
 <div class="block">Checks if an operation was successful</div>
 </dd>
+<dt><a href="net/milkbowl/vault2/helper/TriState.html" title="enum in net.milkbowl.vault2.helper"><span class="typeNameLink">TriState</span></a> - Enum in <a href="net/milkbowl/vault2/helper/package-summary.html">net.milkbowl.vault2.helper</a></dt>
+<dd>
+<div class="block">Represents a tri-state value that can be TRUE, FALSE, or UNDEFINED.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/economy/EconomyResponse.html#type">type</a></span> - Variable in class net.milkbowl.vault.economy.<a href="net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy">EconomyResponse</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
@@ -2335,6 +1949,8 @@
 <dd>
 <div class="block">Success or failure of call.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/subject/Subject.html#type--">type()</a></span> - Method in class net.milkbowl.vault2.helper.subject.<a href="net/milkbowl/vault2/helper/subject/Subject.html" title="class in net.milkbowl.vault2.helper.subject">Subject</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <a name="I:U">
 <!--   -->
@@ -2351,6 +1967,8 @@
 </a>
 <h2 class="title">V</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/Context.html#value-java.lang.String-">value(String)</a></span> - Method in class net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/Context.html" title="class in net.milkbowl.vault2.helper.context">Context</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/economy/EconomyResponse.ResponseType.html#valueOf-java.lang.String-">valueOf(String)</a></span> - Static method in enum net.milkbowl.vault.economy.<a href="net/milkbowl/vault/economy/EconomyResponse.ResponseType.html" title="enum in net.milkbowl.vault.economy">EconomyResponse.ResponseType</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
@@ -2364,6 +1982,20 @@
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/LookupMode.html#valueOf-java.lang.String-">valueOf(String)</a></span> - Static method in enum net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/LookupMode.html" title="enum in net.milkbowl.vault2.helper.context">LookupMode</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this type with the specified name.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/subject/SubjectType.html#valueOf-java.lang.String-">valueOf(String)</a></span> - Static method in enum net.milkbowl.vault2.helper.subject.<a href="net/milkbowl/vault2/helper/subject/SubjectType.html" title="enum in net.milkbowl.vault2.helper.subject">SubjectType</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this type with the specified name.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/TriState.html#valueOf-java.lang.String-">valueOf(String)</a></span> - Static method in enum net.milkbowl.vault2.helper.<a href="net/milkbowl/vault2/helper/TriState.html" title="enum in net.milkbowl.vault2.helper">TriState</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this type with the specified name.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/Context.html#valueOrNull-java.lang.String-">valueOrNull(String)</a></span> - Method in class net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/Context.html" title="class in net.milkbowl.vault2.helper.context">Context</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/economy/EconomyResponse.ResponseType.html#values--">values()</a></span> - Static method in enum net.milkbowl.vault.economy.<a href="net/milkbowl/vault/economy/EconomyResponse.ResponseType.html" title="enum in net.milkbowl.vault.economy">EconomyResponse.ResponseType</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
@@ -2376,6 +2008,21 @@ the order they are declared.</div>
 the order they are declared.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyResponse.ResponseType.html#values--">values()</a></span> - Static method in enum net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyResponse.ResponseType.html" title="enum in net.milkbowl.vault2.economy">EconomyResponse.ResponseType</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/LookupMode.html#values--">values()</a></span> - Static method in enum net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/LookupMode.html" title="enum in net.milkbowl.vault2.helper.context">LookupMode</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/subject/SubjectType.html#values--">values()</a></span> - Static method in enum net.milkbowl.vault2.helper.subject.<a href="net/milkbowl/vault2/helper/subject/SubjectType.html" title="enum in net.milkbowl.vault2.helper.subject">SubjectType</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/TriState.html#values--">values()</a></span> - Static method in enum net.milkbowl.vault2.helper.<a href="net/milkbowl/vault2/helper/TriState.html" title="enum in net.milkbowl.vault2.helper">TriState</a></dt>
 <dd>
 <div class="block">Returns an array containing the constants of this enum type, in
 the order they are declared.</div>
@@ -2425,6 +2072,12 @@ the order they are declared.</div>
 <div class="block">Withdraw an amount from a player on a given world - DO NOT USE NEGATIVE AMOUNTS
  IMPLEMENTATION SPECIFIC - if an economy plugin does not support this the global balance will be returned.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/Context.html#world--">world()</a></span> - Method in class net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/Context.html" title="class in net.milkbowl.vault2.helper.context">Context</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/ContextKeys.html#WORLD">WORLD</a></span> - Static variable in class net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/ContextKeys.html" title="class in net.milkbowl.vault2.helper.context">ContextKeys</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/Context.html#worldOrNull--">worldOrNull()</a></span> - Method in class net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/Context.html" title="class in net.milkbowl.vault2.helper.context">Context</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <a href="#I:A">A</a>&nbsp;<a href="#I:B">B</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:W">W</a>&nbsp;</div>
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
