@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":50,"i1":50,"i2":50,"i3":6,"i4":6,"i5":18,"i6":18,"i7":18,"i8":6,"i9":6,"i10":18,"i11":18,"i12":18,"i13":38,"i14":6,"i15":38,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6,"i23":6,"i24":6,"i25":38,"i26":38,"i27":6,"i28":6,"i29":6,"i30":18,"i31":6,"i32":38,"i33":38,"i34":38,"i35":6,"i36":6,"i37":6,"i38":6,"i39":6,"i40":6,"i41":6,"i42":6,"i43":6,"i44":6,"i45":6,"i46":6,"i47":6,"i48":6,"i49":6,"i50":6,"i51":6,"i52":6,"i53":18,"i54":18,"i55":18,"i56":6,"i57":6,"i58":6,"i59":6,"i60":6};
+var methods = {"i0":50,"i1":50,"i2":50,"i3":6,"i4":6,"i5":18,"i6":18,"i7":18,"i8":6,"i9":6,"i10":18,"i11":18,"i12":18,"i13":18,"i14":18,"i15":18,"i16":18,"i17":18,"i18":18,"i19":38,"i20":6,"i21":38,"i22":6,"i23":6,"i24":6,"i25":6,"i26":6,"i27":6,"i28":6,"i29":6,"i30":6,"i31":38,"i32":38,"i33":6,"i34":6,"i35":6,"i36":18,"i37":6,"i38":38,"i39":38,"i40":38,"i41":6,"i42":6,"i43":6,"i44":6,"i45":6,"i46":6,"i47":6,"i48":6,"i49":6,"i50":6,"i51":6,"i52":6,"i53":6,"i54":6,"i55":6,"i56":6,"i57":6,"i58":6,"i59":18,"i60":18,"i61":18,"i62":6,"i63":6,"i64":6,"i65":6,"i66":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -228,6 +228,64 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i13" class="rowColor">
+<td class="colFirst"><code>default @NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#canDeposit-java.lang.String-java.util.UUID-java.math.BigDecimal-">canDeposit</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
+          @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
+          @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount)</code>
+<div class="block">Checks if an account associated with a UUID can receive a deposit of the specified amount.</div>
+</td>
+</tr>
+<tr id="i14" class="altColor">
+<td class="colFirst"><code>default @NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#canDeposit-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">canDeposit</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
+          @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
+          @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;worldName,
+          @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount)</code>
+<div class="block">Checks if an account associated with a UUID can receive a deposit of the specified amount
+ in a given world.</div>
+</td>
+</tr>
+<tr id="i15" class="rowColor">
+<td class="colFirst"><code>default @NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#canDeposit-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">canDeposit</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
+          @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
+          @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;worldName,
+          @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;currency,
+          @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount)</code>
+<div class="block">Checks if an account associated with a UUID can receive a deposit of the specified amount
+ in a given world and currency.</div>
+</td>
+</tr>
+<tr id="i16" class="altColor">
+<td class="colFirst"><code>default @NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#canWithdraw-java.lang.String-java.util.UUID-java.math.BigDecimal-">canWithdraw</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
+           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
+           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount)</code>
+<div class="block">Checks if an account associated with a UUID can perform a withdrawal of the specified amount.</div>
+</td>
+</tr>
+<tr id="i17" class="rowColor">
+<td class="colFirst"><code>default @NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#canWithdraw-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">canWithdraw</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
+           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
+           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;worldName,
+           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount)</code>
+<div class="block">Checks if an account associated with a UUID can perform a withdrawal of the specified amount
+ in a given world.</div>
+</td>
+</tr>
+<tr id="i18" class="altColor">
+<td class="colFirst"><code>default @NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#canWithdraw-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">canWithdraw</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
+           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
+           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;worldName,
+           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;currency,
+           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount)</code>
+<div class="block">Checks if an account associated with a UUID can perform a withdrawal of the specified amount
+ in a given world and currency.</div>
+</td>
+</tr>
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#createAccount-java.util.UUID-java.lang.String-">createAccount</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
@@ -238,7 +296,7 @@ var activeTableTab = "activeTableTab";
 </div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#createAccount-java.util.UUID-java.lang.String-boolean-">createAccount</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
@@ -246,7 +304,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Creates a new account with the provided information.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#createAccount-java.util.UUID-java.lang.String-java.lang.String-">createAccount</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
@@ -258,7 +316,7 @@ var activeTableTab = "activeTableTab";
 </div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#createAccount-java.util.UUID-java.lang.String-java.lang.String-boolean-">createAccount</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
@@ -267,7 +325,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Creates a new account with the given parameters.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#createSharedAccount-java.lang.String-java.util.UUID-java.lang.String-java.util.UUID-">createSharedAccount</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                    @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -276,32 +334,32 @@ var activeTableTab = "activeTableTab";
 <div class="block">Creates a shared account with the specified parameters.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#currencies--">currencies</a></span>()</code>
 <div class="block">Returns a list of currencies used by the economy plugin.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#defaultCurrencyNamePlural-java.lang.String-">defaultCurrencyNamePlural</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName)</code>
 <div class="block">Returns the name of the default currency in plural form.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#defaultCurrencyNameSingular-java.lang.String-">defaultCurrencyNameSingular</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName)</code>
 <div class="block">Returns the name of the default currency in singular form.</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#deleteAccount-java.lang.String-java.util.UUID-">deleteAccount</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;plugin,
              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID)</code>
 <div class="block">Deletes the account associated with the specified UUID.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code>@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#deposit-java.lang.String-java.util.UUID-java.math.BigDecimal-">deposit</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
        @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -309,7 +367,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Deposit an amount to an account associated with the given UUID</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i29" class="rowColor">
 <td class="colFirst"><code>@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#deposit-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">deposit</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
        @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -318,7 +376,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Deposit an amount to an account associated with a UUID on a given world</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i30" class="altColor">
 <td class="colFirst"><code>@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#deposit-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">deposit</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
        @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -328,7 +386,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Deposit an amount to an account associated with a UUID on a given world</div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i31" class="rowColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#format-java.math.BigDecimal-">format</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
@@ -338,7 +396,7 @@ var activeTableTab = "activeTableTab";
 </div>
 </td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i32" class="altColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#format-java.math.BigDecimal-java.lang.String-">format</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount,
       @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;currency)</code>
@@ -349,7 +407,7 @@ var activeTableTab = "activeTableTab";
 </div>
 </td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i33" class="rowColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#format-java.lang.String-java.math.BigDecimal-">format</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
       @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount)</code>
@@ -357,7 +415,7 @@ var activeTableTab = "activeTableTab";
  your economy plugin's currency names/conventions.</div>
 </td>
 </tr>
-<tr id="i28" class="altColor">
+<tr id="i34" class="altColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#format-java.lang.String-java.math.BigDecimal-java.lang.String-">format</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
       @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount,
@@ -366,13 +424,13 @@ var activeTableTab = "activeTableTab";
  your economy plugin's currency names/conventions.</div>
 </td>
 </tr>
-<tr id="i29" class="rowColor">
+<tr id="i35" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#fractionalDigits-java.lang.String-">fractionalDigits</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName)</code>
 <div class="block">Some economy plugins round off after a certain number of digits.</div>
 </td>
 </tr>
-<tr id="i30" class="altColor">
+<tr id="i36" class="altColor">
 <td class="colFirst"><code>default int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#fractionalDigits-java.lang.String-java.lang.String-">fractionalDigits</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                 @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;currency)</code>
@@ -380,13 +438,13 @@ var activeTableTab = "activeTableTab";
  plugin.</div>
 </td>
 </tr>
-<tr id="i31" class="rowColor">
+<tr id="i37" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#getAccountName-java.util.UUID-">getAccountName</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID)</code>
 <div class="block">Gets the last known name of an account owned by the given UUID.</div>
 </td>
 </tr>
-<tr id="i32" class="altColor">
+<tr id="i38" class="altColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#getBalance-java.lang.String-java.util.UUID-">getBalance</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID)</code>
@@ -397,7 +455,7 @@ var activeTableTab = "activeTableTab";
 </div>
 </td>
 </tr>
-<tr id="i33" class="rowColor">
+<tr id="i39" class="rowColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#getBalance-java.lang.String-java.util.UUID-java.lang.String-">getBalance</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -409,7 +467,7 @@ var activeTableTab = "activeTableTab";
 </div>
 </td>
 </tr>
-<tr id="i34" class="altColor">
+<tr id="i40" class="altColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#getBalance-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-">getBalance</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -422,26 +480,26 @@ var activeTableTab = "activeTableTab";
 </div>
 </td>
 </tr>
-<tr id="i35" class="rowColor">
+<tr id="i41" class="rowColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#getDefaultCurrency-java.lang.String-">getDefaultCurrency</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName)</code>
 <div class="block">Used to get the default currency.</div>
 </td>
 </tr>
-<tr id="i36" class="altColor">
+<tr id="i42" class="altColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#getName--">getName</a></span>()</code>
 <div class="block">Gets name of the economy plugin.</div>
 </td>
 </tr>
-<tr id="i37" class="rowColor">
+<tr id="i43" class="rowColor">
 <td class="colFirst"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#getUUIDNameMap--">getUUIDNameMap</a></span>()</code>
 <div class="block">Returns a map that represents all the UUIDs which have accounts in the plugin, as well as their
  last-known-name.</div>
 </td>
 </tr>
-<tr id="i38" class="altColor">
+<tr id="i44" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#has-java.lang.String-java.util.UUID-java.math.BigDecimal-">has</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
    @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -449,7 +507,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Checks if the account associated with the given UUID has the amount</div>
 </td>
 </tr>
-<tr id="i39" class="rowColor">
+<tr id="i45" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#has-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">has</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
    @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -458,7 +516,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Checks if the account associated with the given UUID has the amount in the given world</div>
 </td>
 </tr>
-<tr id="i40" class="altColor">
+<tr id="i46" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#has-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">has</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
    @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -468,20 +526,20 @@ var activeTableTab = "activeTableTab";
 <div class="block">Checks if the account associated with the given UUID has the amount in the given world</div>
 </td>
 </tr>
-<tr id="i41" class="rowColor">
+<tr id="i47" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#hasAccount-java.util.UUID-">hasAccount</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID)</code>
 <div class="block">Checks if this UUID has an account yet.</div>
 </td>
 </tr>
-<tr id="i42" class="altColor">
+<tr id="i48" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#hasAccount-java.util.UUID-java.lang.String-">hasAccount</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
           @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;worldName)</code>
 <div class="block">Checks if this UUID has an account yet in the given world.</div>
 </td>
 </tr>
-<tr id="i43" class="rowColor">
+<tr id="i49" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#hasAccountPermission-java.lang.String-java.util.UUID-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission-">hasAccountPermission</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                     @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -490,25 +548,25 @@ var activeTableTab = "activeTableTab";
 <div class="block">Checks if the specified account has the given permission for the given plugin.</div>
 </td>
 </tr>
-<tr id="i44" class="altColor">
+<tr id="i50" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#hasCurrency-java.lang.String-">hasCurrency</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;currency)</code>
 <div class="block">Returns true if a currency with the specified name exists.</div>
 </td>
 </tr>
-<tr id="i45" class="rowColor">
+<tr id="i51" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#hasMultiCurrencySupport--">hasMultiCurrencySupport</a></span>()</code>
 <div class="block">Returns true if the economy plugin supports multiple currencies.</div>
 </td>
 </tr>
-<tr id="i46" class="altColor">
+<tr id="i52" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#hasSharedAccountSupport--">hasSharedAccountSupport</a></span>()</code>
 <div class="block">Returns true if the economy plugin supports shared accounts.</div>
 </td>
 </tr>
-<tr id="i47" class="rowColor">
+<tr id="i53" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#isAccountMember-java.lang.String-java.util.UUID-java.util.UUID-">isAccountMember</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -516,7 +574,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Determines whether a specific member is an account member of a given plugin.</div>
 </td>
 </tr>
-<tr id="i48" class="altColor">
+<tr id="i54" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#isAccountOwner-java.lang.String-java.util.UUID-java.util.UUID-">isAccountOwner</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
               @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -525,13 +583,13 @@ var activeTableTab = "activeTableTab";
  account ID and plugin name.</div>
 </td>
 </tr>
-<tr id="i49" class="rowColor">
+<tr id="i55" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#isEnabled--">isEnabled</a></span>()</code>
 <div class="block">Checks if economy plugin is enabled.</div>
 </td>
 </tr>
-<tr id="i50" class="altColor">
+<tr id="i56" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#removeAccountMember-java.lang.String-java.util.UUID-java.util.UUID-">removeAccountMember</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                    @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -539,7 +597,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Removes a member from an account.</div>
 </td>
 </tr>
-<tr id="i51" class="rowColor">
+<tr id="i57" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#renameAccount-java.lang.String-java.util.UUID-java.lang.String-">renameAccount</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;plugin,
              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -547,7 +605,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Renames the account with the specified ID in the given plugin to the new name.</div>
 </td>
 </tr>
-<tr id="i52" class="altColor">
+<tr id="i58" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#renameAccount-java.util.UUID-java.lang.String-">renameAccount</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
              @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
@@ -555,7 +613,7 @@ var activeTableTab = "activeTableTab";
  <a href="../../../../net/milkbowl/vault2/economy/Economy.html#getUUIDNameMap--"><code>getUUIDNameMap()</code></a>.</div>
 </td>
 </tr>
-<tr id="i53" class="rowColor">
+<tr id="i59" class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#set-java.lang.String-java.util.UUID-java.math.BigDecimal-">set</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
    @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -563,7 +621,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Sets the amount of monies for a player.</div>
 </td>
 </tr>
-<tr id="i54" class="altColor">
+<tr id="i60" class="altColor">
 <td class="colFirst"><code>default <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#set-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">set</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
    @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -572,7 +630,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Sets the amount of monies for a player in a specific world.</div>
 </td>
 </tr>
-<tr id="i55" class="rowColor">
+<tr id="i61" class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#set-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">set</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
    @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -582,7 +640,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Sets the amount of specified currency for a player in a specific world.</div>
 </td>
 </tr>
-<tr id="i56" class="altColor">
+<tr id="i62" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#setOwner-java.lang.String-java.util.UUID-java.util.UUID-">setOwner</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
         @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -590,7 +648,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Sets the owner of a specified plugin to the given accountID.</div>
 </td>
 </tr>
-<tr id="i57" class="rowColor">
+<tr id="i63" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#updateAccountPermission-java.lang.String-java.util.UUID-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission-boolean-">updateAccountPermission</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
                        @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -600,7 +658,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Updates the account permission for a specific plugin and user.</div>
 </td>
 </tr>
-<tr id="i58" class="altColor">
+<tr id="i64" class="altColor">
 <td class="colFirst"><code>@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#withdraw-java.lang.String-java.util.UUID-java.math.BigDecimal-">withdraw</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
         @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -608,7 +666,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Withdraw an amount from an account associated with a UUID</div>
 </td>
 </tr>
-<tr id="i59" class="rowColor">
+<tr id="i65" class="rowColor">
 <td class="colFirst"><code>@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#withdraw-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">withdraw</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
         @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -617,7 +675,7 @@ var activeTableTab = "activeTableTab";
 <div class="block">Withdraw an amount from an account associated with a UUID on a given world</div>
 </td>
 </tr>
-<tr id="i60" class="altColor">
+<tr id="i66" class="altColor">
 <td class="colFirst"><code>@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../net/milkbowl/vault2/economy/Economy.html#withdraw-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">withdraw</a></span>(@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
         @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
@@ -1784,6 +1842,258 @@ default&nbsp;@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/ma
  whether the transaction was a Success, Failure, Unsupported.</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../net/milkbowl/vault2/economy/Economy.html#fractionalDigits-java.lang.String-"><code>fractionalDigits(String)</code></a></dd>
+</dl>
+</li>
+</ul>
+<a name="canDeposit-java.lang.String-java.util.UUID-java.math.BigDecimal-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>canDeposit</h4>
+<pre>@NotNull
+default&nbsp;@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;canDeposit(@NotNull
+                                                     @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
+                                                     @NotNull
+                                                     @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
+                                                     @NotNull
+                                                     @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount)</pre>
+<div class="block">Checks if an account associated with a UUID can receive a deposit of the specified amount.
+ Checks performed are up to the implementation, but could include balance limits, account
+ status, inventory space for item-based currencies, or other provider-specific validations.
+ <p>
+ Note: Negative amounts should not be used.
+ <br>
+ Note: <code>pluginName</code> should be used for logging/diagnostics only and MUST NOT affect
+ business logic.
+ </p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pluginName</code> - The name of the plugin that is calling the method.</dd>
+<dd><code>accountID</code> - the UUID associated with the account to check.</dd>
+<dd><code>amount</code> - Amount to check.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy"><code>EconomyResponse</code></a> which includes the Economy plugin's <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.ResponseType.html" title="enum in net.milkbowl.vault2.economy"><code>EconomyResponse.ResponseType</code></a>
+ indicating whether the account can receive the deposit. On success, amount is the checked
+ amount and balance is the current balance.</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>2.19</dd>
+</dl>
+</li>
+</ul>
+<a name="canDeposit-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>canDeposit</h4>
+<pre>@NotNull
+default&nbsp;@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;canDeposit(@NotNull
+                                                     @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
+                                                     @NotNull
+                                                     @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
+                                                     @NotNull
+                                                     @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;worldName,
+                                                     @NotNull
+                                                     @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount)</pre>
+<div class="block">Checks if an account associated with a UUID can receive a deposit of the specified amount
+ in a given world.
+ Checks performed are up to the implementation, but could include balance limits, account
+ status, inventory space for item-based currencies, or other provider-specific validations.
+ <p>
+ Note: Negative amounts should not be used.
+ <br>
+ Note: <code>pluginName</code> should be used for logging/diagnostics only and MUST NOT affect
+ business logic.
+ <br>
+ If the provider does not support multiple worlds, the provider's default world will be used.
+ </p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pluginName</code> - The name of the plugin that is calling the method.</dd>
+<dd><code>accountID</code> - the UUID associated with the account to check.</dd>
+<dd><code>worldName</code> - the name of the world to check in.</dd>
+<dd><code>amount</code> - Amount to check.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy"><code>EconomyResponse</code></a> which includes the Economy plugin's <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.ResponseType.html" title="enum in net.milkbowl.vault2.economy"><code>EconomyResponse.ResponseType</code></a>
+ indicating whether the account can receive the deposit. On success, amount is the checked
+ amount and balance is the current balance.</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>2.19</dd>
+</dl>
+</li>
+</ul>
+<a name="canDeposit-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>canDeposit</h4>
+<pre>@NotNull
+default&nbsp;@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;canDeposit(@NotNull
+                                                     @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
+                                                     @NotNull
+                                                     @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
+                                                     @NotNull
+                                                     @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;worldName,
+                                                     @NotNull
+                                                     @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;currency,
+                                                     @NotNull
+                                                     @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount)</pre>
+<div class="block">Checks if an account associated with a UUID can receive a deposit of the specified amount
+ in a given world and currency.
+ Checks performed are up to the implementation, but could include balance limits, account
+ status, inventory space for item-based currencies, or other provider-specific validations.
+ <p>
+ Note: Negative amounts should not be used.
+ <br>
+ Note: <code>pluginName</code> should be used for logging/diagnostics only and MUST NOT affect
+ business logic.
+ <br>
+ If the provider does not support multiple worlds, the provider's default world will be used.
+ <br>
+ If the provider does not support multi-currency, the provider's default currency will be
+ used.
+ </p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pluginName</code> - The name of the plugin that is calling the method.</dd>
+<dd><code>accountID</code> - the UUID associated with the account to check.</dd>
+<dd><code>worldName</code> - the name of the world to check in.</dd>
+<dd><code>currency</code> - the currency to use.</dd>
+<dd><code>amount</code> - Amount to check.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy"><code>EconomyResponse</code></a> which includes the Economy plugin's <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.ResponseType.html" title="enum in net.milkbowl.vault2.economy"><code>EconomyResponse.ResponseType</code></a>
+ indicating whether the account can receive the deposit. On success, amount is the checked
+ amount and balance is the current balance.</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>2.19</dd>
+</dl>
+</li>
+</ul>
+<a name="canWithdraw-java.lang.String-java.util.UUID-java.math.BigDecimal-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>canWithdraw</h4>
+<pre>@NotNull
+default&nbsp;@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;canWithdraw(@NotNull
+                                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
+                                                      @NotNull
+                                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
+                                                      @NotNull
+                                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount)</pre>
+<div class="block">Checks if an account associated with a UUID can perform a withdrawal of the specified amount.
+ Checks performed are up to the implementation, but could include account status, withdrawal
+ limits, cooldowns, or other provider-specific validations beyond simple balance checks.
+ <p>
+ Note: Negative amounts should not be used.
+ <br>
+ Note: <code>pluginName</code> should be used for logging/diagnostics only and MUST NOT affect
+ business logic.
+ </p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pluginName</code> - The name of the plugin that is calling the method.</dd>
+<dd><code>accountID</code> - the UUID associated with the account to check.</dd>
+<dd><code>amount</code> - Amount to check.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy"><code>EconomyResponse</code></a> which includes the Economy plugin's <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.ResponseType.html" title="enum in net.milkbowl.vault2.economy"><code>EconomyResponse.ResponseType</code></a>
+ indicating whether the account can perform the withdrawal. On success, amount is the checked
+ amount and balance is the current balance.</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>2.19</dd>
+</dl>
+</li>
+</ul>
+<a name="canWithdraw-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>canWithdraw</h4>
+<pre>@NotNull
+default&nbsp;@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;canWithdraw(@NotNull
+                                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
+                                                      @NotNull
+                                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
+                                                      @NotNull
+                                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;worldName,
+                                                      @NotNull
+                                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount)</pre>
+<div class="block">Checks if an account associated with a UUID can perform a withdrawal of the specified amount
+ in a given world.
+ Checks performed are up to the implementation, but could include account status, withdrawal
+ limits, cooldowns, or other provider-specific validations beyond simple balance checks.
+ <p>
+ Note: Negative amounts should not be used.
+ <br>
+ Note: <code>pluginName</code> should be used for logging/diagnostics only and MUST NOT affect
+ business logic.
+ <br>
+ If the provider does not support multiple worlds, the provider's default world will be used.
+ </p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pluginName</code> - The name of the plugin that is calling the method.</dd>
+<dd><code>accountID</code> - the UUID associated with the account to check.</dd>
+<dd><code>worldName</code> - the name of the world to check in.</dd>
+<dd><code>amount</code> - Amount to check.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy"><code>EconomyResponse</code></a> which includes the Economy plugin's <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.ResponseType.html" title="enum in net.milkbowl.vault2.economy"><code>EconomyResponse.ResponseType</code></a>
+ indicating whether the account can perform the withdrawal. On success, amount is the checked
+ amount and balance is the current balance.</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>2.19</dd>
+</dl>
+</li>
+</ul>
+<a name="canWithdraw-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>canWithdraw</h4>
+<pre>@NotNull
+default&nbsp;@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a>&nbsp;canWithdraw(@NotNull
+                                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginName,
+                                                      @NotNull
+                                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;accountID,
+                                                      @NotNull
+                                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;worldName,
+                                                      @NotNull
+                                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;currency,
+                                                      @NotNull
+                                                      @NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html?is-external=true" title="class or interface in java.math">BigDecimal</a>&nbsp;amount)</pre>
+<div class="block">Checks if an account associated with a UUID can perform a withdrawal of the specified amount
+ in a given world and currency.
+ Checks performed are up to the implementation, but could include account status, withdrawal
+ limits, cooldowns, or other provider-specific validations beyond simple balance checks.
+ <p>
+ Note: Negative amounts should not be used.
+ <br>
+ Note: <code>pluginName</code> should be used for logging/diagnostics only and MUST NOT affect
+ business logic.
+ <br>
+ If the provider does not support multiple worlds, the provider's default world will be used.
+ <br>
+ If the provider does not support multi-currency, the provider's default currency will be
+ used.
+ </p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pluginName</code> - The name of the plugin that is calling the method.</dd>
+<dd><code>accountID</code> - the UUID associated with the account to check.</dd>
+<dd><code>worldName</code> - the name of the world to check in.</dd>
+<dd><code>currency</code> - the currency to use.</dd>
+<dd><code>amount</code> - Amount to check.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy"><code>EconomyResponse</code></a> which includes the Economy plugin's <a href="../../../../net/milkbowl/vault2/economy/EconomyResponse.ResponseType.html" title="enum in net.milkbowl.vault2.economy"><code>EconomyResponse.ResponseType</code></a>
+ indicating whether the account can perform the withdrawal. On success, amount is the checked
+ amount and balance is the current balance.</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>2.19</dd>
 </dl>
 </li>
 </ul>
