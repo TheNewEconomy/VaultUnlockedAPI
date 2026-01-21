@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "net.milkbowl.vault"
-version = "2.18"
+version = "2.19"
 description = "VaultUnlockedAPI"
 
 repositories {
