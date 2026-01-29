@@ -352,23 +352,23 @@ public interface Economy {
   /**
    * Renames the account with the specified ID in the given plugin to the new name.
    *
-   * @param plugin    The plugin name where the account exists
+   * @param pluginName    The plugin name where the account exists
    * @param accountID The unique identifier of the account to be renamed
    * @param name      The new name to assign to the account
    *
    * @return true if the rename operation was successful, false otherwise
    */
-  boolean renameAccount(@NotNull final String plugin, @NotNull final UUID accountID, @NotNull final String name);
+  boolean renameAccount(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String name);
 
   /**
    * Deletes the account associated with the specified UUID.
    *
-   * @param plugin    the name of the plugin managing the account
+   * @param pluginName    the name of the plugin managing the account
    * @param accountID the UUID of the account to be deleted
    *
    * @return true if the account was successfully deleted, false otherwise
    */
-  boolean deleteAccount(@NotNull final String plugin, @NotNull final UUID accountID);
+  boolean deleteAccount(@NotNull final String pluginName, @NotNull final UUID accountID);
 
   /*
    * Account balance related methods follow.
@@ -383,13 +383,13 @@ public interface Economy {
    * If the provider does not support multi-currency, the provider's default currency will be
    * used.
    * </p>
-   * @param plugin    the name of the plugin
+   * @param pluginName    the name of the plugin
    * @param accountID the UUID of the account
    * @param currency  the currency to check support for.
    *
    * @return true if the account supports the currency, false otherwise
    */
-  boolean accountSupportsCurrency(@NotNull final String plugin, @NotNull final UUID accountID, @NotNull final String currency);
+  boolean accountSupportsCurrency(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String currency);
 
   /**
    * Checks if the given account supports the specified currency in the given world.
@@ -402,14 +402,14 @@ public interface Economy {
    * If the provider does not support multi-currency, the provider's default currency will be
    * used.
    * </p>
-   * @param plugin    the name of the plugin requesting the check
+   * @param pluginName    the name of the plugin requesting the check
    * @param accountID the UUID of the player account
    * @param currency  the currency code to check support for
    * @param world     the name of the world to check in
    *
    * @return true if the account supports the currency in the world, false otherwise
    */
-  boolean accountSupportsCurrency(@NotNull final String plugin, @NotNull final UUID accountID, @NotNull final String currency, @NotNull final String world);
+  boolean accountSupportsCurrency(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String currency, @NotNull final String world);
 
   /**
    * Gets balance of an account associated with a UUID.
@@ -698,6 +698,96 @@ public interface Economy {
   }
 
   /**
+   * Checks if an account associated with a UUID can perform a withdrawal of the specified amount.
+   * Checks performed are up to the implementation, but could include account status, withdrawal
+   * limits, cooldowns, or other provider-specific validations beyond simple balance checks.
+   * <p>
+   * Note: Negative amounts should not be used.
+   * <br>
+   * Note: {@code pluginName} should be used for logging/diagnostics only and MUST NOT affect
+   * business logic.
+   * </p>
+   * @param pluginName The name of the plugin that is calling the method.
+   * @param accountID  the UUID associated with the account to check.
+   * @param amount     Amount to check.
+   *
+   * @return {@link EconomyResponse} which includes the Economy plugin's {@link ResponseType}
+   * indicating whether the account can perform the withdrawal. On success, amount is the checked
+   * amount and balance is the current balance.
+   *
+   * @since 2.19
+   */
+  @NotNull
+  default EconomyResponse canWithdraw(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final BigDecimal amount) {
+
+    return new EconomyResponse(BigDecimal.ZERO, BigDecimal.ZERO, ResponseType.NOT_IMPLEMENTED, "canWithdraw is not implemented by this economy provider.");
+  }
+
+  /**
+   * Checks if an account associated with a UUID can perform a withdrawal of the specified amount
+   * in a given world.
+   * Checks performed are up to the implementation, but could include account status, withdrawal
+   * limits, cooldowns, or other provider-specific validations beyond simple balance checks.
+   * <p>
+   * Note: Negative amounts should not be used.
+   * <br>
+   * Note: {@code pluginName} should be used for logging/diagnostics only and MUST NOT affect
+   * business logic.
+   * <br>
+   * If the provider does not support multiple worlds, the provider's default world will be used.
+   * </p>
+   * @param pluginName The name of the plugin that is calling the method.
+   * @param accountID  the UUID associated with the account to check.
+   * @param worldName  the name of the world to check in.
+   * @param amount     Amount to check.
+   *
+   * @return {@link EconomyResponse} which includes the Economy plugin's {@link ResponseType}
+   * indicating whether the account can perform the withdrawal. On success, amount is the checked
+   * amount and balance is the current balance.
+   *
+   * @since 2.19
+   */
+  @NotNull
+  default EconomyResponse canWithdraw(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String worldName, @NotNull final BigDecimal amount) {
+
+    return new EconomyResponse(BigDecimal.ZERO, BigDecimal.ZERO, ResponseType.NOT_IMPLEMENTED, "canWithdraw is not implemented by this economy provider.");
+  }
+
+  /**
+   * Checks if an account associated with a UUID can perform a withdrawal of the specified amount
+   * in a given world and currency.
+   * Checks performed are up to the implementation, but could include account status, withdrawal
+   * limits, cooldowns, or other provider-specific validations beyond simple balance checks.
+   * <p>
+   * Note: Negative amounts should not be used.
+   * <br>
+   * Note: {@code pluginName} should be used for logging/diagnostics only and MUST NOT affect
+   * business logic.
+   * <br>
+   * If the provider does not support multiple worlds, the provider's default world will be used.
+   * <br>
+   * If the provider does not support multi-currency, the provider's default currency will be
+   * used.
+   * </p>
+   * @param pluginName The name of the plugin that is calling the method.
+   * @param accountID  the UUID associated with the account to check.
+   * @param worldName  the name of the world to check in.
+   * @param currency   the currency to use.
+   * @param amount     Amount to check.
+   *
+   * @return {@link EconomyResponse} which includes the Economy plugin's {@link ResponseType}
+   * indicating whether the account can perform the withdrawal. On success, amount is the checked
+   * amount and balance is the current balance.
+   *
+   * @since 2.19
+   */
+  @NotNull
+  default EconomyResponse canWithdraw(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String worldName, @NotNull final String currency, @NotNull final BigDecimal amount) {
+
+    return new EconomyResponse(BigDecimal.ZERO, BigDecimal.ZERO, ResponseType.NOT_IMPLEMENTED, "canWithdraw is not implemented by this economy provider.");
+  }
+
+  /**
    * Withdraw an amount from an account associated with a UUID
    * <p>
    * Note: Negative amounts should not be used. Use deposit methods instead.
@@ -855,96 +945,6 @@ public interface Economy {
   default EconomyResponse canDeposit(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String worldName, @NotNull final String currency, @NotNull final BigDecimal amount) {
 
     return new EconomyResponse(BigDecimal.ZERO, BigDecimal.ZERO, ResponseType.NOT_IMPLEMENTED, "canDeposit is not implemented by this economy provider.");
-  }
-
-  /**
-   * Checks if an account associated with a UUID can perform a withdrawal of the specified amount.
-   * Checks performed are up to the implementation, but could include account status, withdrawal
-   * limits, cooldowns, or other provider-specific validations beyond simple balance checks.
-   * <p>
-   * Note: Negative amounts should not be used.
-   * <br>
-   * Note: {@code pluginName} should be used for logging/diagnostics only and MUST NOT affect
-   * business logic.
-   * </p>
-   * @param pluginName The name of the plugin that is calling the method.
-   * @param accountID  the UUID associated with the account to check.
-   * @param amount     Amount to check.
-   *
-   * @return {@link EconomyResponse} which includes the Economy plugin's {@link ResponseType}
-   * indicating whether the account can perform the withdrawal. On success, amount is the checked
-   * amount and balance is the current balance.
-   *
-   * @since 2.19
-   */
-  @NotNull
-  default EconomyResponse canWithdraw(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final BigDecimal amount) {
-
-    return new EconomyResponse(BigDecimal.ZERO, BigDecimal.ZERO, ResponseType.NOT_IMPLEMENTED, "canWithdraw is not implemented by this economy provider.");
-  }
-
-  /**
-   * Checks if an account associated with a UUID can perform a withdrawal of the specified amount
-   * in a given world.
-   * Checks performed are up to the implementation, but could include account status, withdrawal
-   * limits, cooldowns, or other provider-specific validations beyond simple balance checks.
-   * <p>
-   * Note: Negative amounts should not be used.
-   * <br>
-   * Note: {@code pluginName} should be used for logging/diagnostics only and MUST NOT affect
-   * business logic.
-   * <br>
-   * If the provider does not support multiple worlds, the provider's default world will be used.
-   * </p>
-   * @param pluginName The name of the plugin that is calling the method.
-   * @param accountID  the UUID associated with the account to check.
-   * @param worldName  the name of the world to check in.
-   * @param amount     Amount to check.
-   *
-   * @return {@link EconomyResponse} which includes the Economy plugin's {@link ResponseType}
-   * indicating whether the account can perform the withdrawal. On success, amount is the checked
-   * amount and balance is the current balance.
-   *
-   * @since 2.19
-   */
-  @NotNull
-  default EconomyResponse canWithdraw(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String worldName, @NotNull final BigDecimal amount) {
-
-    return new EconomyResponse(BigDecimal.ZERO, BigDecimal.ZERO, ResponseType.NOT_IMPLEMENTED, "canWithdraw is not implemented by this economy provider.");
-  }
-
-  /**
-   * Checks if an account associated with a UUID can perform a withdrawal of the specified amount
-   * in a given world and currency.
-   * Checks performed are up to the implementation, but could include account status, withdrawal
-   * limits, cooldowns, or other provider-specific validations beyond simple balance checks.
-   * <p>
-   * Note: Negative amounts should not be used.
-   * <br>
-   * Note: {@code pluginName} should be used for logging/diagnostics only and MUST NOT affect
-   * business logic.
-   * <br>
-   * If the provider does not support multiple worlds, the provider's default world will be used.
-   * <br>
-   * If the provider does not support multi-currency, the provider's default currency will be
-   * used.
-   * </p>
-   * @param pluginName The name of the plugin that is calling the method.
-   * @param accountID  the UUID associated with the account to check.
-   * @param worldName  the name of the world to check in.
-   * @param currency   the currency to use.
-   * @param amount     Amount to check.
-   *
-   * @return {@link EconomyResponse} which includes the Economy plugin's {@link ResponseType}
-   * indicating whether the account can perform the withdrawal. On success, amount is the checked
-   * amount and balance is the current balance.
-   *
-   * @since 2.19
-   */
-  @NotNull
-  default EconomyResponse canWithdraw(@NotNull final String pluginName, @NotNull final UUID accountID, @NotNull final String worldName, @NotNull final String currency, @NotNull final BigDecimal amount) {
-
-    return new EconomyResponse(BigDecimal.ZERO, BigDecimal.ZERO, ResponseType.NOT_IMPLEMENTED, "canWithdraw is not implemented by this economy provider.");
   }
 
     /**
