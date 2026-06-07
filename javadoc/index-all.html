@@ -67,7 +67,7 @@
 <!--   -->
 </a></div>
 <!-- ========= END OF TOP NAVBAR ========= -->
-<div class="contentContainer"><a href="#I:A">A</a>&nbsp;<a href="#I:B">B</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:W">W</a>&nbsp;<a name="I:A">
+<div class="contentContainer"><a href="#I:A">A</a>&nbsp;<a href="#I:B">B</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:W">W</a>&nbsp;<a name="I:A">
 <!--   -->
 </a>
 <h2 class="title">A</h2>
@@ -98,6 +98,15 @@
 <div class="block"><span class="deprecationComment">Use <a href="net/milkbowl/vault2/economy/Economy.html#accountsWithOwnerOf-java.lang.String-java.util.UUID-"><code>Economy.accountsWithOwnerOf(String, UUID)</code></a> instead as the string return allows ambiguity.</span></div>
 </div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#accountSupportsCurrency-java.lang.String-java.util.UUID-java.lang.String-">accountSupportsCurrency(String, UUID, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously checks if the given account supports the specified currency within the context
+ of the provided plugin.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#accountSupportsCurrency-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-">accountSupportsCurrency(String, UUID, String, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously checks if a specific account supports the provided currency in the given world.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#accountSupportsCurrency-java.lang.String-java.util.UUID-java.lang.String-">accountSupportsCurrency(String, UUID, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Determines whether an account supports a specific currency.</div>
@@ -106,17 +115,59 @@
 <dd>
 <div class="block">Checks if the given account supports the specified currency in the given world.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#accountSupportsCurrency-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.lang.String-">accountSupportsCurrency(Economy, String, UUID, String)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Checks asynchronously if the specified account supports the given currency.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#accountSupportsCurrency-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-">accountSupportsCurrency(Economy, String, UUID, String, String)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Checks if the specified account supports the given currency in the provided world.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#accountsWithAccessTo-java.lang.String-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission...-">accountsWithAccessTo(String, UUID, AccountPermission...)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously retrieves a list of account IDs (UUIDs) that have the specified permissions
+ for the given plugin name and account ID.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#accountsWithAccessTo-java.lang.String-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission...-">accountsWithAccessTo(String, UUID, AccountPermission...)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Retrieves a list of account IDs that the specified account has the specified permissions for.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#accountsWithAccessTo-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission...-">accountsWithAccessTo(Economy, String, UUID, AccountPermission...)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Retrieves a list of account IDs that have been granted specific permissions to access a given account
+ within the context of the specified plugin.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#accountsWithMembershipTo-java.lang.String-java.util.UUID-">accountsWithMembershipTo(String, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously retrieves a list of account UUIDs that have a membership associated with the specified plugin.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#accountsWithMembershipTo-java.lang.String-java.util.UUID-">accountsWithMembershipTo(String, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Retrieves a list of account IDs that the specified account is a member of.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#accountsWithMembershipTo-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-">accountsWithMembershipTo(Economy, String, UUID)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Retrieves a list of account IDs that have a membership to the specified plugin name for the given account ID.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#accountsWithOwnerOf-java.lang.String-java.util.UUID-">accountsWithOwnerOf(String, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously retrieves a list of account IDs associated with a specific owner.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#accountsWithOwnerOf-java.lang.String-java.util.UUID-">accountsWithOwnerOf(String, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Retrieves a list of account IDs owned by the specified account ID.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#accountsWithOwnerOf-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-">accountsWithOwnerOf(Economy, String, UUID)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Retrieves a list of account IDs that are owned by the same owner as the specified account ID.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#addAccountMember-java.lang.String-java.util.UUID-java.util.UUID-">addAccountMember(String, UUID, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously adds a member to an account.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#addAccountMember-java.lang.String-java.util.UUID-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission...-">addAccountMember(String, UUID, UUID, AccountPermission...)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously adds a member to an account with the specified initial permissions.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#addAccountMember-java.lang.String-java.util.UUID-java.util.UUID-">addAccountMember(String, UUID, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
@@ -125,6 +176,18 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#addAccountMember-java.lang.String-java.util.UUID-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission...-">addAccountMember(String, UUID, UUID, AccountPermission...)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Adds a member to an account with the specified initial permissions.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#addAccountMember-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.util.UUID-">addAccountMember(Economy, String, UUID, UUID)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Adds a member to an existing account in the economy system.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#addAccountMember-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission...-">addAccountMember(Economy, String, UUID, UUID, AccountPermission...)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Adds a member to the specified account with the given permissions.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/MultiEconomyResponse.html#addBalance-java.util.UUID-java.math.BigDecimal-">addBalance(UUID, BigDecimal)</a></span> - Method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/MultiEconomyResponse.html" title="class in net.milkbowl.vault2.economy">MultiEconomyResponse</a></dt>
+<dd>
+<div class="block">Updates the balance of the entity identified by the specified UUID.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#addGroup-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-">addGroup(Context, Subject, String)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
 <dd>
@@ -143,12 +206,26 @@
 <dd>
 <div class="block">Amount modified by calling method</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/MultiEconomyResponse.html#amount">amount</a></span> - Variable in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/MultiEconomyResponse.html" title="class in net.milkbowl.vault2.economy">MultiEconomyResponse</a></dt>
+<dd>
+<div class="block">Amount modified by calling method</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/MultiEconomyResponse.html#amount--">amount()</a></span> - Method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/MultiEconomyResponse.html" title="class in net.milkbowl.vault2.economy">MultiEconomyResponse</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/TriState.html#asBool--">asBool()</a></span> - Method in enum net.milkbowl.vault2.helper.<a href="net/milkbowl/vault2/helper/TriState.html" title="enum in net.milkbowl.vault2.helper">TriState</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/Context.html#asMap--">asMap()</a></span> - Method in class net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/Context.html" title="class in net.milkbowl.vault2.helper.context">Context</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/subject/Subject.html#asUUID--">asUUID()</a></span> - Method in class net.milkbowl.vault2.helper.subject.<a href="net/milkbowl/vault2/helper/subject/Subject.html" title="class in net.milkbowl.vault2.helper.subject">Subject</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#async--">async()</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
+<dd>
+<div class="block">Provides an optional asynchronous economy instance.</div>
+</dd>
+<dt><a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy"><span class="typeNameLink">AsyncEconomy</span></a> - Interface in <a href="net/milkbowl/vault2/economy/package-summary.html">net.milkbowl.vault2.economy</a></dt>
+<dd>
+<div class="block">AsyncEconomy</div>
+</dd>
 </dl>
 <a name="I:B">
 <!--   -->
@@ -159,6 +236,19 @@
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">New balance of account</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#balance-java.lang.String-java.util.UUID-">balance(String, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously retrieves the balance for the specified account associated with a given plugin.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#balance-java.lang.String-java.util.UUID-java.lang.String-">balance(String, UUID, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously retrieves the balance of a specific account within a given world for the
+ specified plugin.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#balance-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-">balance(String, UUID, String, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously retrieves the balance of a specified account for a given world and currency.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#balance-java.lang.String-java.util.UUID-">balance(String, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
@@ -172,9 +262,25 @@
 <dd>
 <div class="block">Gets balance of a UUID on the specified world and currency.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#balance-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-">balance(Economy, String, UUID)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Retrieves the balance of a specific account within a given economy plugin.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#balance-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.lang.String-">balance(Economy, String, UUID, String)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Retrieves the balance of the specified account in the given world using the provided Economy instance.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#balance-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-">balance(Economy, String, UUID, String, String)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Retrieves the balance for a specific account in a specified world and currency.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyResponse.html#balance">balance</a></span> - Variable in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyResponse.html" title="class in net.milkbowl.vault2.economy">EconomyResponse</a></dt>
 <dd>
 <div class="block">New balance of account</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/MultiEconomyResponse.html#balance-java.util.UUID-">balance(UUID)</a></span> - Method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/MultiEconomyResponse.html" title="class in net.milkbowl.vault2.economy">MultiEconomyResponse</a></dt>
+<dd>
+<div class="block">Retrieves the balance associated with the specified UUID.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/economy/Economy.html#bankBalance-java.lang.String-">bankBalance(String)</a></span> - Method in interface net.milkbowl.vault.economy.<a href="net/milkbowl/vault/economy/Economy.html" title="interface in net.milkbowl.vault.economy">Economy</a></dt>
 <dd>
@@ -211,6 +317,20 @@
 </a>
 <h2 class="title">C</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#canDeposit-java.lang.String-java.util.UUID-java.math.BigDecimal-">canDeposit(String, UUID, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously checks if the specified amount can be deposited into the account 
+ associated with the given identifier.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#canDeposit-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">canDeposit(String, UUID, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously checks if a specified amount can be deposited into an account.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#canDeposit-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">canDeposit(String, UUID, String, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously checks if a specified amount can be deposited into a player's account
+ for a given plugin, world, and currency.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#canDeposit-java.lang.String-java.util.UUID-java.math.BigDecimal-">canDeposit(String, UUID, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Checks if an account associated with a UUID can receive a deposit of the specified amount.</div>
@@ -225,6 +345,31 @@
 <div class="block">Checks if an account associated with a UUID can receive a deposit of the specified amount
  in a given world and currency.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#canDeposit-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.math.BigDecimal-">canDeposit(Economy, String, UUID, BigDecimal)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Checks if a deposit of the specified amount can be made into the given account.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#canDeposit-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">canDeposit(Economy, String, UUID, String, BigDecimal)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Checks if a deposit can be made into a specified account within the given economy system.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#canDeposit-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">canDeposit(Economy, String, UUID, String, String, BigDecimal)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Determines if the specified account is eligible to receive the specified deposit.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#canWithdraw-java.lang.String-java.util.UUID-java.math.BigDecimal-">canWithdraw(String, UUID, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Determines asynchronously if the specified amount can be withdrawn from the given account.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#canWithdraw-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">canWithdraw(String, UUID, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Checks asynchronously if a specified withdrawal operation can be performed for a given account.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#canWithdraw-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">canWithdraw(String, UUID, String, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously checks if a withdrawal operation can be performed on a specified account in the given world
+ and currency for the specified amount.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#canWithdraw-java.lang.String-java.util.UUID-java.math.BigDecimal-">canWithdraw(String, UUID, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Checks if an account associated with a UUID can perform a withdrawal of the specified amount.</div>
@@ -238,6 +383,19 @@
 <dd>
 <div class="block">Checks if an account associated with a UUID can perform a withdrawal of the specified amount
  in a given world and currency.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#canWithdraw-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.math.BigDecimal-">canWithdraw(Economy, String, UUID, BigDecimal)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Determines if a specified amount can be withdrawn from a given account.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#canWithdraw-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">canWithdraw(Economy, String, UUID, String, BigDecimal)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Checks if a withdrawal of the specified amount can be made from the given account in the
+ specified world.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#canWithdraw-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">canWithdraw(Economy, String, UUID, String, String, BigDecimal)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Checks if a withdrawal can be made from the specified account in the given world and currency.</div>
 </dd>
 <dt><a href="net/milkbowl/vault/chat/Chat.html" title="class in net.milkbowl.vault.chat"><span class="typeNameLink">Chat</span></a> - Class in <a href="net/milkbowl/vault/chat/package-summary.html">net.milkbowl.vault.chat</a></dt>
 <dd>
@@ -315,6 +473,14 @@
 <dd>
 <div class="block">Asynchronously copies the suffix from one subject to another in the provided context.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#createAccount-java.util.UUID-java.lang.String-boolean-">createAccount(UUID, String, boolean)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously creates an account with the specified details.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#createAccount-java.util.UUID-java.lang.String-java.lang.String-boolean-">createAccount(UUID, String, String, boolean)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously creates an account with the specified details.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#createAccount-java.util.UUID-java.lang.String-">createAccount(UUID, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
@@ -338,6 +504,14 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#createAccount-java.util.UUID-java.lang.String-java.lang.String-boolean-">createAccount(UUID, String, String, boolean)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Creates a new account with the given parameters.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#createAccount-net.milkbowl.vault2.economy.Economy-java.util.UUID-java.lang.String-boolean-">createAccount(Economy, UUID, String, boolean)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Creates an account in the given economy system with the specified parameters.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#createAccount-net.milkbowl.vault2.economy.Economy-java.util.UUID-java.lang.String-java.lang.String-boolean-">createAccount(Economy, UUID, String, String, boolean)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Creates a new account using the provided Economy instance.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/economy/AbstractEconomy.html#createBank-java.lang.String-org.bukkit.OfflinePlayer-">createBank(String, OfflinePlayer)</a></span> - Method in class net.milkbowl.vault.economy.<a href="net/milkbowl/vault/economy/AbstractEconomy.html" title="class in net.milkbowl.vault.economy">AbstractEconomy</a></dt>
 <dd>&nbsp;</dd>
@@ -379,9 +553,17 @@
 <div class="block">Attempts to create a player account for the given player on the specified world
  IMPLEMENTATION SPECIFIC - if an economy plugin does not support this then false will always be returned.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#createSharedAccount-java.lang.String-java.util.UUID-java.lang.String-java.util.UUID-">createSharedAccount(String, UUID, String, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously creates a shared account in the specified plugin with the provided details.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#createSharedAccount-java.lang.String-java.util.UUID-java.lang.String-java.util.UUID-">createSharedAccount(String, UUID, String, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Creates a shared account with the specified parameters.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#createSharedAccount-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.lang.String-java.util.UUID-">createSharedAccount(Economy, String, UUID, String, UUID)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Creates a shared account within the specified economy provider.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#currencies--">currencies()</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
@@ -411,14 +593,34 @@
 <dd>
 <div class="block">Returns the name of the default currency in singular form.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#deleteAccount-java.lang.String-java.util.UUID-">deleteAccount(String, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously deletes an account identified by the specified plugin name and account ID.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#deleteAccount-java.lang.String-java.util.UUID-">deleteAccount(String, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Deletes the account associated with the specified UUID.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#deleteAccount-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-">deleteAccount(Economy, String, UUID)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Deletes an account associated with the given plugin name and account ID.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/economy/Economy.html#deleteBank-java.lang.String-">deleteBank(String)</a></span> - Method in interface net.milkbowl.vault.economy.<a href="net/milkbowl/vault/economy/Economy.html" title="interface in net.milkbowl.vault.economy">Economy</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Deletes a bank account with the specified name.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#deposit-java.lang.String-java.util.UUID-java.math.BigDecimal-">deposit(String, UUID, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously deposits a specified amount into the account identified by the given account ID.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#deposit-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">deposit(String, UUID, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously deposits a specified amount into an account within a defined world context for a given plugin.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#deposit-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">deposit(String, UUID, String, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously deposits the specified amount of currency into a given account.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#deposit-java.lang.String-java.util.UUID-java.math.BigDecimal-">deposit(String, UUID, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
@@ -431,6 +633,18 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#deposit-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">deposit(String, UUID, String, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Deposit an amount to an account associated with a UUID on a given world</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#deposit-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.math.BigDecimal-">deposit(Economy, String, UUID, BigDecimal)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Deposits a specified amount into an account.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#deposit-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">deposit(Economy, String, UUID, String, BigDecimal)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Deposits a specified amount of money into an account in the specified world.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#deposit-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">deposit(Economy, String, UUID, String, String, BigDecimal)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Deposits a specified amount of currency into an account.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/economy/AbstractEconomy.html#depositPlayer-org.bukkit.OfflinePlayer-double-">depositPlayer(OfflinePlayer, double)</a></span> - Method in class net.milkbowl.vault.economy.<a href="net/milkbowl/vault/economy/AbstractEconomy.html" title="class in net.milkbowl.vault.economy">AbstractEconomy</a></dt>
 <dd>&nbsp;</dd>
@@ -479,6 +693,10 @@
 <dd>
 <div class="block">The main economy API</div>
 </dd>
+<dt><a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy"><span class="typeNameLink">EconomyFutures</span></a> - Class in <a href="net/milkbowl/vault2/economy/package-summary.html">net.milkbowl.vault2.economy</a></dt>
+<dd>
+<div class="block">Provides a wrapper for the synchronous methods of <a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy"><code>Economy</code></a> and the asynchronous methods of <a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy"><code>AsyncEconomy</code></a>.</div>
+</dd>
 <dt><a href="net/milkbowl/vault/economy/EconomyResponse.html" title="class in net.milkbowl.vault.economy"><span class="typeNameLink">EconomyResponse</span></a> - Class in <a href="net/milkbowl/vault/economy/package-summary.html">net.milkbowl.vault.economy</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
@@ -516,6 +734,12 @@
 <dd>
 <div class="block">Error message if the variable 'type' is ResponseType.FAILURE</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/MultiEconomyResponse.html#errorMessage">errorMessage</a></span> - Variable in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/MultiEconomyResponse.html" title="class in net.milkbowl.vault2.economy">MultiEconomyResponse</a></dt>
+<dd>
+<div class="block">Error message if the variable 'type' is ResponseType.FAILURE</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/MultiEconomyResponse.html#errorMessage--">errorMessage()</a></span> - Method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/MultiEconomyResponse.html" title="class in net.milkbowl.vault2.economy">MultiEconomyResponse</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <a name="I:F">
 <!--   -->
@@ -590,9 +814,17 @@
 <dd>
 <div class="block">Retrieves the value associated with the specified key for the given subject within the provided context.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#getAccountName-java.util.UUID-">getAccountName(UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously retrieves the account name associated with the given account ID.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#getAccountName-java.util.UUID-">getAccountName(UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Gets the last known name of an account owned by the given UUID.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#getAccountName-net.milkbowl.vault2.economy.Economy-java.util.UUID-">getAccountName(Economy, UUID)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Retrieves the name of an account associated with the specified account ID.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#getAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-net.milkbowl.vault2.chat.InfoKey-">getAsync(Context, Subject, InfoKey&lt;T&gt;)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
 <dd>
@@ -1040,10 +1272,19 @@
 <dd>
 <div class="block">Retrieves the suffix for the specified subject in the provided context, or returns null if not available.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#getUUIDNameMap--">getUUIDNameMap()</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously retrieves a map where the keys are UUIDs and the values are corresponding
+ names.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#getUUIDNameMap--">getUUIDNameMap()</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Returns a map that represents all the UUIDs which have accounts in the plugin, as well as their
  last-known-name.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#getUUIDNameMap-net.milkbowl.vault2.economy.Economy-">getUUIDNameMap(Economy)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Retrieves a mapping of UUIDs to names using the provided Economy instance.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/Context.html#GLOBAL">GLOBAL</a></span> - Static variable in class net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/Context.html" title="class in net.milkbowl.vault2.helper.context">Context</a></dt>
 <dd>&nbsp;</dd>
@@ -1164,6 +1405,18 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Checks if player has a permission node.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#has-java.lang.String-java.util.UUID-java.math.BigDecimal-">has(String, UUID, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously checks if the specified plugin has the required attributes
+ associated with the given account and amount.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#has-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">has(String, UUID, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#has-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">has(String, UUID, String, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Checks asynchronously if a specific plugin has the required data or configuration
+ for the given account, world, currency, and amount.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#has-java.lang.String-java.util.UUID-java.math.BigDecimal-">has(String, UUID, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Checks if the account associated with the given UUID has the amount</div>
@@ -1175,6 +1428,20 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#has-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">has(String, UUID, String, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Checks if the account associated with the given UUID has the amount in the given world</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#has-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.math.BigDecimal-">has(Economy, String, UUID, BigDecimal)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Checks if a given account has a specified amount in the economy system.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#has-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">has(Economy, String, UUID, String, BigDecimal)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Checks if the specified account has at least the given amount in the specified world 
+ using the provided economy system.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#has-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">has(Economy, String, UUID, String, String, BigDecimal)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Checks if the specified account has at least the specified amount of currency
+ in the given world for the plugin's economy system.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#has-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-">has(Context, Subject, String)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
 <dd>
@@ -1210,6 +1477,15 @@
  This will always return true if the player has joined the server at least once
  as all major economy plugins auto-generate a player account when the player joins the server</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#hasAccount-java.util.UUID-">hasAccount(UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously checks whether an account exists for the specified account ID.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#hasAccount-java.util.UUID-java.lang.String-">hasAccount(UUID, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously checks if an account exists for the given account ID within the specified
+ world.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#hasAccount-java.util.UUID-">hasAccount(UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Checks if this UUID has an account yet.</div>
@@ -1218,9 +1494,25 @@
 <dd>
 <div class="block">Checks if this UUID has an account yet in the given world.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#hasAccount-net.milkbowl.vault2.economy.Economy-java.util.UUID-">hasAccount(Economy, UUID)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Checks asynchronously if an account exists in the provided economy system for the given account ID.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#hasAccount-net.milkbowl.vault2.economy.Economy-java.util.UUID-java.lang.String-">hasAccount(Economy, UUID, String)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Checks asynchronously whether an account exists for the specified account ID and world name.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#hasAccountPermission-java.lang.String-java.util.UUID-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission-">hasAccountPermission(String, UUID, UUID, AccountPermission)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously checks if the specified account has a given permission within the context of a specific plugin.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#hasAccountPermission-java.lang.String-java.util.UUID-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission-">hasAccountPermission(String, UUID, UUID, AccountPermission)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Checks if the specified account has the given permission for the given plugin.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#hasAccountPermission-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission-">hasAccountPermission(Economy, String, UUID, UUID, AccountPermission)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Checks if a specific UUID has the given permission for the specified account under a plugin.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#hasAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-">hasAsync(Context, Subject, String)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
 <dd>
@@ -1297,14 +1589,30 @@
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/InfoKey.html#intKey-java.lang.String-">intKey(String)</a></span> - Static method in class net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/InfoKey.html" title="class in net.milkbowl.vault2.chat">InfoKey</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#isAccountMember-java.lang.String-java.util.UUID-java.util.UUID-">isAccountMember(String, UUID, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously checks whether the specified user is a member of the given account for the provided plugin.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#isAccountMember-java.lang.String-java.util.UUID-java.util.UUID-">isAccountMember(String, UUID, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Determines whether a specific member is an account member of a given plugin.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#isAccountMember-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.util.UUID-">isAccountMember(Economy, String, UUID, UUID)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Checks if a given UUID is a member of a specified account in the provided Economy system.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#isAccountOwner-java.lang.String-java.util.UUID-java.util.UUID-">isAccountOwner(String, UUID, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously checks whether the specified user is the owner of the given account for the specified plugin.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#isAccountOwner-java.lang.String-java.util.UUID-java.util.UUID-">isAccountOwner(String, UUID, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Determines whether the specified owner ID is the owner of the account associated with the given
  account ID and plugin name.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#isAccountOwner-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.util.UUID-">isAccountOwner(Economy, String, UUID, UUID)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Checks if the specified UUID corresponds to the owner of the account identified by the given account ID.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/economy/AbstractEconomy.html#isBankMember-java.lang.String-org.bukkit.OfflinePlayer-">isBankMember(String, OfflinePlayer)</a></span> - Method in class net.milkbowl.vault.economy.<a href="net/milkbowl/vault/economy/AbstractEconomy.html" title="class in net.milkbowl.vault.economy">AbstractEconomy</a></dt>
 <dd>&nbsp;</dd>
@@ -1377,6 +1685,18 @@
 <dd>
 <div class="block">Defines the modes used for resolving or retrieving values within a given context.</div>
 </dd>
+</dl>
+<a name="I:M">
+<!--   -->
+</a>
+<h2 class="title">M</h2>
+<dl>
+<dt><a href="net/milkbowl/vault2/economy/MultiEconomyResponse.html" title="class in net.milkbowl.vault2.economy"><span class="typeNameLink">MultiEconomyResponse</span></a> - Class in <a href="net/milkbowl/vault2/economy/package-summary.html">net.milkbowl.vault2.economy</a></dt>
+<dd>
+<div class="block">MultiEconomyResponse</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/MultiEconomyResponse.html#MultiEconomyResponse-java.math.BigDecimal-net.milkbowl.vault2.economy.EconomyResponse.ResponseType-java.lang.String-">MultiEconomyResponse(BigDecimal, EconomyResponse.ResponseType, String)</a></span> - Constructor for class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/MultiEconomyResponse.html" title="class in net.milkbowl.vault2.economy">MultiEconomyResponse</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <a name="I:N">
 <!--   -->
@@ -1645,9 +1965,17 @@
 </a>
 <h2 class="title">R</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#removeAccountMember-java.lang.String-java.util.UUID-java.util.UUID-">removeAccountMember(String, UUID, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Removes a member from an account asynchronously.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#removeAccountMember-java.lang.String-java.util.UUID-java.util.UUID-">removeAccountMember(String, UUID, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Removes a member from an account.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#removeAccountMember-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.util.UUID-">removeAccountMember(Economy, String, UUID, UUID)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Removes a member from a specific account within the provided economy system.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#removeGroup-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-">removeGroup(Context, Subject, String)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
 <dd>
@@ -1656,6 +1984,10 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#removeGroupAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-">removeGroupAsync(Context, Subject, String)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
 <dd>
 <div class="block">Removes the specified group from the given subject within the provided context.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#renameAccount-java.lang.String-java.util.UUID-java.lang.String-">renameAccount(String, UUID, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Renames an account asynchronously based on the provided plugin name, account ID, and new name.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#renameAccount-java.util.UUID-java.lang.String-">renameAccount(UUID, String)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
@@ -1666,6 +1998,14 @@
 <dd>
 <div class="block">Renames the account with the specified ID in the given plugin to the new name.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#renameAccount-net.milkbowl.vault2.economy.Economy-java.util.UUID-java.lang.String-">renameAccount(Economy, UUID, String)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Renames an account in the given economy system.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#renameAccount-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.lang.String-">renameAccount(Economy, String, UUID, String)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Renames an existing account in the specified economy system.</div>
+</dd>
 </dl>
 <a name="I:S">
 <!--   -->
@@ -1675,6 +2015,18 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#set-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-net.milkbowl.vault2.chat.InfoKey-T-">set(Context, Subject, InfoKey&lt;T&gt;, T)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
 <dd>
 <div class="block">Sets the value associated with a specific key for a given subject in the specified context.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#set-java.lang.String-java.util.UUID-java.math.BigDecimal-">set(String, UUID, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Updates the balance of an account asynchronously.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#set-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">set(String, UUID, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Sets the specified amount asynchronously for the given account in the specified world.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#set-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">set(String, UUID, String, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously sets the balance for a specific account in the specified world and currency.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#set-java.lang.String-java.util.UUID-java.math.BigDecimal-">set(String, UUID, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
@@ -1687,6 +2039,19 @@
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#set-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">set(String, UUID, String, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Sets the amount of specified currency for a player in a specific world.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#set-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.math.BigDecimal-">set(Economy, String, UUID, BigDecimal)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Sets the specified amount for the provided account ID within the given economy instance.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#set-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">set(Economy, String, UUID, String, BigDecimal)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Sets the economy balance for a specific account in a given world.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#set-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">set(Economy, String, UUID, String, String, BigDecimal)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Sets the specified amount of the given currency for the specified account and world
+ in the provided economy instance.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/chat/ChatUnlocked.html#setAsync-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-net.milkbowl.vault2.chat.InfoKey-T-">setAsync(Context, Subject, InfoKey&lt;T&gt;, T)</a></span> - Method in interface net.milkbowl.vault2.chat.<a href="net/milkbowl/vault2/chat/ChatUnlocked.html" title="interface in net.milkbowl.vault2.chat">ChatUnlocked</a></dt>
 <dd>
@@ -1752,9 +2117,17 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Set group suffix</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#setOwner-java.lang.String-java.util.UUID-java.util.UUID-">setOwner(String, UUID, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously sets the owner for a specific account associated with a plugin.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#setOwner-java.lang.String-java.util.UUID-java.util.UUID-">setOwner(String, UUID, UUID)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Sets the owner of a specified plugin to the given accountID.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#setOwner-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.util.UUID-">setOwner(Economy, String, UUID, UUID)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Attempts to set an owner for a specified account in the provided economy system.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/permission/PermissionUnlocked.html#setPermission-net.milkbowl.vault2.helper.context.Context-net.milkbowl.vault2.helper.subject.Subject-java.lang.String-net.milkbowl.vault2.helper.TriState-">setPermission(Context, Subject, String, TriState)</a></span> - Method in interface net.milkbowl.vault2.permission.<a href="net/milkbowl/vault2/permission/PermissionUnlocked.html" title="interface in net.milkbowl.vault2.permission">PermissionUnlocked</a></dt>
 <dd>
@@ -1949,6 +2322,10 @@
 <dd>
 <div class="block">Represents the type of a subject, which can either be a player or a group.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#supportsAsync--">supportsAsync()</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
+<dd>
+<div class="block">Indicates whether asynchronous operations are supported.</div>
+</dd>
 </dl>
 <a name="I:T">
 <!--   -->
@@ -1964,6 +2341,42 @@
 <dd>
 <div class="block">Checks if an operation was successful</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#transfer-java.lang.String-java.util.UUID-java.util.UUID-java.math.BigDecimal-">transfer(String, UUID, UUID, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously transfers a specified monetary amount from one user to another within the context of a given plugin.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#transfer-java.lang.String-java.util.UUID-java.util.UUID-java.lang.String-java.math.BigDecimal-">transfer(String, UUID, UUID, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously transfers a specific amount of currency from one account to another within the same world.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#transfer-java.lang.String-java.util.UUID-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">transfer(String, UUID, UUID, String, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously transfers a specified amount of currency from one account to another within a specific world.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#transfer-java.lang.String-java.util.UUID-java.util.UUID-java.math.BigDecimal-">transfer(String, UUID, UUID, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
+<dd>
+<div class="block">Transfers a specified monetary amount from one user to another within the context of a given plugin.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#transfer-java.lang.String-java.util.UUID-java.util.UUID-java.lang.String-java.math.BigDecimal-">transfer(String, UUID, UUID, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
+<dd>
+<div class="block">Transfers a specific amount of currency from one account to another within the same world.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#transfer-java.lang.String-java.util.UUID-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">transfer(String, UUID, UUID, String, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
+<dd>
+<div class="block">Transfers a specified amount of currency from one account to another within a specific world.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#transfer-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.util.UUID-java.math.BigDecimal-">transfer(Economy, String, UUID, UUID, BigDecimal)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Asynchronously transfers a specified monetary amount from one user to another within the context of a given plugin.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#transfer-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.util.UUID-java.lang.String-java.math.BigDecimal-">transfer(Economy, String, UUID, UUID, String, BigDecimal)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Asynchronously transfers a specific amount of currency from one account to another within the same world.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#transfer-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">transfer(Economy, String, UUID, UUID, String, String, BigDecimal)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Asynchronously transfers a specified amount of currency from one account to another within a specific world.</div>
+</dd>
 <dt><a href="net/milkbowl/vault2/helper/TriState.html" title="enum in net.milkbowl.vault2.helper"><span class="typeNameLink">TriState</span></a> - Enum in <a href="net/milkbowl/vault2/helper/package-summary.html">net.milkbowl.vault2.helper</a></dt>
 <dd>
 <div class="block">Represents a tri-state value that can be TRUE, FALSE, or UNDEFINED.</div>
@@ -1977,6 +2390,12 @@
 <dd>
 <div class="block">Success or failure of call.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/MultiEconomyResponse.html#type">type</a></span> - Variable in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/MultiEconomyResponse.html" title="class in net.milkbowl.vault2.economy">MultiEconomyResponse</a></dt>
+<dd>
+<div class="block">Success or failure of call.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/MultiEconomyResponse.html#type--">type()</a></span> - Method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/MultiEconomyResponse.html" title="class in net.milkbowl.vault2.economy">MultiEconomyResponse</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/subject/Subject.html#type--">type()</a></span> - Method in class net.milkbowl.vault2.helper.subject.<a href="net/milkbowl/vault2/helper/subject/Subject.html" title="class in net.milkbowl.vault2.helper.subject">Subject</a></dt>
 <dd>&nbsp;</dd>
 </dl>
@@ -1985,9 +2404,17 @@
 </a>
 <h2 class="title">U</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#updateAccountPermission-java.lang.String-java.util.UUID-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission-boolean-">updateAccountPermission(String, UUID, UUID, AccountPermission, boolean)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Updates the account permission for a specific account asynchronously.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#updateAccountPermission-java.lang.String-java.util.UUID-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission-boolean-">updateAccountPermission(String, UUID, UUID, AccountPermission, boolean)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Updates the account permission for a specific plugin and user.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#updateAccountPermission-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.util.UUID-net.milkbowl.vault2.economy.AccountPermission-boolean-">updateAccountPermission(Economy, String, UUID, UUID, AccountPermission, boolean)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Updates the permission of a specific account in the economy system.</div>
 </dd>
 </dl>
 <a name="I:V">
@@ -2061,6 +2488,18 @@ the order they are declared.</div>
 </a>
 <h2 class="title">W</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#withdraw-java.lang.String-java.util.UUID-java.math.BigDecimal-">withdraw(String, UUID, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously withdraws a specified amount of money from an account associated with the given UUID.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#withdraw-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">withdraw(String, UUID, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Initiates an asynchronous operation to withdraw a specified amount from an account in a specified world context.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/AsyncEconomy.html#withdraw-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">withdraw(String, UUID, String, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/AsyncEconomy.html" title="interface in net.milkbowl.vault2.economy">AsyncEconomy</a></dt>
+<dd>
+<div class="block">Asynchronously withdraws a specified amount of currency from an account in a specific world.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#withdraw-java.lang.String-java.util.UUID-java.math.BigDecimal-">withdraw(String, UUID, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Withdraw an amount from an account associated with a UUID</div>
@@ -2072,6 +2511,18 @@ the order they are declared.</div>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/Economy.html#withdraw-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">withdraw(String, UUID, String, String, BigDecimal)</a></span> - Method in interface net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/Economy.html" title="interface in net.milkbowl.vault2.economy">Economy</a></dt>
 <dd>
 <div class="block">Withdraw an amount from an account associated with a UUID on a given world</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#withdraw-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.math.BigDecimal-">withdraw(Economy, String, UUID, BigDecimal)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Withdraws a specified amount from the given account using the provided economy system.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#withdraw-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-">withdraw(Economy, String, UUID, String, BigDecimal)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Withdraws a specified amount from a player's account in the given economy and world.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/milkbowl/vault2/economy/EconomyFutures.html#withdraw-net.milkbowl.vault2.economy.Economy-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-">withdraw(Economy, String, UUID, String, String, BigDecimal)</a></span> - Static method in class net.milkbowl.vault2.economy.<a href="net/milkbowl/vault2/economy/EconomyFutures.html" title="class in net.milkbowl.vault2.economy">EconomyFutures</a></dt>
+<dd>
+<div class="block">Initiates a withdrawal from a specified account with the given details.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault/economy/AbstractEconomy.html#withdrawPlayer-org.bukkit.OfflinePlayer-double-">withdrawPlayer(OfflinePlayer, double)</a></span> - Method in class net.milkbowl.vault.economy.<a href="net/milkbowl/vault/economy/AbstractEconomy.html" title="class in net.milkbowl.vault.economy">AbstractEconomy</a></dt>
 <dd>&nbsp;</dd>
@@ -2107,7 +2558,7 @@ the order they are declared.</div>
 <dt><span class="memberNameLink"><a href="net/milkbowl/vault2/helper/context/Context.html#worldOrNull--">worldOrNull()</a></span> - Method in class net.milkbowl.vault2.helper.context.<a href="net/milkbowl/vault2/helper/context/Context.html" title="class in net.milkbowl.vault2.helper.context">Context</a></dt>
 <dd>&nbsp;</dd>
 </dl>
-<a href="#I:A">A</a>&nbsp;<a href="#I:B">B</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:W">W</a>&nbsp;</div>
+<a href="#I:A">A</a>&nbsp;<a href="#I:B">B</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:W">W</a>&nbsp;</div>
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
 <div class="bottomNav"><a name="navbar.bottom">
 <!--   -->
