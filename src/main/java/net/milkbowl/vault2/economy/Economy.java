@@ -67,6 +67,29 @@ public interface Economy {
    */
   boolean hasMultiCurrencySupport();
 
+  /**
+   * Indicates whether asynchronous operations are supported.
+   *
+   * @return true if asynchronous operations are supported; false otherwise.
+   * @since 2.20
+   */
+  default boolean supportsAsync() {
+
+    return async().isPresent();
+  }
+
+  /**
+   * Provides an optional asynchronous economy instance.
+   * This method allows retrieving an instance of {@code AsyncEconomy} if it is available.
+   *
+   * @return an {@code Optional} containing the asynchronous economy instance if available,
+   *         otherwise an empty {@code Optional}.
+   * @since 2.20
+   */
+  default Optional<AsyncEconomy> async() {
+    return Optional.empty();
+  }
+
   /*
    * Currency-related methods follow.
    */
@@ -698,6 +721,111 @@ public interface Economy {
   }
 
   /**
+   * Transfers a specified monetary amount from one user to another within the context of a given plugin.
+   * The method ensures atomicity by attempting to revert the withdrawal if the deposit fails.
+   *
+   * @param pluginName the name of the plugin initiating the transfer; must not be null
+   * @param from the unique identifier (UUID) of the user account from which the amount will be withdrawn; must not be null
+   * @param to the unique identifier (UUID) of the user account to which the amount will be deposited; must not be null
+   * @param amount the monetary amount to transfer; must not be null
+   * @return a {@code MultiEconomyResponse} detailing the status of the transfer, including the final balances, success/failure type, and error messages (if any)
+   */
+  default MultiEconomyResponse transfer(@NotNull final String pluginName, @NotNull final UUID from, @NotNull final UUID to, @NotNull final BigDecimal amount) {
+
+    final MultiEconomyResponse successResponse = new MultiEconomyResponse(amount, ResponseType.SUCCESS, "");
+
+    final EconomyResponse withdrawResponse = withdraw(pluginName, from, amount);
+    if(withdrawResponse.type != ResponseType.SUCCESS) {
+      return new MultiEconomyResponse(amount, withdrawResponse.type, withdrawResponse.errorMessage);
+    }
+
+    final EconomyResponse depositResponse = deposit(pluginName, to, withdrawResponse.amount);
+    if(depositResponse.type != ResponseType.SUCCESS) {
+      //deposit back to our withdrawal account to prevent losing out when the deposit fails
+      deposit(pluginName, from, amount);
+      return new MultiEconomyResponse(amount, depositResponse.type, depositResponse.errorMessage);
+    }
+    successResponse.addBalance(from, withdrawResponse.balance);
+    successResponse.addBalance(to, depositResponse.balance);
+    return successResponse;
+  }
+
+  /**
+   * Transfers a specific amount of currency from one account to another within the same world.
+   * The transfer is performed as a withdrawal from the source account followed by a deposit
+   * into the target account. If the deposit operation fails, the withdrawn amount is refunded
+   * to the source account to ensure consistency.
+   *
+   * @param pluginName The name of the plugin initiating the transfer.
+   *                   Must not be null.
+   * @param from       The unique identifier of the sender's account.
+   *                   Must not be null.
+   * @param to         The unique identifier of the receiver's account.
+   *                   Must not be null.
+   * @param worldName  The name of the world in which the transfer is taking place.
+   *                   Must not be null.
+   * @param amount     The amount of currency to transfer.
+   *                   Must not be null.
+   * @return A {@code MultiEconomyResponse} containing the details of the transfer result,
+   *         including the amount transferred, the resulting balances for both accounts, and
+   *         the operation status. If the transfer fails, it contains error details.
+   */
+  default MultiEconomyResponse transfer(@NotNull final String pluginName, @NotNull final UUID from, @NotNull final UUID to, @NotNull final String worldName, @NotNull final BigDecimal amount) {
+
+    final MultiEconomyResponse successResponse = new MultiEconomyResponse(amount, ResponseType.SUCCESS, "");
+
+    final EconomyResponse withdrawResponse = withdraw(pluginName, from, worldName, amount);
+    if(withdrawResponse.type != ResponseType.SUCCESS) {
+      return new MultiEconomyResponse(amount, withdrawResponse.type, withdrawResponse.errorMessage);
+    }
+
+    final EconomyResponse depositResponse = deposit(pluginName, to, worldName, withdrawResponse.amount);
+    if(depositResponse.type != ResponseType.SUCCESS) {
+      //deposit back to our withdrawal account to prevent losing out when the deposit fails
+      deposit(pluginName, from, worldName, amount);
+      return new MultiEconomyResponse(amount, depositResponse.type, depositResponse.errorMessage);
+    }
+    successResponse.addBalance(from, withdrawResponse.balance);
+    successResponse.addBalance(to, depositResponse.balance);
+    return successResponse;
+  }
+
+  /**
+   * Transfers a specified amount of currency from one account to another within a specific world.
+   * The transfer involves withdrawing the amount from the source account and depositing it into
+   * the target account. If the deposit fails, the withdrawn amount is returned to the source account
+   * to ensure consistency.
+   *
+   * @param pluginName the name of the plugin initiating the transfer
+   * @param from the unique identifier (UUID) of the source account
+   * @param to the unique identifier (UUID) of the target account
+   * @param worldName the name of the world in which the transfer is taking place
+   * @param currency the name of the currency being transferred
+   * @param amount the amount of currency to transfer
+   * @return a {@link MultiEconomyResponse} containing information about the result of the transfer,
+   *         including success status, balances, and error messages if applicable
+   */
+  default MultiEconomyResponse transfer(@NotNull final String pluginName, @NotNull final UUID from, @NotNull final UUID to, @NotNull final String worldName, @NotNull final String currency, @NotNull final BigDecimal amount) {
+
+    final MultiEconomyResponse successResponse = new MultiEconomyResponse(amount, ResponseType.SUCCESS, "");
+
+    final EconomyResponse withdrawResponse = withdraw(pluginName, from, worldName, currency, amount);
+    if(withdrawResponse.type != ResponseType.SUCCESS) {
+      return new MultiEconomyResponse(amount, withdrawResponse.type, withdrawResponse.errorMessage);
+    }
+
+    final EconomyResponse depositResponse = deposit(pluginName, to, worldName, currency, withdrawResponse.amount);
+    if(depositResponse.type != ResponseType.SUCCESS) {
+      //deposit back to our withdrawal account to prevent losing out when the deposit fails
+      deposit(pluginName, from, worldName, currency, amount);
+      return new MultiEconomyResponse(amount, depositResponse.type, depositResponse.errorMessage);
+    }
+    successResponse.addBalance(from, withdrawResponse.balance);
+    successResponse.addBalance(to, depositResponse.balance);
+    return successResponse;
+  }
+
+  /**
    * Checks if an account associated with a UUID can perform a withdrawal of the specified amount.
    * Checks performed are up to the implementation, but could include account status, withdrawal
    * limits, cooldowns, or other provider-specific validations beyond simple balance checks.
@@ -786,6 +914,8 @@ public interface Economy {
 
     return new EconomyResponse(BigDecimal.ZERO, BigDecimal.ZERO, ResponseType.NOT_IMPLEMENTED, "canWithdraw is not implemented by this economy provider.");
   }
+
+
 
   /**
    * Withdraw an amount from an account associated with a UUID
