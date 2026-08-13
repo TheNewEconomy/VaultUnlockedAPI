@@ -925,8 +925,8 @@ public interface Economy {
    * Note: {@code pluginName} should be used for logging/diagnostics only and MUST NOT affect
    * business logic.
    * <br>
-   * Note: Implementations should perform checks against {@link #canWithdraw(String, UUID, BigDecimal)} first where implemented.
-   * As implementations may or may not do checks in the withdraw method as a backup verification.
+   * Note: Callers should perform checks against {@link #canWithdraw(String, UUID, BigDecimal)} first where implemented.
+   * As callers may or may not do checks in the withdraw method as a backup verification.
    * </p>
    * @param pluginName The name of the plugin that is calling the method.
    * @param accountID  the UUID associated with the account to withdraw from.
@@ -948,8 +948,8 @@ public interface Economy {
    * Note: {@code pluginName} should be used for logging/diagnostics only and MUST NOT affect
    * business logic.
    * <br>
-   * Note: Implementations should perform checks against {@link #canWithdraw(String, UUID, String, BigDecimal)} first where implemented.
-   * As implementations may or may not do checks in the withdraw method as a backup verification.
+   * Note: Callers should perform checks against {@link #canWithdraw(String, UUID, String, BigDecimal)} first where implemented.
+   * As callers may or may not do checks in the withdraw method as a backup verification.
    * <br>
    * If the provider does not support multiple worlds, the provider's default world will be used.
    * </p>
@@ -974,8 +974,8 @@ public interface Economy {
    * Note: {@code pluginName} should be used for logging/diagnostics only and MUST NOT affect
    * business logic.
    * <br>
-   * Note: Implementations should perform checks against {@link #canWithdraw(String, UUID, String, String, BigDecimal)} first where implemented.
-   * As implementations may or may not do checks in the withdraw method as a backup verification.
+   * Note: Callers should perform checks against {@link #canWithdraw(String, UUID, String, String, BigDecimal)} first where implemented.
+   * As callers may or may not do checks in the withdraw method as a backup verification.
    * <br>
    * If the provider does not support multiple worlds, the provider's default world will be used.
    * <br>
@@ -1094,8 +1094,8 @@ public interface Economy {
    * Note: {@code pluginName} should be used for logging/diagnostics only and MUST NOT affect
    * business logic.
    * <br>
-   * Note: Implementations should perform checks against {@link #canDeposit(String, UUID, BigDecimal)} first where implemented.
-   * As implementations may or may not do checks in the deposit method as a backup verification.
+   * Note: Callers should perform checks against {@link #canDeposit(String, UUID, BigDecimal)} first where implemented.
+   * As callers may or may not do checks in the deposit method as a backup verification.
    * </p>
    * @param pluginName The name of the plugin that is calling the method.
    * @param accountID  the UUID associated with the account to deposit to.
@@ -1117,8 +1117,8 @@ public interface Economy {
    * Note: {@code pluginName} should be used for logging/diagnostics only and MUST NOT affect
    * business logic.
    * <br>
-   * Note: Implementations should perform checks against {@link #canDeposit(String, UUID, String, BigDecimal)} first where implemented.
-   * As implementations may or may not do checks in the deposit method as a backup verification.
+   * Note: Callers should perform checks against {@link #canDeposit(String, UUID, String, BigDecimal)} first where implemented.
+   * As callers may or may not do checks in the deposit method as a backup verification.
    * <br>
    * If the provider does not support multiple worlds, the provider's default world will be used.
    * </p>
@@ -1143,8 +1143,8 @@ public interface Economy {
    * Note: {@code pluginName} should be used for logging/diagnostics only and MUST NOT affect
    * business logic.
    * <br>
-   * Note: Implementations should perform checks against {@link #canDeposit(String, UUID, String, String, BigDecimal)} first where implemented.
-   * As implementations may or may not do checks in the deposit method as a backup verification.
+   * Note: Callers should perform checks against {@link #canDeposit(String, UUID, String, String, BigDecimal)} first where implemented.
+   * As callers may or may not do checks in the deposit method as a backup verification.
    * <br>
    * If the provider does not support multiple worlds, the provider's default world will be used.
    * <br>
