@@ -2053,6 +2053,9 @@ default&nbsp;@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyRe
  <br>
  Note: <code>pluginName</code> should be used for logging/diagnostics only and MUST NOT affect
  business logic.
+ <br>
+ Note: Callers should perform checks against <a href="../../../../net/milkbowl/vault2/economy/Economy.html#canWithdraw-java.lang.String-java.util.UUID-java.math.BigDecimal-"><code>canWithdraw(String, UUID, BigDecimal)</code></a> first where implemented.
+ As callers may or may not do checks in the withdraw method as a backup verification.
  </p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -2088,6 +2091,9 @@ default&nbsp;@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyRe
  <br>
  Note: <code>pluginName</code> should be used for logging/diagnostics only and MUST NOT affect
  business logic.
+ <br>
+ Note: Callers should perform checks against <a href="../../../../net/milkbowl/vault2/economy/Economy.html#canWithdraw-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-"><code>canWithdraw(String, UUID, String, BigDecimal)</code></a> first where implemented.
+ As callers may or may not do checks in the withdraw method as a backup verification.
  <br>
  If the provider does not support multiple worlds, the provider's default world will be used.
  </p></div>
@@ -2128,6 +2134,9 @@ default&nbsp;@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyRe
  <br>
  Note: <code>pluginName</code> should be used for logging/diagnostics only and MUST NOT affect
  business logic.
+ <br>
+ Note: Callers should perform checks against <a href="../../../../net/milkbowl/vault2/economy/Economy.html#canWithdraw-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-"><code>canWithdraw(String, UUID, String, String, BigDecimal)</code></a> first where implemented.
+ As callers may or may not do checks in the withdraw method as a backup verification.
  <br>
  If the provider does not support multiple worlds, the provider's default world will be used.
  <br>
@@ -2294,6 +2303,9 @@ default&nbsp;@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyRe
  <br>
  Note: <code>pluginName</code> should be used for logging/diagnostics only and MUST NOT affect
  business logic.
+ <br>
+ Note: Callers should perform checks against <a href="../../../../net/milkbowl/vault2/economy/Economy.html#canDeposit-java.lang.String-java.util.UUID-java.math.BigDecimal-"><code>canDeposit(String, UUID, BigDecimal)</code></a> first where implemented.
+ As callers may or may not do checks in the deposit method as a backup verification.
  </p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -2329,6 +2341,9 @@ default&nbsp;@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyRe
  <br>
  Note: <code>pluginName</code> should be used for logging/diagnostics only and MUST NOT affect
  business logic.
+ <br>
+ Note: Callers should perform checks against <a href="../../../../net/milkbowl/vault2/economy/Economy.html#canDeposit-java.lang.String-java.util.UUID-java.lang.String-java.math.BigDecimal-"><code>canDeposit(String, UUID, String, BigDecimal)</code></a> first where implemented.
+ As callers may or may not do checks in the deposit method as a backup verification.
  <br>
  If the provider does not support multiple worlds, the provider's default world will be used.
  </p></div>
@@ -2369,6 +2384,9 @@ default&nbsp;@NotNull <a href="../../../../net/milkbowl/vault2/economy/EconomyRe
  <br>
  Note: <code>pluginName</code> should be used for logging/diagnostics only and MUST NOT affect
  business logic.
+ <br>
+ Note: Callers should perform checks against <a href="../../../../net/milkbowl/vault2/economy/Economy.html#canDeposit-java.lang.String-java.util.UUID-java.lang.String-java.lang.String-java.math.BigDecimal-"><code>canDeposit(String, UUID, String, String, BigDecimal)</code></a> first where implemented.
+ As callers may or may not do checks in the deposit method as a backup verification.
  <br>
  If the provider does not support multiple worlds, the provider's default world will be used.
  <br>
